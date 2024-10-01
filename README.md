@@ -34,6 +34,8 @@ Windows:
 git clone https://github.com/Mayank77maruti/603WorkVed.git
 ```
 
+GO THROUGH THE CONTRIBUTING.md file before making any pull requests.
+
 ### Contact
 
 If you want to contact with me you can reach me at [LinkedIn](https://www.linkedin.com/in/mayank-mohapatra-697744267/).
