@@ -19,7 +19,7 @@
   /**
    * COLORS
    */
-
+  --gold-crayola-dark: hsl(38, 61%, 55%); 
   --gold-crayola: hsl(38, 61%, 73%);
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
@@ -145,6 +145,12 @@ select,
 ion-icon,
 textarea {
   display: block;
+}
+.newSpan {
+  color: #ffffff;
+  font-size: 1.2rem; 
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
 }
 
 a {
@@ -293,7 +299,22 @@ body.nav-active {
   font-size: var(--fontSize-label-2);
 }
 
-
+.newHero {
+  color: white; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px; 
+  transition: all 0.3s ease-in-out; 
+}
+.newHero:hover {
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7); 
+}
+.newHero2 {
+  color: var(--gold-crayola-dark); 
+  font-size: 2rem; 
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.5), 
+    0 0 5px rgba(255, 215, 0, 0.7); 
+}
 
 
 
@@ -367,6 +388,7 @@ body.nav-active {
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-2);
   margin-block-end: 12px;
+  font-size: 1.5rem;
 }
 
 .section-subtitle::after {
