@@ -2479,6 +2479,58 @@ textarea.input-field {
 
 }
 
+/*Scroll Watcher*/
+.scroll-watcher{
+  height: 10px;
+  position: fixed;
+  top:0;
+  z-index: 1000;
+  width: 100%;
+  border-radius: 1rem;
+  scale: 0 1;
+  animation: scroll-watcher ease-in;
+  background-color: var(--gold-crayola-dark);
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to{scale: 1 1;}
+}
+
+/*Sections Fade-In*/
+section{
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.card-content{
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+
+
+@keyframes fade-in {
+  from{
+    position: 0;
+    scale: 0.8;
+    opacity: 0;
+  }
+  to
+  {
+    position: 1;
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+
+
+
+
 
 
 
@@ -2565,3 +2617,4 @@ textarea.input-field {
   }
 
 }
+
