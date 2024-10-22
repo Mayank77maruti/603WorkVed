@@ -1,0 +1,110 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 35%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+}
+
+.right-panel {
+  width: 65%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.workspace, .cabins {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.workspace img, .cabins img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+button.control-btn {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.control-btn:hover {
+  background-color: #0056b3;
+}
+
+.area-info {
+  margin-bottom: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.area-display {
+  display: flex;
+  height: 60vh;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+}
+
+.linear-box {
+  background-color: #4caf50;
+}
+
+.lType-box {
+  background-color: #2196f3;
+}
+
+.md-box {
+  background-color: #ff5722;
+}
+
+.manager-box {
+  background-color: #ff9800;
+}
+
+.small-box {
+  background-color: #9c27b0;
+}
+
+.free-space-box {
+  background-color: #cccccc;
+}
