@@ -247,7 +247,9 @@
                   <canvas class="space-canvas"> </canvas>
                 </div>
                 <div class="space-description-div" id="space-1">
-                  <h3 class="space-description-heading container slider-reveal">Sample Heading</h3>
+                  <h3 class="space-description-heading container slider-reveal">
+                    Sample Heading
+                  </h3>
                   <div class="space-description-overlay">
                     <p class="space-description slider-reveal">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -267,7 +269,9 @@
                   <canvas class="space-canvas"> </canvas>
                 </div>
                 <div class="space-description-div" id="space-1">
-                  <h3 class="space-description-heading container slider-reveal">Sample Heading</h3>
+                  <h3 class="space-description-heading container slider-reveal">
+                    Sample Heading
+                  </h3>
                   <div class="space-description-overlay">
                     <p class="space-description slider-reveal">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -300,16 +304,16 @@
         </section>
 
         <style>
-          @media (max-width: 1250px){
-            .space-description-div{
+          @media (max-width: 1250px) {
+            .space-description-div {
               flex-direction: column;
             }
           }
-          .space-div{
+          .space-div {
             min-height: fit-content;
             width: 90vw;
           }
-          .space-canvas-div{
+          .space-canvas-div {
             min-height: 70vh;
             background-position: center;
             background-repeat: no-repeat;
@@ -317,7 +321,7 @@
             background-image: url("assets/images/form-pattern.png");
             filter: invert(50%);
           }
-          .space-description-div{
+          .space-description-div {
             display: flex;
             justify-content: space-between;
             min-height: fit-content;
@@ -328,13 +332,25 @@
           }
 
           .space-description-heading {
-            display: flex; justify-content: center; align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 3.5rem;
           }
-          .space-description-overlay{
-            display: flex; justify-content: center; align-items: center;
+          .space-description-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             max-width: 50%;
-            background-image: linear-gradient(to left, rgba(228, 197, 144, 1),  rgba(228, 197, 144, 0.8),  rgba(228, 197, 144, 0.6),  rgba(228, 197, 144, 0.4),  rgba(228, 197, 144, 0.2), transparent);
+            background-image: linear-gradient(
+              to left,
+              rgba(228, 197, 144, 1),
+              rgba(228, 197, 144, 0.8),
+              rgba(228, 197, 144, 0.6),
+              rgba(228, 197, 144, 0.4),
+              rgba(228, 197, 144, 0.2),
+              transparent
+            );
             font-weight: 500;
           }
 
@@ -342,13 +358,70 @@
             padding: 16px;
           }
 
-          #space-1{
+          #space-1 {
             background-image: url("assets/images/uneebo-office-design-UgYT5nkXdK4-unsplash.avif");
           }
         </style>
 
         <!-- PHILOSOPHY SECTION -->
-        <section class="section text-center"></section>
+        <section class="section text-center philosophy-section">
+          <div class="philosophy-container">
+            <div class="card-container">
+              <div class="card">
+                <h3 class="card-heading">Functionality and Flow</h3>
+                <p class="card-content">
+                  Any space should promote effective workflows, allowing easy
+                  transitions between various types of work, like collaboration,
+                  focused work, and relaxation. The physical layout impacts
+                  efficiency, and creating smooth transitions can reduce
+                  friction and support creativity.
+                </p>
+              </div>
+              <div class="card">
+                <h3 class="card-heading">Sustainability</h3>
+                <p class="card-content">
+                  Environmentally conscious design choices reflect a commitment
+                  to sustainability. Using energy-efficient lighting, recyclable
+                  materials, and indoor plants can reduce an office's ecological
+                  footprint and align with values that attract environmentally
+                  conscious employees.
+                </p>
+              </div>
+              <div class="card">
+                <h3 class="card-heading">
+                  Balance between technology and Humanity
+                </h3>
+                <p class="card-content">
+                  Integration between technology seamlessly into the workspace
+                  to enhance productivity but shouldn’t overlook the human
+                  experience. Thoughtful integration ensures tech enhances
+                  rather than overwhelms, preserving human connection and
+                  engagement in the process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <style>
+          .philosophy-section {
+            background-color: hsla(30, 3%, 34%, 1);
+          }
+          .card-container {
+            display: flex;
+            justify-content: space-between;
+          }
+          .card {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            border-left: 0.5px solid white;
+            border-right: 0.5px solid white;
+          }
+
+          .card-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+          }
+        </style>
       </article>
     </main>
 
