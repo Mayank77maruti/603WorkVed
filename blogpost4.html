@@ -365,9 +365,28 @@
 
         <!-- PHILOSOPHY SECTION -->
         <section class="section text-center philosophy-section">
+          <h1 class="philosophy-heading">Deciding Factors In a Space</h1>
           <div class="philosophy-container">
+            <div class="curve-top">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
+            </div>
             <div class="card-container">
               <div class="card">
+                <img
+                  src="assets/images/divider.png"
+                  alt=""
+                  class="card-heading-img"
+                />
                 <h3 class="card-heading">Functionality and Flow</h3>
                 <p class="card-content">
                   Any space should promote effective workflows, allowing easy
@@ -378,6 +397,11 @@
                 </p>
               </div>
               <div class="card">
+                <img
+                  src="assets/images/divider.png"
+                  alt=""
+                  class="card-heading-img"
+                />
                 <h3 class="card-heading">Sustainability</h3>
                 <p class="card-content">
                   Environmentally conscious design choices reflect a commitment
@@ -388,6 +412,11 @@
                 </p>
               </div>
               <div class="card">
+                <img
+                  src="assets/images/divider.png"
+                  alt=""
+                  class="card-heading-img"
+                />
                 <h3 class="card-heading">
                   Balance between technology and Humanity
                 </h3>
@@ -401,25 +430,103 @@
               </div>
             </div>
           </div>
+          <div class="curve-bottom">
+            <svg
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         <style>
           .philosophy-section {
-            background-color: hsla(30, 3%, 34%, 1);
+            background-color: #2e3033;
+            position: relative;
+          }
+          .philosophy-heading {
+            margin-top: 100px;
+            font-size: 3em;
+            font-weight: bold;
+            color: hsl(38, 61%, 55%);
+            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+              6px 0px 0px hsl(38, 61%, 25%);
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1.05) translateX(2px);
+          }
+          .curve-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+          }
+
+          .curve-top svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 200px;
+            transform: rotateY(180deg);
+          }
+
+          .curve-top .shape-fill {
+            fill: #161718;
           }
           .card-container {
             display: flex;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            position: relative;
             justify-content: space-between;
           }
           .card {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            border-left: 0.5px solid white;
-            border-right: 0.5px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            margin: 16px;
+            border-bottom: 0.25px solid white;
           }
 
           .card-heading {
+            color: hsl(38, 61%, 55%);
             font-size: 2.5rem;
             font-weight: bold;
+          }
+
+          .curve-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+          }
+
+          .curve-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 200px;
+            transform: rotateY(180deg);
+          }
+
+          .curve-bottom .shape-fill {
+            fill: #161718;
           }
         </style>
       </article>
