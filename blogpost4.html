@@ -239,13 +239,10 @@
     <main>
       <article>
         <!-- HERO SECTION -->
-        <section class="hero text-center">
+        <section class="hero text-center space-section">
           <ul class="hero-slider" data-hero-slider>
             <li class="slider-item active" data-hero-slider-item>
-              <div class="space-div text-center">
-                <div class="space-canvas-div">
-                  <canvas class="space-canvas"> </canvas>
-                </div>
+              <div class="space-container">
                 <div class="space-description-div" id="space-1">
                   <h3 class="space-description-heading container slider-reveal">
                     Sample Heading
@@ -259,16 +256,37 @@
                       architecto.
                     </p>
                   </div>
+                </div>
+                <div class="space-canvas-div">
+                  <div class="space-canvas-border-div">
+                    <img
+                      src="assets/images/blob.svg"
+                      alt=""
+                      class="space-canvas-border-blob"
+                    />
+
+                    <img
+                      src="assets/images/blob2.svg"
+                      alt=""
+                      class="space-canvas-border-blob2"
+                    />
+                  </div>
+                  <img
+                    src="assets/images/office1.png"
+                    alt=""
+                    class="space-canvas"
+                  />
+                  <img
+                    src="assets/images/office1.png"
+                    alt=""
+                    class="space-canvas-shadow"
+                  />
                 </div>
               </div>
             </li>
-
             <li class="slider-item" data-hero-slider-item>
-              <div class="space-div text-center">
-                <div class="space-canvas-div">
-                  <canvas class="space-canvas"> </canvas>
-                </div>
-                <div class="space-description-div" id="space-1">
+              <div class="space-container">
+                <div class="space-description-div" id="space-2">
                   <h3 class="space-description-heading container slider-reveal">
                     Sample Heading
                   </h3>
@@ -281,6 +299,114 @@
                       architecto.
                     </p>
                   </div>
+                </div>
+                <div class="space-canvas-div">
+                  <div class="space-canvas-border-div">
+                    <img
+                      src="assets/images/blob.svg"
+                      alt=""
+                      class="space-canvas-border-blob"
+                    />
+                    <img
+                      src="assets/images/blob2.svg"
+                      alt=""
+                      class="space-canvas-border-blob2"
+                    />
+                  </div>
+                  <img
+                    src="assets/images/office2.png"
+                    alt=""
+                    class="space-canvas"
+                  />
+                  <img
+                    src="assets/images/office2.png"
+                    alt=""
+                    class="space-canvas-shadow"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="slider-item" data-hero-slider-item>
+              <div class="space-container">
+                <div class="space-description-div" id="space-3">
+                  <h3 class="space-description-heading container slider-reveal">
+                    Sample Heading
+                  </h3>
+                  <div class="space-description-overlay">
+                    <p class="space-description slider-reveal">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium commodi velit repellendus ex. Aliquam
+                      dignissimos iste quasi ab pariatur beatae nemo harum,
+                      nihil maiores, totam vero dolorem quisquam odit
+                      architecto.
+                    </p>
+                  </div>
+                </div>
+                <div class="space-canvas-div">
+                  <div class="space-canvas-border-div">
+                    <img
+                      src="assets/images/blob.svg"
+                      alt=""
+                      class="space-canvas-border-blob"
+                    />
+                    <img
+                      src="assets/images/blob2.svg"
+                      alt=""
+                      class="space-canvas-border-blob2"
+                    />
+                  </div>
+                  <img
+                    src="assets/images/office3.png"
+                    alt=""
+                    class="space-canvas"
+                  />
+                  <img
+                    src="assets/images/office3.png"
+                    alt=""
+                    class="space-canvas-shadow"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="slider-item" data-hero-slider-item>
+              <div class="space-container">
+                <div class="space-description-div" id="space-4">
+                  <h3 class="space-description-heading container slider-reveal">
+                    Sample Heading
+                  </h3>
+                  <div class="space-description-overlay">
+                    <p class="space-description slider-reveal">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium commodi velit repellendus ex. Aliquam
+                      dignissimos iste quasi ab pariatur beatae nemo harum,
+                      nihil maiores, totam vero dolorem quisquam odit
+                      architecto.
+                    </p>
+                  </div>
+                </div>
+                <div class="space-canvas-div">
+                  <div class="space-canvas-border-div">
+                    <img
+                      src="assets/images/blob.svg"
+                      alt=""
+                      class="space-canvas-border-blob"
+                    />
+                    <img
+                      src="assets/images/blob2.svg"
+                      alt=""
+                      class="space-canvas-border-blob2"
+                    />
+                  </div>
+                  <img
+                    src="assets/images/office4.png"
+                    alt=""
+                    class="space-canvas"
+                  />
+                  <img
+                    src="assets/images/office4.png"
+                    alt=""
+                    class="space-canvas-shadow"
+                  />
                 </div>
               </div>
             </li>
@@ -304,68 +430,176 @@
         </section>
 
         <style>
-          @media (max-width: 1250px) {
-            .space-description-div {
-              flex-direction: column;
+          .space-section {
+            background-image: linear-gradient(
+                to right,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              ),
+              linear-gradient(
+                to bottom,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              );
+            background-size: 120px 120px;
+          }
+          .space-container {
+            display: grid;
+            padding-bottom: 10rem;
+          }
+          .space-container {
+            grid-template-columns: 1fr;
+          }
+          @media (min-width: 600px) {
+            .space-container {
+              grid-template-columns: repeat(1, 1fr);
+              width: 95vw;
             }
           }
-          .space-div {
-            min-height: fit-content;
-            width: 90vw;
+
+          @media (min-width: 900px) {
+            .space-container {
+              grid-template-columns: repeat(1, 1fr);
+              width: 95vw;
+            }
           }
-          .space-canvas-div {
-            min-height: 70vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: auto 90%;
-            background-image: url("assets/images/form-pattern.png");
-            filter: invert(50%);
-          }
-          .space-description-div {
-            display: flex;
-            justify-content: space-between;
-            min-height: fit-content;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border: 1px solid #cd9107;
+          @media (min-width: 1200px) {
+            .space-container {
+              grid-template-columns: repeat(2, 1fr);
+              padding-bottom: 0;
+              width: 88vw;
+            }
           }
 
-          .space-description-heading {
+          .space-canvas-div {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 3.5rem;
+            margin-top: 4em;
           }
+
+          .space-canvas {
+            width: 100%;
+            height: auto;
+          }
+
+          .space-canvas-border-div {
+            position: absolute;
+            height: 100%;
+            aspect-ratio: 1;
+            border: 0.5em solid hsl(42, 94%, 51%);
+            background-image: url("assets/images/footer-form-bg.png");
+            border-radius: 20% 10% 20% 10%;
+            animation: rotate360 linear 10s infinite;
+            z-index: -1;
+          }
+
+          .space-canvas-border-blob {
+            position: fixed;
+            height: 60%;
+            width: 60%;
+            top: 0;
+            left: 80%;
+          }
+
+          .space-canvas-border-blob2 {
+            position: fixed;
+            height: 60%;
+            width: 60%;
+            bottom: -20%;
+            right: 80%;
+          }
+
+          .space-canvas-shadow {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 2em;
+            left: 1em;
+            z-index: -1;
+            filter: grayscale(100%) brightness(50%) contrast(200%);
+          }
+
+          .space-description-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100%;
+            box-sizing: content-box;
+            border: 3px double #f7b10e;
+          }
+
+          .space-description-heading {
+            font-size: 3.5rem;
+            line-height: 1.25em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+            font-weight: 900;
+            color: hsl(38, 61%, 55%);
+            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+              6px 0px 0px hsl(38, 61%, 25%);
+            background-image: linear-gradient(
+              to bottom,
+              rgb(54, 54, 54),
+              rgba(54, 54, 54, 0.8),
+              transparent
+            );
+            background-size: cover;
+          }
+
           .space-description-overlay {
             display: flex;
             justify-content: center;
             align-items: center;
-            max-width: 50%;
+            height: 100%;
             background-image: linear-gradient(
-              to left,
-              rgba(228, 197, 144, 1),
-              rgba(228, 197, 144, 0.8),
-              rgba(228, 197, 144, 0.6),
-              rgba(228, 197, 144, 0.4),
-              rgba(228, 197, 144, 0.2),
-              transparent
-            );
-            font-weight: 500;
+                to top,
+                rgb(54, 54, 54),
+                rgba(54, 54, 54, 0.8),
+                rgba(54, 54, 54, 0.6),
+                rgba(54, 54, 54, 0.4),
+                rgba(54, 54, 54, 0.2),
+                transparent
+              ),
+              url("assets/images/footer-form-bg.png");
+          }
+
+          .space-description-div {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
           }
 
           .space-description {
-            padding: 16px;
+            line-height: normal;
+            padding-bottom: 2em;
           }
 
           #space-1 {
+            background-image: url("assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif");
+          }
+
+          #space-2 {
+            background-image: url("assets/images/uneebo-office-design-6182SnH84II-unsplash.jpg");
+          }
+
+          #space-3 {
             background-image: url("assets/images/uneebo-office-design-UgYT5nkXdK4-unsplash.avif");
+          }
+
+          #space-4 {
+            background-image: url("assets/images/sunshine-loc.webp");
           }
         </style>
 
         <!-- PHILOSOPHY SECTION -->
         <section class="section text-center philosophy-section">
-          <h1 class="philosophy-heading">Deciding Factors In a Space</h1>
           <div class="philosophy-container">
             <div class="curve-top">
               <svg
@@ -383,12 +617,20 @@
             <div class="card-container">
               <div class="card">
                 <img
-                  src="assets/images/divider.png"
+                  src="assets/images/divider.jpg"
                   alt=""
                   class="card-heading-img"
                 />
-                <h3 class="card-heading">Functionality and Flow</h3>
-                <p class="card-content">
+                <h1 class="philosophy-heading">Deciding Factors In a Space</h1>
+              </div>
+              <div class="card">
+                <img
+                  src="assets/images/divider.jpg"
+                  alt=""
+                  class="card-heading-img"
+                />
+                <h3 class="card-heading container">Functionality and Flow</h3>
+                <p class="card-content container">
                   Any space should promote effective workflows, allowing easy
                   transitions between various types of work, like collaboration,
                   focused work, and relaxation. The physical layout impacts
@@ -398,12 +640,12 @@
               </div>
               <div class="card">
                 <img
-                  src="assets/images/divider.png"
+                  src="assets/images/divider.jpg"
                   alt=""
                   class="card-heading-img"
                 />
-                <h3 class="card-heading">Sustainability</h3>
-                <p class="card-content">
+                <h3 class="card-heading container">Sustainability</h3>
+                <p class="card-content container">
                   Environmentally conscious design choices reflect a commitment
                   to sustainability. Using energy-efficient lighting, recyclable
                   materials, and indoor plants can reduce an office's ecological
@@ -413,14 +655,14 @@
               </div>
               <div class="card">
                 <img
-                  src="assets/images/divider.png"
+                  src="assets/images/divider.jpg"
                   alt=""
                   class="card-heading-img"
                 />
-                <h3 class="card-heading">
+                <h3 class="card-heading container">
                   Balance between technology and Humanity
                 </h3>
-                <p class="card-content">
+                <p class="card-content container">
                   Integration between technology seamlessly into the workspace
                   to enhance productivity but shouldn’t overlook the human
                   experience. Thoughtful integration ensures tech enhances
@@ -446,12 +688,44 @@
         </section>
 
         <style>
+          .card-container {
+            display: grid;
+          }
+          .card-container {
+            grid-template-columns: 1fr;
+          }
+          @media (min-width: 600px) {
+            .card-container {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+          @media (min-width: 900px) {
+            .card-container {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+          @media (min-width: 1200px) {
+            .card-container {
+              grid-template-columns: repeat(4, 1fr);
+            }
+          }
           .philosophy-section {
             background-color: #2e3033;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .philosophy-container {
+            width: 95vw;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           .philosophy-heading {
-            margin-top: 100px;
             font-size: 3em;
             font-weight: bold;
             color: hsl(38, 61%, 55%);
@@ -459,8 +733,10 @@
               4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
               5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
               6px 0px 0px hsl(38, 61%, 25%);
-            transition: transform 0.2s ease-in-out;
-            transform: scale(1.05) translateX(2px);
+            line-height: 1.25em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           .curve-top {
             position: absolute;
@@ -482,23 +758,14 @@
           .curve-top .shape-fill {
             fill: #161718;
           }
-          .card-container {
-            display: flex;
-            margin-top: 200px;
-            margin-bottom: 200px;
-            position: relative;
-            justify-content: space-between;
-          }
+
           .card {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             background-color: transparent;
-            padding-top: 16px;
-            padding-bottom: 16px;
-            margin: 16px;
-            border-bottom: 0.25px solid white;
+            height: 50vh;
           }
 
           .card-heading {
@@ -515,6 +782,7 @@
             overflow: hidden;
             line-height: 0;
             transform: rotate(180deg);
+            z-index: -1;
           }
 
           .curve-bottom svg {
@@ -526,7 +794,119 @@
           }
 
           .curve-bottom .shape-fill {
-            fill: #161718;
+            fill: #212121;
+          }
+        </style>
+        <!-- MARKETING SECTION -->
+        <section class="section text-center marketing-section">
+          <div class="marketing-container container">
+            <div class="marketing-div">
+              <h1 class="marketing-heading">
+                Try Our Budget Calculator, For Your Next Space
+              </h1>
+              <img
+                src="/assets/images/separator.svg"
+                alt=""
+                class="seperator"
+              />
+              <a href="indexLayout.html" class="btn btn-secondary calculator-btn">
+                <span class="text text-1">Make Your Space</span>
+
+                <span class="text text-2" aria-hidden="true"
+                  >Make Your Space</span
+                >
+              </a>
+            </div>
+            <a href="indexLayout.html" class="calculator-img-link">
+              <figure>
+                <img
+                  src="/assets/images/calculator.png"
+                  alt=""
+                  loading="lazy"
+                  class="calculator-img"
+                />
+              </figure>
+            </a>
+          </div>
+        </section>
+        <style>
+          .marketing-section {
+            background-image: linear-gradient(
+                to right,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              ),
+              linear-gradient(
+                to bottom,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              );
+            background-size: 120px 120px;
+          }
+          .marketing-container {
+            display: grid;
+            padding-bottom: 10rem;
+          }
+          .marketing-container {
+            grid-template-columns: 1fr; min-height: max-content;
+          }
+          @media (min-width: 600px) {
+            .marketing-container {
+              grid-template-columns: repeat(1, 1fr);
+              width: 95vw;
+            }
+          }
+
+          @media (min-width: 900px) {
+            .marketing-container {
+              grid-template-columns: repeat(1, 1fr);
+              width: 95vw;
+            }
+          }
+          @media (min-width: 1200px) {
+            .marketing-container {
+              grid-template-columns: repeat(2, 1fr);
+              padding-bottom: 0;
+              width: 88vw;
+            }
+          }
+
+          .marketing-section {
+            background-color: #212121;
+          }
+          .calculator-img {
+            width: 100%;
+            height: auto;
+            border: 5px solid hsl(42, 94%, 51%);
+          }
+
+          .marketing-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            margin: 1em;
+          }
+
+          .marketing-heading {
+            font-size: 3.5rem;
+            color: hsl(38, 61%, 55%);
+            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+              6px 0px 0px hsl(38, 61%, 25%);
+            line-height: 1.25em;
+          }
+
+          .seperator {
+            width: 40%;
+            height: auto;
+          }
+
+          .calculator-btn {
+            position: relative !important;
+            margin-bottom: 5em;
           }
         </style>
       </article>
