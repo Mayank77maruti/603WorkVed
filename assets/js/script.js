@@ -168,3 +168,40 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+
+  const fadeInElements = document.querySelectorAll('.fade-in');
+  const slideInElements = document.querySelectorAll('.slide-in');
+  const scaleUpElements = document.querySelectorAll('.scale-up');
+
+  const handleScroll = () => {
+      fadeInElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+              el.classList.add('visible');
+          } else {
+              el.classList.remove('visible');
+          }
+      });
+
+      slideInElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+              el.classList.add('visible');
+          } else {
+              el.classList.remove('visible');
+          }
+      });
+
+      scaleUpElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+              el.classList.add('visible');
+          } else {
+              el.classList.remove('visible');
+          }
+      });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
