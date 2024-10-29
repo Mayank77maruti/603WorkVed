@@ -430,8 +430,125 @@
         }
 
         .content {
-          font-weight: 500; line-height: 1em;
+          font-weight: 500;
+          line-height: 1em;
           padding: 1em;
+        }
+      </style>
+      <!-- Core Values Section -->
+      <section class="section text-center"></section>
+      <!-- Contact Us Section -->
+      <section class="section text-center contact-section">
+        <div class="grid container">
+          <div class="contact-div">
+            <img src="assets/images/divider.jpg" alt="" />
+            <h1 class="contact-heading">Contact - Us</h1>
+            <img src="assets/images/divider.jpg" alt="" class="invert-img" />
+          </div>
+          <div class="contact-div">
+            <div class="contact-label">Book Through Call</div>
+
+            <a
+              href="tel:+804001234567"
+              class="body-1 contact-number hover-underline"
+            >
+              +91 9136036603</a
+            >
+
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">Read More</span>
+
+              <span class="text text-2" aria-hidden="true">Read More</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <style>
+        .contact-section {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #2e3033;
+          background-image: none;
+        }
+
+        .contact-section .grid {
+          gap: 0;
+        }
+
+        .contact-div {
+          border: none;
+          padding-bottom: 16px;
+        }
+
+        @media (min-width: 900px) {
+          .contact-section {
+            background-image: none;
+          }
+          .contact-section .grid {
+            gap: 0;
+          }
+
+          .contact-div {
+            border: none;
+            padding-bottom: 16px;
+          }
+        }
+        @media (min-width: 1200px) {
+          .contact-section {
+            background-image: linear-gradient(
+                to right,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              ),
+              linear-gradient(
+                to bottom,
+                rgba(247, 177, 14, 0.1) 1px,
+                transparent 1px
+              );
+            background-size: 120px 120px;
+          }
+          .contact-section .grid {
+            gap: 1em;
+          }
+
+          .contact-div {
+            border: 1px solid hsl(42, 94%, 51%);
+          }
+        }
+
+        .contact-div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+
+          background-color: #2e3033;
+        }
+
+        .contact-div * {
+          margin-top: 16px;
+        }
+
+        .contact-div span {
+          margin: 0 !important;
+        }
+
+        .contact-heading {
+          font-size: 5rem;
+          color: #d29f46;
+          text-shadow: -1px 0px 0px hsl(38, 61%, 50%),
+            -4px 0px 0px hsl(38, 61%, 45%), -3px 0px 0px hsl(38, 61%, 40%),
+            -5px 0px 0px hsl(38, 61%, 35%), -5px 0px 0px hsl(38, 61%, 30%),
+            -6px 0px 0px hsl(38, 61%, 25%);
+          line-height: 1em;
+        }
+
+        .invert-img {
+          transform: rotate(180deg);
         }
       </style>
     </main>
@@ -491,6 +608,7 @@
 
                 <input
                   type="email"
+                  relative
                   name="email_address"
                   placeholder="Your email"
                   autocomplete="off"
