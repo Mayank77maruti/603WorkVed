@@ -2650,3 +2650,15 @@ section{
   opacity: 1;
   transform: scale(1);
 }
+
+#chatbot-icon{
+ position: absolute;
+ bottom: 50px;
+ left: 50px;
+  /* color: #f7410e; */
+}
+
+#chatbot-icon img{
+  height: 100px;
+  width: 118px;
+}
