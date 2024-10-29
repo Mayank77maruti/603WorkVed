@@ -435,8 +435,211 @@
           padding: 1em;
         }
       </style>
-      <!-- Core Values Section -->
-      <section class="section text-center"></section>
+      <!-- Team Section -->
+      <section class="section text-center team-section">
+        <div class="team-curve-top">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="team-container">
+          <div class="team-section-heading-div container">
+            <div class="separator"></div>
+            <h1 class="team-section-heading">Our Team</h1>
+            <div class="separator"></div>
+          </div>
+          <div class="team-div">
+            <div class="container team">
+              <h3>Team Leader</h3>
+              <img
+                src="/assets/images/testi-avatar.jpg"
+                alt=""
+                class="team-img"
+              />
+              <p class="container team-description">
+                <b>XYZ</b>Known for their wealth of experience in interior design and
+                project management, guiding the team with a blend of strategic
+                insight and creative enthusiasm and their ability to
+                inspire collaboration and maintain the highest standards, They
+                ensure every project is both beautifully crafted and efficiently
+                executed.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="container team">
+              <h3>The Chief Marketing Officer</h3>
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+                alt=""
+                class="team-img"
+              />
+              <p class="container team-description">
+                <b>XYZ</b>The creative strategist behind our brand's
+                presence, bringing a deep understanding of market trends and a
+                passion for storytelling. With a talent for building meaningful
+                connections and a keen sense for design-driven marketing, they
+                ensure our work reaches and resonates with the right audience.
+                Their innovative campaigns and strategic vision help our studio
+                stand out, creating lasting impressions and driving growth in a
+                competitive landscape.
+              </p>
+            </div>
+            <div class="container team">
+              <h3>The Creative Director</h3>
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+                class="team-img"
+              />
+              <p class="container team-description">
+                With a keen eye for aesthetics and a passion for innovative
+                design, <b>XYZ</b> is the creative force behind our studio’s
+                distinctive style. They expertly balance form and function,
+                working closely with clients to bring personalized, stunning
+                spaces to life. Their attention to detail and artistic intuition
+                make each project unique and memorable.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="team-curve-bottom">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </section>
+      <style>
+        .team-curve-top {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+        }
+
+        .team-curve-top svg {
+          position: relative;
+          display: block;
+          width: calc(100% + 1.3px);
+          height: 100px;
+        }
+
+        .team-curve-top .shape-fill {
+          fill: #161718;
+        }
+
+        .team-section {
+          background-color: #212121;
+        }
+
+        .team-section-heading-div {
+          margin-bottom: 16px;
+        }
+        .team-section-heading {
+          font-size: 5.5rem;
+          line-height: 1em;
+          padding: 16px 0 16px 0;
+          color: hsl(38, 61%, 50%);
+          border-top: 1px solid hsl(42, 94%, 51%);
+          border-bottom: 1px solid hsl(42, 94%, 51%);
+          margin: 16px 0 16px 0;
+        }
+        .team-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .team-container .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .team {
+          background-image: url("assets/images/team.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 100%;
+        }
+
+        .team-container .container h3 {
+          margin-bottom: 16px;
+          font-size: 2.5rem;
+          color: hsl(38, 61%, 45%);
+        }
+
+        .team-div {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .team-img {
+          max-width: 100px;
+          height: auto;
+          border: 1px double hsl(42, 94%, 51%);
+          background-image: url("assets/images/blob.svg");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-position: center;
+        }
+
+        .team-description {
+          line-height: 1.05em;
+          margin: 1.5em;
+          padding: 1em !important;
+          text-align: justify !important;
+        }
+
+        .team-description b {
+          font-size: 1.2em;
+          line-height: 2em;
+          color: #d29f46;
+        }
+
+        .team-curve-bottom {
+          position: absolute;
+          z-index: -1;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+          transform: rotate(180deg);
+        }
+
+        .team-curve-bottom svg {
+          position: relative;
+          display: block;
+          width: calc(100% + 1.3px);
+          height: 100px;
+        }
+
+        .team-curve-bottom .shape-fill {
+          fill: #2e3033;
+        }
+      </style>
       <!-- Contact Us Section -->
       <section class="section text-center contact-section">
         <div class="grid container">
