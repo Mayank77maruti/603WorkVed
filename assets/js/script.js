@@ -36,14 +36,41 @@ const addEventOnElements = function (elements, eventType, callback) {
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
+const navLinks = document.querySelectorAll(".navbar-link");
 
+// Toggle Navbar
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
-}
+};
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+
+// Update active class on links
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    // Remove active class from all links
+    navLinks.forEach((item) => item.classList.remove("active"));
+    // Add active class to the clicked link
+    this.classList.add("active");
+  });
+});
+
+// Persist the active class based on the current page URL
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.href;
+
+  navLinks.forEach((link) => {
+    if (link.href === currentPath) {
+      // Remove active class from all links first
+      navLinks.forEach((item) => item.classList.remove("active"));
+      // Add active class to the matched link
+      link.classList.add("active");
+    }
+  });
+});
+
 
 
 
