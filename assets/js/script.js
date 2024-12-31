@@ -45,6 +45,33 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+// Fixes Navlink
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navbar-link");
+  const currentPage = window.location.pathname.split("/").pop(); 
+  const currentHash = window.location.hash; 
+
+
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href"); 
+    const linkHrefPath = linkPath.split("#")[0].split("/").pop(); 
+    const linkHash = linkPath.split("#")[1] || ""; 
+
+  
+    if (currentPage === linkHrefPath) {
+      if (currentHash === `#${linkHash}` || (currentHash === "" && linkHash === "")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+
+
+
 
 
 /**
@@ -170,38 +197,38 @@ window.addEventListener("mousemove", function (event) {
 });
 
 
-  const fadeInElements = document.querySelectorAll('.fade-in');
-  const slideInElements = document.querySelectorAll('.slide-in');
-  const scaleUpElements = document.querySelectorAll('.scale-up');
+const fadeInElements = document.querySelectorAll('.fade-in');
+const slideInElements = document.querySelectorAll('.slide-in');
+const scaleUpElements = document.querySelectorAll('.scale-up');
 
-  const handleScroll = () => {
-      fadeInElements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-              el.classList.add('visible');
-          } else {
-              el.classList.remove('visible');
-          }
-      });
+const handleScroll = () => {
+  fadeInElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
 
-      slideInElements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-              el.classList.add('visible');
-          } else {
-              el.classList.remove('visible');
-          }
-      });
+  slideInElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
 
-      scaleUpElements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-              el.classList.add('visible');
-          } else {
-              el.classList.remove('visible');
-          }
-      });
-  };
+  scaleUpElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+};
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll();
+window.addEventListener('scroll', handleScroll);
+handleScroll();
