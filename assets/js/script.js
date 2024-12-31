@@ -45,19 +45,22 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-// Fixes Navlink
+// Fixes Nav link 
+
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".navbar-link");
-  const currentPage = window.location.pathname.split("/").pop(); 
-  const currentHash = window.location.hash; 
+  const currentPage = window.location.pathname.split("/").pop();
+  let currentHash = window.location.hash;
 
+  if (currentPage === "index.html" && currentHash === "") {
+    currentHash = "#home";
+  }
 
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href"); 
-    const linkHrefPath = linkPath.split("#")[0].split("/").pop(); 
-    const linkHash = linkPath.split("#")[1] || ""; 
+    const linkPath = link.getAttribute("href");
+    const linkHrefPath = linkPath.split("#")[0].split("/").pop();
+    const linkHash = linkPath.split("#")[1] || "";
 
-  
     if (currentPage === linkHrefPath) {
       if (currentHash === `#${linkHash}` || (currentHash === "" && linkHash === "")) {
         link.classList.add("active");
@@ -69,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-
 
 
 
