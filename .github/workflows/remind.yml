@@ -1,0 +1,50 @@
+name: Issue Ping Reminder
+
+on:
+  schedule:
+    # Run the workflow every day at midnight UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  ping-assigned-person:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Open Issues
+        id: get-issues
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+
+            // Filter for issues with assignees
+            const issuesWithAssignees = issues.filter(issue => issue.assignees.length > 0);
+
+            core.setOutput('issues', JSON.stringify(issuesWithAssignees));
+
+      - name: Ping Assigned Person
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issues = JSON.parse(core.getInput('issues', { required: true }));
+
+            const threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
+
+            for (const issue of issues) {
+              const timeSinceCreation = new Date() - new Date(issue.created_at);
+              
+              // Check if the issue was created 3, 6, 9, etc., days ago
+              if (timeSinceCreation % threeDaysInMs < 24 * 60 * 60 * 1000) {
+                const assignee = issue.assignees[0].login;
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: `Hi @${assignee}, How is it going? Do you need any help?`,
+                });
+              }
+            }
