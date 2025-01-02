@@ -1,0 +1,46 @@
+name: Auto-Merge on LGTM Comment
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: write  # Required to merge the PR
+  pull-requests: write  # Required to update PRs
+
+jobs:
+  auto_merge:
+    name: Auto-Merge on LGTM
+    if: ${{ startsWith(github.event.comment.body, 'lgtm') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if Comment is on a PR
+        id: check-pr
+        run: |
+          if [[ "${{ github.event.issue.pull_request.url }}" == "" ]]; then
+            echo "Not a pull request comment. Exiting."
+            exit 1
+          fi
+
+      - name: Merge Pull Request
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { context } = require("@actions/github");
+            const prNumber = context.payload.issue.number;
+            const owner = context.payload.repository.owner.login;
+            const repo = context.payload.repository.name;
+
+            console.log(`Attempting to merge PR #${prNumber}`);
+
+            await github.pulls.merge({
+              owner: owner,
+              repo: repo,
+              pull_number: prNumber,
+              merge_method: "squash", // Change to "merge" or "rebase" if needed
+            });
+
+            console.log(`Successfully merged PR #${prNumber}`);
