@@ -323,8 +323,10 @@ body.nav-active {
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container {
-  padding-inline: 16px;
+#classic-elegance {
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .separator {
@@ -1675,6 +1677,16 @@ textarea.input-field {
   background-color: var(--black-alpha-80);
 }
 
+.footer-list-left{
+  padding: 15px;
+  margin-left: 2rem;
+}
+
+.footer-list-right{
+  margin-right: 2rem;
+  padding: 20px 10px;
+}
+
 .footer-link {
   color: #fff;
   font-weight: var(--weight-bold);
@@ -1688,6 +1700,10 @@ textarea.input-field {
   color: var(--gold-crayola);
 }
 
+.footer-bottom{
+  margin-bottom: -10rem;
+}
+
 .copyright {
   color: var(--quick-silver);
   background-color: var(--black-alpha-80);
@@ -1696,6 +1712,7 @@ textarea.input-field {
   height: 50px;
   padding-top: 10px;
   line-height: var(--lineHeight-3);
+  margin: 0;
 }
 
 .copyright .link {
@@ -2525,14 +2542,6 @@ section{
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
-
 
 /**
  * responsive for larger than 1400px screen
