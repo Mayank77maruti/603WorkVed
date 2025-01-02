@@ -1,0 +1,40 @@
+name: Request Screenshot or Video
+
+on:
+  pull_request:
+    types:
+      - opened
+
+permissions:
+  pull-requests: write 
+
+jobs:
+  comment_on_pr:
+    name: Request Screenshot/Video
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Comment on the PR
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { context } = require("@actions/github");
+            const prNumber = context.payload.pull_request.number;
+            const owner = context.payload.repository.owner.login;
+            const repo = context.payload.repository.name;
+
+            const message = `
+            👋 Hello @${context.payload.pull_request.user.login}, thank you for opening this pull request! 
+
+            To help with the review process, could you please attach a **screenshot** or a **video** demonstrating the changes you've made? This will make it easier for reviewers to understand the impact of your contribution. 
+
+            Thank you for your efforts! 🚀
+            `;
+
+            await github.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
+              body: message
+            });
