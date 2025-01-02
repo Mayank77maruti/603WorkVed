@@ -1,0 +1,59 @@
+name: Issue Management
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  manage_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if the user has raised issues before
+        id: check_user
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              creator: context.payload.issue.user.login,
+              state: 'all',
+            });
+
+            const isFirstIssue = issues.length === 1; 
+            core.setOutput('is_first_issue', isFirstIssue);
+
+      - name: Assign the issue to the creator
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              assignees: [context.payload.issue.user.login],
+            });
+
+      - name: Add the SWOC label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['SWOC'],
+            });
+
+      - name: Send a welcome message if it's the user's first issue
+        if: steps.check_user.outputs.is_first_issue == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `Welcome to 603 WorkVed, very happy to have you on board and thank you for contributing!`,
+            });
