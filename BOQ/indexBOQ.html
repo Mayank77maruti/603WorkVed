@@ -1613,7 +1613,16 @@ Room type
       <div class="modal-header bud-close">
         <button type="button" class="close mod_close" data-dismiss="modal" onclick="modal_close('myModal');">×</button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="form-container">
+       <form action="" id="formEmail" onsubmit="return false">
+        <div class="form-group">
+          <label>
+            Email:
+          </label>
+          <input type="email" class="form-control" placeholder="Enter Email">
+        </div>
+        <button class="btn btn-primary" onclick="submitEmail()">Send To Email</button>
+       </form>
       </div>
       
     </div>
@@ -1778,6 +1787,10 @@ Room type
 			</div>
 					</footer>
 		<!-- End Footer Section -->
+
+
+    <!-- Adding Send Email Functionality -->
+     <script src="js/submitQuery.js"></script>
 
 		
 		<script type="text/javascript" src="js/jquery.min.js"></script>
