@@ -1,59 +1,112 @@
-name: Issue Management
+name: Issue & PR Management
 
 on:
   issues:
     types:
       - opened
+  pull_request:
+    types:
+      - opened
 
 jobs:
-  manage_issue:
+  manage_event:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if the user has raised issues before
+      - name: Check if the user has raised issues or PRs before
         id: check_user
         uses: actions/github-script@v6
         with:
           script: |
-            const { data: issues } = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              creator: context.payload.issue.user.login,
-              state: 'all',
-            });
+            let issues;
+            let isFirstEvent = false;
 
-            const isFirstIssue = issues.length === 1; // Only this issue exists
-            core.setOutput('is_first_issue', isFirstIssue);
+            if (context.payload.issue) {
+              // Check if it's an issue event
+              issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                creator: context.payload.issue.user.login,
+                state: 'all',
+              });
+              isFirstEvent = issues.length === 1;
+            } else if (context.payload.pull_request) {
+              // Check if it's a PR event
+              const prs = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'all',
+              });
+              const userPRs = prs.filter(pr => pr.user.login === context.payload.pull_request.user.login);
+              isFirstEvent = userPRs.length === 1;
+            }
 
-      - name: Assign the issue to the creator
+            core.setOutput('is_first_event', isFirstEvent);
+
+      - name: Assign the issue/PR to the creator
         uses: actions/github-script@v6
         with:
           script: |
-            await github.rest.issues.addAssignees({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.issue.number,
-              assignees: [context.payload.issue.user.login],
-            });
+            if (context.payload.issue) {
+              // Assign issue to the creator
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                assignees: [context.payload.issue.user.login],
+              });
+            } else if (context.payload.pull_request) {
+              // Assign PR to the creator
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                reviewers: [context.payload.pull_request.user.login],
+              });
+            }
 
       - name: Add the SWOC label
         uses: actions/github-script@v6
         with:
           script: |
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.issue.number,
-              labels: ['SWOC'],
-            });
+            if (context.payload.issue) {
+              // Add label to the issue
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                labels: ['SWOC'],
+              });
+            } else if (context.payload.pull_request) {
+              // Add label to the PR (you can add specific labels for PR if desired)
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                labels: ['SWOC'],
+              });
+            }
 
-      - name: Send a welcome message if it's the user's first issue
-        if: steps.check_user.outputs.is_first_issue == 'true'
+      - name: Send a welcome message if it's the user's first issue/PR
+        if: steps.check_user.outputs.is_first_event == 'true'
         uses: actions/github-script@v6
         with:
           script: |
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.issue.number,
-              body: `Welcome to 603 WorkVed, very happy to have you on board and thank you for contributing!`,
-            });
+            const message = `Welcome to 603 WorkVed, very happy to have you on board and thank you for contributing! Make sure to register as a contributor at https://os-lead.vercel.app/`;
+
+            if (context.payload.issue) {
+              // Post comment for issues
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                body: message,
+              });
+            } else if (context.payload.pull_request) {
+              // Post comment for PRs
+              await github.rest.pulls.createReviewComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                body: message,
+              });
+            }
