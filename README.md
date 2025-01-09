@@ -106,4 +106,18 @@ A huge thank you to everyone who has contributed to this project! Your support a
    <img src = "https://contrib.rocks/image?repo=Mayank77maruti/603WorkVed"/>
  </a>
 
+## Repo Stared By:
+
+<div align='center'>
+
+[![Stargazers repo roster for @Mayank77maruti/603WorkVed](https://reporoster.com/stars/Mayank77maruti/603WorkVed)](https://github.com/Mayank77maruti/603WorkVed/stargazers)
+
+</div>
+
+## Repo Forked By:
+
+<div align='center'>
+
+[![Forkers repo roster for @Mayank77maruti/603WorkVed](https://reporoster.com/forks/Mayank77maruti/603WorkVed)](https://github.com/Mayank77maruti/603WorkVed/network/members)
+
 
