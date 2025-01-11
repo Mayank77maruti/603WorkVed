@@ -34,7 +34,7 @@
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --black: hsla(0, 0%, 0%, 1);
-  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.85);
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**
@@ -1694,8 +1694,17 @@ textarea.input-field {
   letter-spacing: var(--letterSpacing-4);
   margin-inline: auto;
   transition: var(--transition-1);
+  display: flex;
+  align-items: center;
 }
-
+.footer-link ion-icon {
+  margin-right: 8px;
+  font-size: 16px
+}
+.footer-link i {
+  margin-right: 8px;
+  font-size: 14px
+}
 .footer-link:is(:hover, :focus-visible) {
   color: var(--gold-crayola);
 }

@@ -1670,8 +1670,19 @@
     letter-spacing: var(--letterSpacing-4);
     margin-inline: auto;
     transition: var(--transition-1);
+    display: flex;
+    align-items: center;
   }
-  
+  .footer-link ion-icon {
+    margin-right: 8px;
+    font-size: 16px
+  }
+
+  .footer-link i {
+    margin-right: 8px;
+    font-size: 14px
+  }
+
   .footer-link:is(:hover, :focus-visible) {
     color: var(--gold-crayola);
   }
