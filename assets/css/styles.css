@@ -735,7 +735,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-  padding-bottom: 10rem;
+    padding-bottom: 0.5rem;
   }
   
   .nav-open-btn {
