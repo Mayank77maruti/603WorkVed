@@ -327,6 +327,7 @@ body.nav-active {
   color: white;
   font-weight: bolder;
   font-size: 2rem;
+  text-shadow: 2px 2px 4px #8a770b;
 }
 
 .separator {
