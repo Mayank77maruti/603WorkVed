@@ -1415,7 +1415,118 @@ body.nav-active {
   letter-spacing: var(--letterSpacing-3);
 }
 
+/*-----------------------------------*\
+  #FAQ SECTION
+\*-----------------------------------*/
 
+.faqs {
+  text-align: center;
+  background: linear-gradient(45deg, #333, #000);
+  border-radius: 10px;
+  font-family:'Forum', cursive;
+  color: #d6d3ce; 
+  border-bottom: 1px solid #555;
+}
+
+.faqs h1 {
+  color: #c49d5b;
+  padding-top: 4%;
+  font-size: 3.1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.faqs p {
+  font-size: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.faq {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333; 
+}
+
+.faq:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #bda372; 
+}
+
+.faq-question:hover {
+  background-color: #cf9742ef;
+  color: #faf7f3; 
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
+  background-color: #1b1b1b; 
+  border-radius: 5px;
+}
+
+.contact-link-container p {
+  display: inline-flex;
+  font-size: 2rem;
+  color: #f5f5f5;
+}
+.contact-link-container{
+padding-bottom: 2%;
+}
+.contact-link {
+  text-decoration: none;
+  color: #e9cd78;
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: font-size 0.3s ease, color 0.3s ease;
+   margin: 2px 0px 0px 5px;
+}
+
+.contact-link:hover {
+  color: #ffcc00;
+  font-size: 1.8rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2.5rem;
+  }
+
+  .faq-question {
+      font-size: 1.2rem;
+  }
+
+  .faq-answer {
+      font-size: 0.9rem;
+  }
+}
 
 
 
