@@ -5,7 +5,7 @@
 </div>
 
 ## Project Description📝
-Our platform offers a seamless way for individuals and businesses to book exquisite spaces tailored to their unique needs and aesthetic preferences. Users can easily explore a variety of environments, from modern office interiors that enhance productivity to inviting creative studios that inspire innovation. Each space is curated to blend style and functionality, making the booking process convenient and enjoyable, so clients can focus on bringing their ideas to life in inspiring settings.
+Our platform offers a seamless way for individuals and businesses to book exquisite spaces tailored to their unique needs and aesthetic preferences. Users can easily explore a variety of environments, from modern office interiors that enhance productivity to inviting creative studios that inspire innovation. Each space is curated to blend style and functionality, making the booking process convenient and enjoyable, so clients can focus on bringing their ideas to life in inspiring settings. 
 
 ## Prerequisites ✅
 > Before you begin, ensure you have met the following requirements:
