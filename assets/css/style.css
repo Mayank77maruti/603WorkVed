@@ -2185,6 +2185,9 @@ textarea.input-field {
   .hero .slider-btn.next {
     right: 30px;
   }
+  .hero button ion-icon{
+     rotate: 35deg;
+  }
 
   .hero .slider-btn:is(:hover, :focus-visible) {
     background-color: var(--gold-crayola);
