@@ -246,7 +246,6 @@
     </header>
 
     <main>
-      <article>
         <!-- GET IN TOUCH SECTION -->
         <section class="hero text-center space-section">
           <div class="contact-container">
@@ -471,10 +470,254 @@
   text-decoration: underline;
 }
 
+  .space-section {
+    background-image: linear-gradient(
+        to right,
+        rgba(247, 177, 14, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(247, 177, 14, 0.1) 1px,
+        transparent 1px
+      );
+    background-size: 120px 120px;
+  }
+  .space-container {
+    display: grid;
+    padding-bottom: 15rem;
+  }
+  .space-container {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 600px) {
+    .space-container {
+      grid-template-columns: repeat(1, 1fr);
+      width: 95vw;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .space-container {
+      grid-template-columns: repeat(1, 1fr);
+      width: 95vw;
+    }
+  }
+  @media (min-width: 1200px) {
+    .space-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 0;
+      width: 88vw;
+    }
+  }
+
+  .space-canvas-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+  }
+
+  .space-canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .space-canvas-border-div {
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    border: 0.5em solid hsl(42, 94%, 51%);
+    background-image: url("assets/images/footer-form-bg.png");
+    border-radius: 20% 10% 20% 10%;
+    animation: rotate360 linear 10s infinite;
+    z-index: -1;
+  }
 
 
+  .space-canvas-shadow {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 2em;
+    left: 1em;
+    z-index: -1;
+    filter: grayscale(100%) brightness(50%) contrast(200%);
+  }
+
+  .space-description-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100%;
+    box-sizing: content-box;
+    border: 3px double #f7b10e;
+  }
+
+  .space-description-heading {
+    font-size: 3.5rem;
+    line-height: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    font-weight: 900;
+    color: hsl(38, 61%, 55%);
+    text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+      4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+      5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+      6px 0px 0px hsl(38, 61%, 25%);
+    background-image: linear-gradient(
+      to bottom,
+      rgb(54, 54, 54),
+      rgba(54, 54, 54, 0.8),
+      transparent
+    );
+    background-size: cover;
+  }
+
+  .space-description-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        rgb(54, 54, 54),
+        rgba(54, 54, 54, 0.8),
+        rgba(54, 54, 54, 0.6),
+        rgba(54, 54, 54, 0.4),
+        rgba(54, 54, 54, 0.2),
+        transparent
+      ),
+      url("assets/images/footer-form-bg.png");
+  }
+
+  .space-description-div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .space-description {
+    line-height: normal;
+    padding-bottom: 2em;
+  }
+  .card-container {
+    display: grid;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 600px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .card-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    .card-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .philosophy-section {
+    background-color: #2e3033;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .philosophy-container {
+    width: 95vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .philosophy-heading {
+    font-size: 3em;
+    font-weight: bold;
+    color: hsl(38, 61%, 55%);
+    text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+      4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+      5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+      6px 0px 0px hsl(38, 61%, 25%);
+    line-height: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .curve-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .curve-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+  }
+
+  .curve-top .shape-fill {
+    fill: #161718;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 50vh;
+  }
+
+  .card-heading {
+    color: hsl(38, 61%, 55%);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .curve-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  .curve-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+  }
+
+  .curve-bottom .shape-fill {
+    fill: #212121;
+  }
 
 
+#top{
+  height: auto;
+}
 
         </style>
         <footer class="footer section has-bg-image text-center fade-in"
@@ -601,257 +844,6 @@
         </div>
       </footer>
     
-
-        <style>
-          .space-section {
-            background-image: linear-gradient(
-                to right,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              ),
-              linear-gradient(
-                to bottom,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              );
-            background-size: 120px 120px;
-          }
-          .space-container {
-            display: grid;
-            padding-bottom: 15rem;
-          }
-          .space-container {
-            grid-template-columns: 1fr;
-          }
-          @media (min-width: 600px) {
-            .space-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
-          }
-
-          @media (min-width: 900px) {
-            .space-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
-          }
-          @media (min-width: 1200px) {
-            .space-container {
-              grid-template-columns: repeat(2, 1fr);
-              padding-bottom: 0;
-              width: 88vw;
-            }
-          }
-
-          .space-canvas-div {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 4em;
-          }
-
-          .space-canvas {
-            width: 100%;
-            height: auto;
-          }
-
-          .space-canvas-border-div {
-            position: absolute;
-            height: 100%;
-            aspect-ratio: 1;
-            border: 0.5em solid hsl(42, 94%, 51%);
-            background-image: url("assets/images/footer-form-bg.png");
-            border-radius: 20% 10% 20% 10%;
-            animation: rotate360 linear 10s infinite;
-            z-index: -1;
-          }
-
-
-          .space-canvas-shadow {
-            position: absolute;
-            width: 100%;
-            height: auto;
-            top: 2em;
-            left: 1em;
-            z-index: -1;
-            filter: grayscale(100%) brightness(50%) contrast(200%);
-          }
-
-          .space-description-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            min-height: 100%;
-            box-sizing: content-box;
-            border: 3px double #f7b10e;
-          }
-
-          .space-description-heading {
-            font-size: 3.5rem;
-            line-height: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2em;
-            font-weight: 900;
-            color: hsl(38, 61%, 55%);
-            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-              6px 0px 0px hsl(38, 61%, 25%);
-            background-image: linear-gradient(
-              to bottom,
-              rgb(54, 54, 54),
-              rgba(54, 54, 54, 0.8),
-              transparent
-            );
-            background-size: cover;
-          }
-
-          .space-description-overlay {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            background-image: linear-gradient(
-                to top,
-                rgb(54, 54, 54),
-                rgba(54, 54, 54, 0.8),
-                rgba(54, 54, 54, 0.6),
-                rgba(54, 54, 54, 0.4),
-                rgba(54, 54, 54, 0.2),
-                transparent
-              ),
-              url("assets/images/footer-form-bg.png");
-          }
-
-          .space-description-div {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-
-          .space-description {
-            line-height: normal;
-            padding-bottom: 2em;
-          }
-        </style>
-
-
-        <style>
-          .card-container {
-            display: grid;
-          }
-          .card-container {
-            grid-template-columns: 1fr;
-          }
-          @media (min-width: 600px) {
-            .card-container {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-
-          @media (min-width: 900px) {
-            .card-container {
-              grid-template-columns: repeat(3, 1fr);
-            }
-          }
-          @media (min-width: 1200px) {
-            .card-container {
-              grid-template-columns: repeat(4, 1fr);
-            }
-          }
-          .philosophy-section {
-            background-color: #2e3033;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .philosophy-container {
-            width: 95vw;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .philosophy-heading {
-            font-size: 3em;
-            font-weight: bold;
-            color: hsl(38, 61%, 55%);
-            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-              6px 0px 0px hsl(38, 61%, 25%);
-            line-height: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .curve-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-          }
-
-          .curve-top svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 200px;
-            transform: rotateY(180deg);
-          }
-
-          .curve-top .shape-fill {
-            fill: #161718;
-          }
-
-          .card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            height: 50vh;
-          }
-
-          .card-heading {
-            color: hsl(38, 61%, 55%);
-            font-size: 2.5rem;
-            font-weight: bold;
-          }
-
-          .curve-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-            z-index: -1;
-          }
-
-          .curve-bottom svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 200px;
-            transform: rotateY(180deg);
-          }
-
-          .curve-bottom .shape-fill {
-            fill: #212121;
-          }
-        </style>
-      </article>
     </main>
 
 

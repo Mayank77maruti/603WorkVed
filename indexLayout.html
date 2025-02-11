@@ -17,10 +17,14 @@
 
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
+      
       height: 100%;
       overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
     }
     h2 {
       text-align: center;
@@ -75,6 +79,16 @@
       border-radius: 5px;
     }
 
+    #nav{
+     background-color: gainsboro;
+    color: orangered;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2vh;
+    height: 10vh;
+    }
+
     /* Media queries for mobile responsiveness */
     @media only screen and (max-width: 1024px) {
       .image-container {
@@ -120,7 +134,7 @@
     }
   </style>
 </head>
-<h2>Select Your Layout</h2>
+<div id="nav"><h1>Select Your Layout</h1></div>
 <body>
   <div class="container">
     <div class="image-container" data-text="Combination">
