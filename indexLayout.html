@@ -89,6 +89,23 @@
     height: 10vh;
     }
 
+    .next-button-container{
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 5vh;
+    }
+
+    .next-button{
+
+      width:10vw;
+      height:5vh;
+      margin-bottom: 5vh;
+      background-color: orangered;
+      border-radius: 100px;
+    }
+
     /* Media queries for mobile responsiveness */
     @media only screen and (max-width: 1024px) {
       .image-container {
@@ -168,7 +185,8 @@
     </a>
     </div>
   </div>
-  <a class="button" href="./BOQ/indexBOQ.html">Next</a>
+
+  <div class="next-button-container"> <button class="next-button"><a href="./BOQ/indexBOQ.html" style="text-decoration: none;color: white;">Next</a></button></div> 
 
 </body>
 </html>
