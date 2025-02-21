@@ -385,6 +385,7 @@
     }
   }
   .btn {
+    margin-top: 15px;
     position: relative;
     color: #ffffff;
     font-size: var(--fontSize-label-2);
@@ -395,7 +396,8 @@
     border: 2px solid #f7b10e;
     padding: 12px 45px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 10; /* Ensures it's above other elements */
+    margin-left: 10px; 
   }
   
   .btn::before {
@@ -404,8 +406,8 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 200%;
-    height: 200%;
+    width: 120%;
+  height: 120%;
     border-radius: var(--radius-circle);
     background-color: var(--gold-crayola);
     transition: var(--transition-2);
@@ -441,6 +443,7 @@
   .btn-secondary {
     background-color: var(--gold-crayola);
     color: var(--black);
+    margin-top: 15px;
   }
   
   .btn-secondary::before {
