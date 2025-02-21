@@ -35,6 +35,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./styles.css">
 
   <!-- 
     - preload images
@@ -74,56 +75,54 @@
   <!-- 
     - #TOP BAR
   -->
-  <div class="scroll-watcher"> <!--Scroll Element Div-->
-    <!-- <p>Hello Everyone</p> -->
-  </div>
-  <div class="topbar">
-
-    <div class="container">
-
-      <address class="topbar-item">
-        <div class="icon">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span newSpan ">
-          Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-        </span>
-      </address>
-
-      <div class="separator"></div>
-
-      <div class="topbar-item item-2">
-        <div class="icon">
-          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span newSpan">Daily : 8.00 am to 10.00 pm</span>
+  <div class="scroll-watcher"> <!--Scroll Element Div--> </div>
+<div class="topbar">
+  <div class="container">
+    <address class="topbar-item">
+      <div class="icon">
+        <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
       </div>
+      <span class="span newSpan"> Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052 </span>
+    </address>
 
-      <a href="tel:+11234567890" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-        </div>
+    <div class="separator"></div>
 
-        <span class="span newSpan">
-          +91 9136036603</span>
-      </a>
-
-      <div class="separator"></div>
-
-      <a href="mailto:	
-      sales@603thecoworkingspace.com" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span newSpan">
-          sales@603thecoworkingspace.com</span>
-      </a>
-
+    <div class="topbar-item item-2">
+      <div class="icon">
+        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span newSpan">Daily : 8.00 am to 10.00 pm</span>
     </div>
+
+    <a href="tel:+11234567890" class="topbar-item link">
+      <div class="icon">
+        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span newSpan">+91 9136036603</span>
+    </a>
+
+    <div class="separator"></div>
+
+    <a href="mailto:sales@603thecoworkingspace.com" class="topbar-item link">
+      <div class="icon">
+        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span newSpan">sales@603thecoworkingspace.com</span>
+    </a>
+
+    <!-- User Profile Icon with Dropdown -->
+    <div class="user-profile">
+      <ion-icon name="person-circle-outline" class="profile-icon"></ion-icon>
+      <div class="dropdown-menu">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
   </div>
+</div>
+
 
 
 
@@ -232,11 +231,11 @@
 
       </nav>
 
-      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+      <!-- <a href="indexLayout.html" class="btn btn-secondary scale-up">
         <span class="text text-1">Make Your Space</span>
 
         <span class="text text-2" aria-hidden="true">Make Your Space</span>
-      </a>
+      </a> -->
 
       <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
@@ -343,12 +342,11 @@
             </p>
             <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/10/29/14/20241029145535-1707TD8Z.json"
               id="chatbot-icon" target="_blank"><img src="image/bot1.png" alt=""></a>
-            <a href="indexLayout.html" class="btn btn-primary slider-reveal scale-up">
-              <span class="text text-1 newHero">Make Your Space</span>
+            <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
 
-              <span class="text text-2 newHero" aria-hidden="true">Make Your Space</span>
-            </a>
-
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
 
           </li>
 

@@ -4,3 +4,56 @@
     font-size: 2rem;
 }
 
+
+
+.user-profile {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 40px;
+  color: white;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  color: #ffcc00;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 150px;
+  z-index: 1100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+
+
+.user-profile:hover .dropdown-menu,
+.user-profile:focus-within .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
