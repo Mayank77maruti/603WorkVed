@@ -1421,6 +1421,83 @@ body.nav-active {
 
 
 /* FAQ Section Styling */
+
+
+/* FAQ Section Header Styling */
+.faqs h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(135deg, #e9cd78, #cf9742);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fadeInText 1.2s ease-in-out;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faqs p {
+  font-size: 1.4rem;
+  color: #ddd;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.8;
+  font-style: italic;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  animation: fadeInParagraph 1.5s ease-in-out;
+}
+
+@keyframes fadeInParagraph {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add subtle background gradient to the header */
+.faqs {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #111, #1b1b1b);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.faqs:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
+}
+
+/* Add a subtle border under the FAQ heading */
+.faqs h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #cf9742;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
 .faq-section {
   max-width: 800px;
   margin: 50px auto;
