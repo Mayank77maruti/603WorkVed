@@ -20,17 +20,7 @@ jobs:
             });
             const isFirstIssue = issues.length === 1; // Only this issue exists
             core.setOutput('is_first_issue', isFirstIssue);
-      - name: Assign the issue to the creator
-        uses: actions/github-script@v6
-        with:
-          script: |
-            await github.rest.issues.addAssignees({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.issue.number,
-              assignees: [context.payload.issue.user.login],
-            });
-      - name: Add the SWOC label
+      - name: Add the hacktoberfest label
         uses: actions/github-script@v6
         with:
           script: |
@@ -38,7 +28,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              labels: ['SWOC'],
+              labels: ['hacktoberfest'],
             });
       - name: Send a welcome message if it's the user's first issue
         if: steps.check_user.outputs.is_first_issue == 'true'
@@ -49,5 +39,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              body: `Welcome to 603 WorkVed, very happy to have you on board and thank you for contributing! Make sure you have registered on OS LEAD platform as a contributor.`,
+              body: `Welcome to 603 WorkVed, very happy to have you on board `,
             });
