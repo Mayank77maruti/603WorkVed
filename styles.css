@@ -4,7 +4,299 @@
     font-size: 2rem;
 }
 
+/* Modern Footer Social Media Styles */
+.footer-social-section {
+  text-align: center;
+  margin: 2rem auto 0;
+  padding: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
 
+.social-title {
+  color: #d4af37;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #d4af37, #f4d03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.social-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  min-width: 110px;
+  justify-content: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+  left: 100%;
+}
+
+.social-icon-wrapper {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease;
+}
+
+.social-icon-wrapper ion-icon,
+.social-icon-wrapper i {
+  font-size: 18px;
+  transition: all 0.35s ease;
+}
+
+.social-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  transition: all 0.35s ease;
+  text-transform: uppercase;
+}
+
+/* Platform-specific hover effects with enhanced animations */
+.social-link[data-platform="facebook"]:hover {
+  background: linear-gradient(135deg, #1877f2, #42a5f5);
+  border-color: #1877f2;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.35);
+}
+
+.social-link[data-platform="instagram"]:hover {
+  background: linear-gradient(135deg, #e4405f, #fd1d1d, #fcb045);
+  border-color: #e4405f;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(228, 64, 95, 0.35);
+}
+
+.social-link[data-platform="twitter"]:hover {
+  background: linear-gradient(135deg, #000000, #333333);
+  border-color: #000000;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.social-link[data-platform="youtube"]:hover {
+  background: linear-gradient(135deg, #ff0000, #ff4444);
+  border-color: #ff0000;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.35);
+}
+
+.social-link[data-platform="location"]:hover {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  border-color: #4285f4;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.35);
+}
+
+.social-link:hover .social-icon-wrapper {
+  transform: scale(1.15) rotate(6deg);
+}
+
+.social-link:hover .social-text {
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.8px;
+}
+
+/* Enhanced mobile responsive */
+@media (max-width: 968px) {
+  .footer-social-section {
+    margin: 1.5rem auto 0;
+    padding: 1.2rem 0;
+  }
+  
+  .footer-social-list {
+    gap: 0.8rem;
+  }
+  
+  .social-link {
+    padding: 0.6rem 0.8rem;
+    min-width: 100px;
+    gap: 0.5rem;
+  }
+  
+  .social-title {
+    font-size: 1.4rem;
+  }
+  
+  .social-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-social-section {
+    margin: 1rem auto 0;
+    padding: 1rem 0;
+  }
+  
+  .footer-social-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    max-width: 200px;
+  }
+  
+  .social-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem;
+  }
+  
+  .social-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .social-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Contact Us Link Styling */
+.contact-us-link {
+  margin-top: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact-us-link::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-us-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(212, 175, 55, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 400;
+}
+
+.contact-us-link a:hover {
+  color: #d4af37;
+  text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.contact-us-text {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-us-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #d4af37, rgba(212, 175, 55, 0.5));
+  transition: width 0.3s ease;
+}
+
+.contact-us-link a:hover .contact-us-text::after {
+  width: 100%;
+}
+
+.contact-us-link a:hover .contact-us-text {
+  letter-spacing: 0.5px;
+}
+
+/* Add a subtle arrow that appears on hover */
+.contact-us-link a::after {
+  content: '→';
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+  color: #d4af37;
+}
+
+.contact-us-link a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile responsive for contact us link */
+@media (max-width: 680px) {
+  .contact-us-link {
+    margin-top: 1rem;
+  }
+  
+  .contact-us-text {
+    font-size: 0.85rem;
+  }
+}
 
 .user-profile {
   position: relative;
