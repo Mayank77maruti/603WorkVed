@@ -3,64 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login - 603 The Coworking Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
     <style>
+        :root {
+            --gold-cove: hsl(38, 61%, 73%);
+            --spanish-gray: hsl(0, 0%, 60%);
+            --sonic-silver: hsl(0, 0%, 47%);
+            --eerie-black: hsl(0, 0%, 13%);
+            --smoky-black: hsl(0, 0%, 7%);
+            --white: hsl(0, 0%, 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color:hsl(38, 61%, 73%);
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, var(--smoky-black) 0%, var(--eerie-black) 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000000" width="1200" height="800"/><g fill="%23c9a063" fill-opacity="0.05"><circle cx="200" cy="200" r="150"/><circle cx="1000" cy="600" r="200"/><circle cx="600" cy="100" r="100"/></g></svg>');
+            background-size: cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
         .login-container {
-            background-color:hsl(37, 46%, 84%);
-            padding: 30px;
-            border-radius: 13px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(201, 160, 99, 0.3);
+            border-radius: 16px;
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.6s ease-out;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Forum', serif;
+            font-size: 42px;
+            color: var(--gold-cove);
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+
         .login-container h1 {
-            margin-bottom: 20px;
-            color: #333;
+            text-align: center;
+            font-family: 'Forum', serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 92%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
+        .subtitle {
+            text-align: center;
+            color: var(--spanish-gray);
+            font-size: 14px;
+            margin-bottom: 35px;
+            font-family: 'DM Sans', sans-serif;
         }
-        .login-container button {
-            width: 98%;
-            padding: 10px;
-            margin-top: 10px;
-            background-color: hsl(38, 72%, 37%);
-            color: white;
-            border: none;
-            border-radius: 6px;
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form-group ion-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-cove);
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 15px 14px 48px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(201, 160, 99, 0.3);
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--gold-cove);
+            box-shadow: 0 0 0 3px rgba(201, 160, 99, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--sonic-silver);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--spanish-gray);
             cursor: pointer;
+            font-size: 20px;
+            z-index: 2;
+            transition: color 0.3s ease;
         }
-        .login-container button:hover {
-            background-color: hsla(210, 4%, 11%, 1);
+
+        .password-toggle:hover {
+            color: var(--gold-cove);
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: var(--spanish-gray);
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: var(--gold-cove);
+        }
+
+        .error-message {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background: linear-gradient(135deg, var(--gold-cove) 0%, hsl(38, 61%, 60%) 100%);
+            color: var(--eerie-black);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 160, 99, 0.4);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--spanish-gray);
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: var(--gold-cove);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: var(--spanish-gray);
+            font-size: 13px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(201, 160, 99, 0.2);
+        }
+
+        .separator span {
+            padding: 0 15px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--spanish-gray);
+            font-size: 14px;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            cursor: pointer;
+            accent-color: var(--gold-cove);
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 40px 25px;
+            }
+            
+            .logo-text {
+                font-size: 36px;
+            }
+            
+            .login-container h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h1 style="text-align: center; font-family: 'Courier New';">Login</h1>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+        <div class="logo">
+            <div class="logo-text">603</div>
+        </div>
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Sign in to access your workspace</p>
+        
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" id="username" placeholder="Username or Email" required autocomplete="username">
+                <span class="error-message" id="usernameError">Please enter your username or email</span>
+            </div>
+
+            <div class="form-group">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+                <ion-icon name="eye-outline" class="password-toggle" id="togglePassword"></ion-icon>
+                <span class="error-message" id="passwordError">Please enter your password</span>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Sign In</button>
         </form>
-        <h3 style="text-align: center;">
+
+        <div class="signup-link">
             Don't have an account? <a href="signup.html">Sign Up</a>
-        </h3>
+        </div>
     </div>
-   
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        const togglePassword = document.getElementById('togglePassword');
+
+        // Password visibility toggle
+        togglePassword.addEventListener('click', () => {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            togglePassword.name = type === 'password' ? 'eye-outline' : 'eye-off-outline';
+        });
+
+        // Form validation
+        function showError(input, message) {
+            const errorElement = document.getElementById(input.id + 'Error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+            input.style.borderColor = '#ff4444';
+        }
+
+        function clearError(input) {
+            const errorElement = document.getElementById(input.id + 'Error');
+            errorElement.classList.remove('show');
+            input.style.borderColor = 'rgba(201, 160, 99, 0.3)';
+        }
+
+        // Clear errors on input
+        username.addEventListener('input', () => clearError(username));
+        password.addEventListener('input', () => clearError(password));
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            clearError(username);
+            clearError(password);
+
+            // Validate username
+            if (username.value.trim().length === 0) {
+                showError(username, 'Please enter your username or email');
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.value.length === 0) {
+                showError(password, 'Please enter your password');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Here you would typically send data to your backend
+                console.log('Login form submitted!');
+                console.log('Username:', username.value);
+                console.log('Remember me:', document.getElementById('rememberMe').checked);
+                alert('Login successful! (This is a demo)');
+                // Uncomment below to redirect after successful login
+                // window.location.href = 'index.html';
+            }
+        });
+    </script>
 </body>
 </html>

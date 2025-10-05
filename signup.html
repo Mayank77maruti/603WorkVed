@@ -3,70 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
+    <title>Sign Up - 603 The Coworking Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
     <style>
+        :root {
+            --gold-cove: hsl(38, 61%, 73%);
+            --spanish-gray: hsl(0, 0%, 60%);
+            --sonic-silver: hsl(0, 0%, 47%);
+            --eerie-black: hsl(0, 0%, 13%);
+            --smoky-black: hsl(0, 0%, 7%);
+            --white: hsl(0, 0%, 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color:hsl(38, 61%, 73%);
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, var(--smoky-black) 0%, var(--eerie-black) 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
-        .login-container {
-            background-color:hsl(37, 46%, 84%);
-            padding: 30px;
-            border-radius: 13px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            height: 400px;
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000000" width="1200" height="800"/><g fill="%23c9a063" fill-opacity="0.05"><circle cx="200" cy="200" r="150"/><circle cx="1000" cy="600" r="200"/><circle cx="600" cy="100" r="100"/></g></svg>');
+            background-size: cover;
+            opacity: 0.3;
+            z-index: 0;
         }
-        .login-container h1 {
-            margin-bottom: 20px;
-            color: #333;
+
+        .signup-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(201, 160, 99, 0.3);
+            border-radius: 16px;
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 460px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.6s ease-out;
         }
-        .login-container input[type="text"],
-        .login-container input[type="email"],
-        .login-container input[type="confirm password"],
-        .login-container input[type="password"] {
-            width: 92%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .login-container button {
-            width: 98%;
-            padding: 10px;
-            margin-top: 10px;
-            background-color: hsl(38, 72%, 37%);
-            color: white;
-            border: none;
-            border-radius: 6px;
+
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Forum', serif;
+            font-size: 42px;
+            color: var(--gold-cove);
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+
+        .signup-container h1 {
+            text-align: center;
+            font-family: 'Forum', serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--spanish-gray);
+            font-size: 14px;
+            margin-bottom: 35px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form-group ion-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-cove);
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 15px 14px 48px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(201, 160, 99, 0.3);
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--gold-cove);
+            box-shadow: 0 0 0 3px rgba(201, 160, 99, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--sonic-silver);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--spanish-gray);
             cursor: pointer;
+            font-size: 20px;
+            z-index: 2;
+            transition: color 0.3s ease;
         }
-        .login-container button:hover {
-            background-color: hsla(210, 4%, 11%, 1);
+
+        .password-toggle:hover {
+            color: var(--gold-cove);
+        }
+
+        .password-strength {
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .password-strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .strength-weak { width: 33%; background: #ff4444; }
+        .strength-medium { width: 66%; background: #ffbb33; }
+        .strength-strong { width: 100%; background: #00C851; }
+
+        .error-message {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background: linear-gradient(135deg, var(--gold-cove) 0%, hsl(38, 61%, 60%) 100%);
+            color: var(--eerie-black);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .signup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 160, 99, 0.4);
+        }
+
+        .signup-btn:active {
+            transform: translateY(0);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--spanish-gray);
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: var(--gold-cove);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .login-link a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: var(--spanish-gray);
+            font-size: 13px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(201, 160, 99, 0.2);
+        }
+
+        .separator span {
+            padding: 0 15px;
+        }
+
+        .password-strength-text {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 600;
+    display: none;
+}
+
+.password-strength-text.show {
+    display: block;
+}
+
+.text-weak { color: #ff4444; }
+.text-medium { color: #ffbb33; }
+.text-strong { color: #00C851; }
+
+        @media (max-width: 480px) {
+            .signup-container {
+                padding: 40px 25px;
+            }
+            
+            .logo-text {
+                font-size: 36px;
+            }
+            
+            .signup-container h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1 style="text-align: center; font-family: 'Courier New';">Sign Up</h1>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="Email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="Confirm password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
+    <div class="signup-container">
+        <div class="logo">
+            <div class="logo-text">603</div>
+        </div>
+        <h1>Create Account</h1>
+        <p class="subtitle">Join our premium coworking community</p>
+        
+        <form id="signupForm" novalidate>
+            <div class="form-group">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" id="username" placeholder="Full Name" required autocomplete="name">
+                <span class="error-message" id="usernameError">Please enter your full name</span>
+            </div>
+
+            <div class="form-group">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" placeholder="Email Address" required autocomplete="email">
+                <span class="error-message" id="emailError">Please enter a valid email</span>
+            </div>
+
+            <div class="form-group">
+                <ion-icon name="call-outline"></ion-icon>
+                <input type="tel" id="phone" placeholder="Phone Number (Optional)" autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
+                <ion-icon name="eye-outline" class="password-toggle" id="togglePassword"></ion-icon>
+                <div class="password-strength">
+                    <div class="password-strength-bar" id="strengthBar"></div>
+                </div>
+                <div class="password-strength">
+    <div class="password-strength-bar" id="strengthBar"></div>
+</div>
+<span class="password-strength-text" id="strengthText"></span>
+                <span class="error-message" id="passwordError">Password must be at least 8 characters</span>
+            </div>
+
+            <div class="form-group">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                <ion-icon name="eye-outline" class="password-toggle" id="toggleConfirmPassword"></ion-icon>
+                <span class="error-message" id="confirmPasswordError">Passwords do not match</span>
+            </div>
+
+            <button type="submit" class="signup-btn">Create Account</button>
         </form>
 
-        <h3 style="text-align: center;">
+        <div class="login-link">
             Already have an account? <a href="login.html">Login</a>
-        </h3>
-       
+        </div>
     </div>
-   
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const togglePassword = document.getElementById('togglePassword');
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const strengthBar = document.getElementById('strengthBar');
+
+        // Password visibility toggle
+        togglePassword.addEventListener('click', () => {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            togglePassword.name = type === 'password' ? 'eye-outline' : 'eye-off-outline';
+        });
+
+        toggleConfirmPassword.addEventListener('click', () => {
+            const type = confirmPassword.type === 'password' ? 'text' : 'password';
+            confirmPassword.type = type;
+            toggleConfirmPassword.name = type === 'password' ? 'eye-outline' : 'eye-off-outline';
+        });
+
+        // Password strength checker with text display
+password.addEventListener('input', (e) => {
+    const val = e.target.value;
+    const strengthText = document.getElementById('strengthText');
+    let strength = 0;
+    
+    // Check password criteria
+    if (val.length >= 8) strength++;
+    if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
+    if (/\d/.test(val)) strength++;
+    if (/[^a-zA-Z\d]/.test(val)) strength++;
+
+    // Update strength bar and text
+    strengthBar.className = 'password-strength-bar';
+    strengthText.className = 'password-strength-text';
+    
+    if (val.length === 0) {
+        strengthBar.style.width = '0%';
+        strengthText.classList.remove('show');
+    } else if (strength >= 3) {
+        strengthBar.classList.add('strength-strong');
+        strengthText.classList.add('show', 'text-strong');
+        strengthText.textContent = '✓ Strong Password';
+    } else if (strength >= 2) {
+        strengthBar.classList.add('strength-medium');
+        strengthText.classList.add('show', 'text-medium');
+        strengthText.textContent = '⚠ Medium Password - Add more variety';
+    } else {
+        strengthBar.classList.add('strength-weak');
+        strengthText.classList.add('show', 'text-weak');
+        strengthText.textContent = '✗ Weak Password - Use 8+ chars, mixed case, numbers & symbols';
+    }
+});
+
+        // Form validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Password strength checker
+password.addEventListener('input', (e) => {
+    const val = e.target.value;
+    let strength = 0;
+    
+    // Check password criteria
+    if (val.length >= 8) strength++;
+    if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
+    if (/\d/.test(val)) strength++;
+    if (/[^a-zA-Z\d]/.test(val)) strength++;
+
+    // Update strength bar
+    strengthBar.className = 'password-strength-bar';
+    if (strength >= 3) {
+        strengthBar.classList.add('strength-strong');
+    } else if (strength >= 2) {
+        strengthBar.classList.add('strength-medium');
+    } else if (strength >= 1) {
+        strengthBar.classList.add('strength-weak');
+    } else {
+        strengthBar.style.width = '0%';
+    }
+    });
+
+        function showError(input, message) {
+            const errorElement = document.getElementById(input.id + 'Error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+            input.style.borderColor = '#ff4444';
+        }
+
+        function clearError(input) {
+            const errorElement = document.getElementById(input.id + 'Error');
+            errorElement.classList.remove('show');
+            input.style.borderColor = 'rgba(201, 160, 99, 0.3)';
+        }
+
+        [username, email, password, confirmPassword].forEach(input => {
+            input.addEventListener('input', () => clearError(input));
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            [username, email, password, confirmPassword].forEach(clearError);
+
+            // Validate username
+            if (username.value.trim().length < 2) {
+                showError(username, 'Please enter your full name');
+                isValid = false;
+            }
+
+            // Validate email
+            if (!validateEmail(email.value)) {
+                showError(email, 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.value.length < 8) {
+                showError(password, 'Password must be at least 8 characters');
+                isValid = false;
+            }
+
+            // Validate confirm password
+            if (password.value !== confirmPassword.value) {
+                showError(confirmPassword, 'Passwords do not match');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Here you would typically send data to your backend
+                console.log('Form submitted successfully!');
+                alert('Account created successfully! (This is a demo)');
+                // Uncomment below to redirect after successful signup
+                // window.location.href = 'login.html';
+            }
+        });
+    </script>
 </body>
 </html>
