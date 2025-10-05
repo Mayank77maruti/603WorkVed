@@ -7,6 +7,55 @@
 ## Project Description📝
 Our platform offers a seamless way for individuals and businesses to book exquisite spaces tailored to their unique needs and aesthetic preferences. Users can easily explore a variety of environments, from modern office interiors that enhance productivity to inviting creative studios that inspire innovation. Each space is curated to blend style and functionality, making the booking process convenient and enjoyable, so clients can focus on bringing their ideas to life in inspiring settings.
 
+## File Structure 📁
+```
+603WorkVed/
+├── about.html
+├── Achievements.html
+├── blogs.html
+├── blogpost1.html
+├── blogpost2.html
+├── blogpost3.html
+├── blogpost4.html
+├── blogpost5.html
+├── blockpost5.html
+├── blockpost7.html
+├── blogpage6.html
+├── contact.html
+├── HowWeAre.html
+├── index.html
+├── index.js
+├── indexLayout.html
+├── login.html
+├── MeetOurTeam.html
+├── signup.html
+├── styles.css
+├── README.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── LICENSE
+├── assets
+│   ├── design.md
+│   ├── css/
+│   │   ├── style.css
+│   │   └── styles.css
+│   ├── favicon/
+│   ├── images/
+│   └── js/
+│       └── script.js
+├── BOQ/
+│   ├── indexBOQ.html
+│   ├── css/
+│   │   └── animate.css
+│   ├── fonts/
+│   ├── images/
+│   └── js/
+├── Frontend/
+│   └── office-space-calculator/
+└── image/
+```
+
 ## Prerequisites ✅
 > Before you begin, ensure you have met the following requirements:
 
