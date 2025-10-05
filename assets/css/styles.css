@@ -1585,7 +1585,7 @@
   \*-----------------------------------*/
   
   .footer-top {
-    /* margin-block-end: 70px; */
+    margin-block-end: 70px;
   }
   
   .footer-brand {
@@ -2256,14 +2256,13 @@
      */
   
     .footer .grid-list {
-      max-width: 200px;
+      grid-template-columns: 0.45fr 1fr 0.45fr;
       align-items: center;
     }
-
-
   
     .footer-brand {
-      grid-column: 1;
+      grid-column: auto;
+      order: 1;
       padding-block: 100px;
     }
   
