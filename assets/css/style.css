@@ -2257,7 +2257,8 @@ textarea.input-field {
    */
 
   .grid-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-inline: 20rem;
   }
 
   :is(.service, .event) .container {
@@ -2522,7 +2523,7 @@ textarea.input-field {
    */
 
   .footer .grid-list {
-    grid-template-columns: 0.45fr 1fr 0.45fr;
+    /* grid-template-columns: 0.45fr 1fr 0.45fr; */
     align-items: center;
   }
 
