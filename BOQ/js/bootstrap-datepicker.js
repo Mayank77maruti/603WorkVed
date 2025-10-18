@@ -18,22 +18,21 @@
  * limitations under the License.
  * ========================================================= */
 
-(function( $ ) {
+(function ($) {
 
 	var $window = $(window);
 
-	function UTCDate(){
+	function UTCDate() {
 		return new Date(Date.UTC.apply(Date, arguments));
 	}
-	function UTCToday(){
+	function UTCToday() {
 		var today = new Date();
 		return UTCDate(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
 	}
 
-
 	// Picker object
 
-	var Datepicker = function(element, options) {
+	var Datepicker = function (element, options) {
 		var that = this;
 
 		this._process_options(options);
@@ -43,33 +42,32 @@
 		this.isInput = this.element.is('input');
 		this.component = this.element.is('.date') ? this.element.find('.add-on, .btn') : false;
 		this.hasInput = this.component && this.element.find('input').length;
-		if(this.component && this.component.length === 0)
+		if (this.component && this.component.length === 0)
 			this.component = false;
 
 		this.picker = $(DPGlobal.template);
 		this._buildEvents();
 		this._attachEvents();
 
-		if(this.isInline) {
+		if (this.isInline) {
 			this.picker.addClass('datepicker-inline').appendTo(this.element);
 		} else {
 			this.picker.addClass('datepicker-dropdown dropdown-menu');
 		}
 
-		if (this.o.rtl){
+		if (this.o.rtl) {
 			this.picker.addClass('datepicker-rtl');
 			this.picker.find('.prev i, .next i')
-						.toggleClass('icon-arrow-left icon-arrow-right');
+				.toggleClass('icon-arrow-left icon-arrow-right');
 		}
-
 
 		this.viewMode = this.o.startView;
 
 		if (this.o.calendarWeeks)
 			this.picker.find('tfoot th.today')
-						.attr('colspan', function(i, val){
-							return parseInt(val) + 1;
-						});
+				.attr('colspan', function (i, val) {
+					return parseInt(val) + 1;
+				});
 
 		this._allow_update = false;
 
@@ -85,7 +83,7 @@
 		this.update();
 		this.showMode();
 
-		if(this.isInline) {
+		if (this.isInline) {
 			this.show();
 		}
 	};
@@ -93,7 +91,7 @@
 	Datepicker.prototype = {
 		constructor: Datepicker,
 
-		_process_options: function(opts){
+		_process_options: function (opts) {
 			// Store raw options for reference
 			this._o = $.extend({}, this._o, opts);
 			// Processed options
@@ -109,7 +107,7 @@
 			}
 			o.language = lang;
 
-			switch(o.startView){
+			switch (o.startView) {
 				case 2:
 				case 'decade':
 					o.startView = 2;
@@ -162,7 +160,7 @@
 				}
 			}
 
-			o.daysOfWeekDisabled = o.daysOfWeekDisabled||[];
+			o.daysOfWeekDisabled = o.daysOfWeekDisabled || [];
 			if (!$.isArray(o.daysOfWeekDisabled))
 				o.daysOfWeekDisabled = o.daysOfWeekDisabled.split(/[,\s]*/);
 			o.daysOfWeekDisabled = $.map(o.daysOfWeekDisabled, function (d) {
@@ -171,14 +169,14 @@
 
 			var plc = String(o.orientation).toLowerCase().split(/\s+/g),
 				_plc = o.orientation.toLowerCase();
-			plc = $.grep(plc, function(word){
+			plc = $.grep(plc, function (word) {
 				return (/^auto|left|right|top|bottom$/).test(word);
 			});
-			o.orientation = {x: 'auto', y: 'auto'};
+			o.orientation = { x: 'auto', y: 'auto' };
 			if (!_plc || _plc === 'auto')
 				; // no action
-			else if (plc.length === 1){
-				switch(plc[0]){
+			else if (plc.length === 1) {
+				switch (plc[0]) {
 					case 'top':
 					case 'bottom':
 						o.orientation.y = plc[0];
@@ -190,12 +188,12 @@
 				}
 			}
 			else {
-				_plc = $.grep(plc, function(word){
+				_plc = $.grep(plc, function (word) {
 					return (/^left|right$/).test(word);
 				});
 				o.orientation.x = _plc[0] || 'auto';
 
-				_plc = $.grep(plc, function(word){
+				_plc = $.grep(plc, function (word) {
 					return (/^top|bottom$/).test(word);
 				});
 				o.orientation.y = _plc[0] || 'auto';
@@ -203,21 +201,21 @@
 		},
 		_events: [],
 		_secondaryEvents: [],
-		_applyEvents: function(evs){
-			for (var i=0, el, ev; i<evs.length; i++){
+		_applyEvents: function (evs) {
+			for (var i = 0, el, ev; i < evs.length; i++) {
 				el = evs[i][0];
 				ev = evs[i][1];
 				el.on(ev);
 			}
 		},
-		_unapplyEvents: function(evs){
-			for (var i=0, el, ev; i<evs.length; i++){
+		_unapplyEvents: function (evs) {
+			for (var i = 0, el, ev; i < evs.length; i++) {
 				el = evs[i][0];
 				ev = evs[i][1];
 				el.off(ev);
 			}
 		},
-		_buildEvents: function(){
+		_buildEvents: function () {
 			if (this.isInput) { // single input
 				this._events = [
 					[this.element, {
@@ -227,7 +225,7 @@
 					}]
 				];
 			}
-			else if (this.component && this.hasInput){ // component: input + button
+			else if (this.component && this.hasInput) { // component: input + button
 				this._events = [
 					// For components that are not readonly, allow keyboard nav
 					[this.element.find('input'), {
@@ -273,35 +271,35 @@
 				}]
 			];
 		},
-		_attachEvents: function(){
+		_attachEvents: function () {
 			this._detachEvents();
 			this._applyEvents(this._events);
 		},
-		_detachEvents: function(){
+		_detachEvents: function () {
 			this._unapplyEvents(this._events);
 		},
-		_attachSecondaryEvents: function(){
+		_attachSecondaryEvents: function () {
 			this._detachSecondaryEvents();
 			this._applyEvents(this._secondaryEvents);
 		},
-		_detachSecondaryEvents: function(){
+		_detachSecondaryEvents: function () {
 			this._unapplyEvents(this._secondaryEvents);
 		},
-		_trigger: function(event, altdate){
+		_trigger: function (event, altdate) {
 			var date = altdate || this.date,
 				local_date = this._utc_to_local(date);
 
 			this.element.trigger({
 				type: event,
 				date: local_date,
-				format: $.proxy(function(altformat){
+				format: $.proxy(function (altformat) {
 					var format = altformat || this.o.format;
 					return DPGlobal.formatDate(date, format, this.o.language);
 				}, this)
 			});
 		},
 
-		show: function(e) {
+		show: function (e) {
 			if (!this.isInline)
 				this.picker.appendTo('body');
 			this.picker.show();
@@ -314,8 +312,8 @@
 			this._trigger('show');
 		},
 
-		hide: function(e){
-			if(this.isInline) return;
+		hide: function (e) {
+			if (this.isInline) return;
 			if (!this.picker.is(':visible')) return;
 			this.picker.hide().detach();
 			this._detachSecondaryEvents();
@@ -333,7 +331,7 @@
 			this._trigger('hide');
 		},
 
-		remove: function() {
+		remove: function () {
 			this.hide();
 			this._detachEvents();
 			this._detachSecondaryEvents();
@@ -344,40 +342,40 @@
 			}
 		},
 
-		_utc_to_local: function(utc){
-			return new Date(utc.getTime() + (utc.getTimezoneOffset()*60000));
+		_utc_to_local: function (utc) {
+			return new Date(utc.getTime() + (utc.getTimezoneOffset() * 60000));
 		},
-		_local_to_utc: function(local){
-			return new Date(local.getTime() - (local.getTimezoneOffset()*60000));
+		_local_to_utc: function (local) {
+			return new Date(local.getTime() - (local.getTimezoneOffset() * 60000));
 		},
-		_zero_time: function(local){
+		_zero_time: function (local) {
 			return new Date(local.getFullYear(), local.getMonth(), local.getDate());
 		},
-		_zero_utc_time: function(utc){
+		_zero_utc_time: function (utc) {
 			return new Date(Date.UTC(utc.getUTCFullYear(), utc.getUTCMonth(), utc.getUTCDate()));
 		},
 
-		getDate: function() {
+		getDate: function () {
 			return this._utc_to_local(this.getUTCDate());
 		},
 
-		getUTCDate: function() {
+		getUTCDate: function () {
 			return this.date;
 		},
 
-		setDate: function(d) {
+		setDate: function (d) {
 			this.setUTCDate(this._local_to_utc(d));
 		},
 
-		setUTCDate: function(d) {
+		setUTCDate: function (d) {
 			this.date = d;
 			this.setValue();
 		},
 
-		setValue: function() {
+		setValue: function () {
 			var formatted = this.getFormattedDate();
 			if (!this.isInput) {
-				if (this.component){
+				if (this.component) {
 					this.element.find('input').val(formatted).change();
 				}
 			} else {
@@ -385,32 +383,32 @@
 			}
 		},
 
-		getFormattedDate: function(format) {
+		getFormattedDate: function (format) {
 			if (format === undefined)
 				format = this.o.format;
 			return DPGlobal.formatDate(this.date, format, this.o.language);
 		},
 
-		setStartDate: function(startDate){
-			this._process_options({startDate: startDate});
+		setStartDate: function (startDate) {
+			this._process_options({ startDate: startDate });
 			this.update();
 			this.updateNavArrows();
 		},
 
-		setEndDate: function(endDate){
-			this._process_options({endDate: endDate});
+		setEndDate: function (endDate) {
+			this._process_options({ endDate: endDate });
 			this.update();
 			this.updateNavArrows();
 		},
 
-		setDaysOfWeekDisabled: function(daysOfWeekDisabled){
-			this._process_options({daysOfWeekDisabled: daysOfWeekDisabled});
+		setDaysOfWeekDisabled: function (daysOfWeekDisabled) {
+			this._process_options({ daysOfWeekDisabled: daysOfWeekDisabled });
 			this.update();
 			this.updateNavArrows();
 		},
 
-		place: function(){
-						if(this.isInline) return;
+		place: function () {
+			if (this.isInline) return;
 			var calendarWidth = this.picker.outerWidth(),
 				calendarHeight = this.picker.outerHeight(),
 				visualPadding = 10,
@@ -418,9 +416,9 @@
 				windowHeight = $window.height(),
 				scrollTop = $window.scrollTop();
 
-			var zIndex = parseInt(this.element.parents().filter(function() {
-							return $(this).css('z-index') != 'auto';
-						}).first().css('z-index'))+10;
+			var zIndex = parseInt(this.element.parents().filter(function () {
+				return $(this).css('z-index') != 'auto';
+			}).first().css('z-index')) + 10;
 			var offset = this.component ? this.component.parent().offset() : this.element.offset();
 			var height = this.component ? this.component.outerHeight(true) : this.element.outerHeight(false);
 			var width = this.component ? this.component.outerWidth(true) : this.element.outerWidth(false);
@@ -428,7 +426,7 @@
 				top = offset.top;
 
 			this.picker.removeClass(
-				'datepicker-orient-top datepicker-orient-bottom '+
+				'datepicker-orient-top datepicker-orient-bottom ' +
 				'datepicker-orient-right datepicker-orient-left'
 			);
 
@@ -474,12 +472,12 @@
 		},
 
 		_allow_update: true,
-		update: function(){
+		update: function () {
 			if (!this._allow_update) return;
 
 			var oldDate = new Date(this.date),
 				date, fromArgs = false;
-			if(arguments && arguments.length && (typeof arguments[0] === 'string' || arguments[0] instanceof Date)) {
+			if (arguments && arguments.length && (typeof arguments[0] === 'string' || arguments[0] instanceof Date)) {
 				date = arguments[0];
 				if (date instanceof Date)
 					date = this._local_to_utc(date);
@@ -516,39 +514,39 @@
 			this.fill();
 		},
 
-		fillDow: function(){
+		fillDow: function () {
 			var dowCnt = this.o.weekStart,
-			html = '<tr>';
-			if(this.o.calendarWeeks){
+				html = '<tr>';
+			if (this.o.calendarWeeks) {
 				var cell = '<th class="cw">&nbsp;</th>';
 				html += cell;
 				this.picker.find('.datepicker-days thead tr:first-child').prepend(cell);
 			}
 			while (dowCnt < this.o.weekStart + 7) {
-				html += '<th class="dow">'+dates[this.o.language].daysMin[(dowCnt++)%7]+'</th>';
+				html += '<th class="dow">' + dates[this.o.language].daysMin[(dowCnt++) % 7] + '</th>';
 			}
 			html += '</tr>';
 			this.picker.find('.datepicker-days thead').append(html);
 		},
 
-		fillMonths: function(){
+		fillMonths: function () {
 			var html = '',
-			i = 0;
+				i = 0;
 			while (i < 12) {
-				html += '<span class="month">'+dates[this.o.language].monthsShort[i++]+'</span>';
+				html += '<span class="month">' + dates[this.o.language].monthsShort[i++] + '</span>';
 			}
 			this.picker.find('.datepicker-months td').html(html);
 		},
 
-		setRange: function(range){
+		setRange: function (range) {
 			if (!range || !range.length)
 				delete this.range;
 			else
-				this.range = $.map(range, function(d){ return d.valueOf(); });
+				this.range = $.map(range, function (d) { return d.valueOf(); });
 			this.fill();
 		},
 
-		getClassNames: function(date){
+		getClassNames: function (date) {
 			var cls = [],
 				year = this.viewDate.getUTCFullYear(),
 				month = this.viewDate.getUTCMonth(),
@@ -573,18 +571,18 @@
 				$.inArray(date.getUTCDay(), this.o.daysOfWeekDisabled) !== -1) {
 				cls.push('disabled');
 			}
-			if (this.range){
-				if (date > this.range[0] && date < this.range[this.range.length-1]){
+			if (this.range) {
+				if (date > this.range[0] && date < this.range[this.range.length - 1]) {
 					cls.push('range');
 				}
-				if ($.inArray(date.valueOf(), this.range) != -1){
+				if ($.inArray(date.valueOf(), this.range) != -1) {
 					cls.push('selected');
 				}
 			}
 			return cls;
 		},
 
-		fill: function() {
+		fill: function () {
 			var d = new Date(this.viewDate),
 				year = d.getUTCFullYear(),
 				month = d.getUTCMonth(),
@@ -595,28 +593,28 @@
 				currentDate = this.date && this.date.valueOf(),
 				tooltip;
 			this.picker.find('.datepicker-days thead th.datepicker-switch')
-						.text(dates[this.o.language].months[month]+' '+year);
+				.text(dates[this.o.language].months[month] + ' ' + year);
 			this.picker.find('tfoot th.today')
-						.text(dates[this.o.language].today)
-						.toggle(this.o.todayBtn !== false);
+				.text(dates[this.o.language].today)
+				.toggle(this.o.todayBtn !== false);
 			this.picker.find('tfoot th.clear')
-						.text(dates[this.o.language].clear)
-						.toggle(this.o.clearBtn !== false);
+				.text(dates[this.o.language].clear)
+				.toggle(this.o.clearBtn !== false);
 			this.updateNavArrows();
 			this.fillMonths();
-			var prevMonth = UTCDate(year, month-1, 28,0,0,0,0),
+			var prevMonth = UTCDate(year, month - 1, 28, 0, 0, 0, 0),
 				day = DPGlobal.getDaysInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
 			prevMonth.setUTCDate(day);
-			prevMonth.setUTCDate(day - (prevMonth.getUTCDay() - this.o.weekStart + 7)%7);
+			prevMonth.setUTCDate(day - (prevMonth.getUTCDay() - this.o.weekStart + 7) % 7);
 			var nextMonth = new Date(prevMonth);
 			nextMonth.setUTCDate(nextMonth.getUTCDate() + 42);
 			nextMonth = nextMonth.valueOf();
 			var html = [];
 			var clsName;
-			while(prevMonth.valueOf() < nextMonth) {
+			while (prevMonth.valueOf() < nextMonth) {
 				if (prevMonth.getUTCDay() == this.o.weekStart) {
 					html.push('<tr>');
-					if(this.o.calendarWeeks){
+					if (this.o.calendarWeeks) {
 						// ISO 8601: First week contains first thursday.
 						// ISO also states week starts on Monday, but we can be more abstract here.
 						var
@@ -625,24 +623,24 @@
 							// Thursday of this week
 							th = new Date(+ws + (7 + 4 - ws.getUTCDay()) % 7 * 864e5),
 							// First Thursday of year, year from thursday
-							yth = new Date(+(yth = UTCDate(th.getUTCFullYear(), 0, 1)) + (7 + 4 - yth.getUTCDay())%7*864e5),
+							yth = new Date(+(yth = UTCDate(th.getUTCFullYear(), 0, 1)) + (7 + 4 - yth.getUTCDay()) % 7 * 864e5),
 							// Calendar week: ms between thursdays, div ms per day, div 7 days
-							calWeek =  (th - yth) / 864e5 / 7 + 1;
-						html.push('<td class="cw">'+ calWeek +'</td>');
+							calWeek = (th - yth) / 864e5 / 7 + 1;
+						html.push('<td class="cw">' + calWeek + '</td>');
 
 					}
 				}
 				clsName = this.getClassNames(prevMonth);
 				clsName.push('day');
 
-				if (this.o.beforeShowDay !== $.noop){
+				if (this.o.beforeShowDay !== $.noop) {
 					var before = this.o.beforeShowDay(this._utc_to_local(prevMonth));
 					if (before === undefined)
 						before = {};
-					else if (typeof(before) === 'boolean')
-						before = {enabled: before};
-					else if (typeof(before) === 'string')
-						before = {classes: before};
+					else if (typeof (before) === 'boolean')
+						before = { enabled: before };
+					else if (typeof (before) === 'string')
+						before = { classes: before };
 					if (before.enabled === false)
 						clsName.push('disabled');
 					if (before.classes)
@@ -652,20 +650,20 @@
 				}
 
 				clsName = $.unique(clsName);
-				html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + '>'+prevMonth.getUTCDate() + '</td>');
+				html.push('<td class="' + clsName.join(' ') + '"' + (tooltip ? ' title="' + tooltip + '"' : '') + '>' + prevMonth.getUTCDate() + '</td>');
 				if (prevMonth.getUTCDay() == this.o.weekEnd) {
 					html.push('</tr>');
 				}
-				prevMonth.setUTCDate(prevMonth.getUTCDate()+1);
+				prevMonth.setUTCDate(prevMonth.getUTCDate() + 1);
 			}
 			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
 			var currentYear = this.date && this.date.getUTCFullYear();
 
 			var months = this.picker.find('.datepicker-months')
-						.find('th:eq(1)')
-							.text(year)
-							.end()
-						.find('span').removeClass('active');
+				.find('th:eq(1)')
+				.text(year)
+				.end()
+				.find('span').removeClass('active');
 			if (currentYear && currentYear == year) {
 				months.eq(this.date.getUTCMonth()).addClass('active');
 			}
@@ -676,25 +674,25 @@
 				months.slice(0, startMonth).addClass('disabled');
 			}
 			if (year == endYear) {
-				months.slice(endMonth+1).addClass('disabled');
+				months.slice(endMonth + 1).addClass('disabled');
 			}
 
 			html = '';
-			year = parseInt(year/10, 10) * 10;
+			year = parseInt(year / 10, 10) * 10;
 			var yearCont = this.picker.find('.datepicker-years')
-								.find('th:eq(1)')
-									.text(year + '-' + (year + 9))
-									.end()
-								.find('td');
+				.find('th:eq(1)')
+				.text(year + '-' + (year + 9))
+				.end()
+				.find('td');
 			year -= 1;
 			for (var i = -1; i < 11; i++) {
-				html += '<span class="year'+(i == -1 ? ' old' : i == 10 ? ' new' : '')+(currentYear == year ? ' active' : '')+(year < startYear || year > endYear ? ' disabled' : '')+'">'+year+'</span>';
+				html += '<span class="year' + (i == -1 ? ' old' : i == 10 ? ' new' : '') + (currentYear == year ? ' active' : '') + (year < startYear || year > endYear ? ' disabled' : '') + '">' + year + '</span>';
 				year += 1;
 			}
 			yearCont.html(html);
 		},
 
-		updateNavArrows: function() {
+		updateNavArrows: function () {
 			if (!this._allow_update) return;
 
 			var d = new Date(this.viewDate),
@@ -703,46 +701,46 @@
 			switch (this.viewMode) {
 				case 0:
 					if (this.o.startDate !== -Infinity && year <= this.o.startDate.getUTCFullYear() && month <= this.o.startDate.getUTCMonth()) {
-						this.picker.find('.prev').css({visibility: 'hidden'});
+						this.picker.find('.prev').css({ visibility: 'hidden' });
 					} else {
-						this.picker.find('.prev').css({visibility: 'visible'});
+						this.picker.find('.prev').css({ visibility: 'visible' });
 					}
 					if (this.o.endDate !== Infinity && year >= this.o.endDate.getUTCFullYear() && month >= this.o.endDate.getUTCMonth()) {
-						this.picker.find('.next').css({visibility: 'hidden'});
+						this.picker.find('.next').css({ visibility: 'hidden' });
 					} else {
-						this.picker.find('.next').css({visibility: 'visible'});
+						this.picker.find('.next').css({ visibility: 'visible' });
 					}
 					break;
 				case 1:
 				case 2:
 					if (this.o.startDate !== -Infinity && year <= this.o.startDate.getUTCFullYear()) {
-						this.picker.find('.prev').css({visibility: 'hidden'});
+						this.picker.find('.prev').css({ visibility: 'hidden' });
 					} else {
-						this.picker.find('.prev').css({visibility: 'visible'});
+						this.picker.find('.prev').css({ visibility: 'visible' });
 					}
 					if (this.o.endDate !== Infinity && year >= this.o.endDate.getUTCFullYear()) {
-						this.picker.find('.next').css({visibility: 'hidden'});
+						this.picker.find('.next').css({ visibility: 'hidden' });
 					} else {
-						this.picker.find('.next').css({visibility: 'visible'});
+						this.picker.find('.next').css({ visibility: 'visible' });
 					}
 					break;
 			}
 		},
 
-		click: function(e) {
+		click: function (e) {
 			e.preventDefault();
 			var target = $(e.target).closest('span, td, th');
 			if (target.length == 1) {
-				switch(target[0].nodeName.toLowerCase()) {
+				switch (target[0].nodeName.toLowerCase()) {
 					case 'th':
-						switch(target[0].className) {
+						switch (target[0].className) {
 							case 'datepicker-switch':
 								this.showMode(1);
 								break;
 							case 'prev':
 							case 'next':
 								var dir = DPGlobal.modes[this.viewMode].navStep * (target[0].className == 'prev' ? -1 : 1);
-								switch(this.viewMode){
+								switch (this.viewMode) {
 									case 0:
 										this.viewDate = this.moveMonth(this.viewDate, dir);
 										this._trigger('changeMonth', this.viewDate);
@@ -789,16 +787,16 @@
 								this.viewDate.setUTCMonth(month);
 								this._trigger('changeMonth', this.viewDate);
 								if (this.o.minViewMode === 1) {
-									this._setDate(UTCDate(year, month, day,0,0,0,0));
+									this._setDate(UTCDate(year, month, day, 0, 0, 0, 0));
 								}
 							} else {
-								var year = parseInt(target.text(), 10)||0;
+								var year = parseInt(target.text(), 10) || 0;
 								var day = 1;
 								var month = 0;
 								this.viewDate.setUTCFullYear(year);
 								this._trigger('changeYear', this.viewDate);
 								if (this.o.minViewMode === 2) {
-									this._setDate(UTCDate(year, month, day,0,0,0,0));
+									this._setDate(UTCDate(year, month, day, 0, 0, 0, 0));
 								}
 							}
 							this.showMode(-1);
@@ -806,8 +804,8 @@
 						}
 						break;
 					case 'td':
-						if (target.is('.day') && !target.is('.disabled')){
-							var day = parseInt(target.text(), 10)||1;
+						if (target.is('.day') && !target.is('.disabled')) {
+							var day = parseInt(target.text(), 10) || 1;
 							var year = this.viewDate.getUTCFullYear(),
 								month = this.viewDate.getUTCMonth();
 							if (target.is('.old')) {
@@ -825,17 +823,17 @@
 									month += 1;
 								}
 							}
-							this._setDate(UTCDate(year, month, day,0,0,0,0));
+							this._setDate(UTCDate(year, month, day, 0, 0, 0, 0));
 						}
 						break;
 				}
 			}
 		},
 
-		_setDate: function(date, which){
+		_setDate: function (date, which) {
 			if (!which || which == 'date')
 				this.date = new Date(date);
-			if (!which || which  == 'view')
+			if (!which || which == 'view')
 				this.viewDate = new Date(date);
 			this.fill();
 			this.setValue();
@@ -843,7 +841,7 @@
 			var element;
 			if (this.isInput) {
 				element = this.element;
-			} else if (this.component){
+			} else if (this.component) {
 				element = this.element.find('input');
 			}
 			if (element) {
@@ -854,7 +852,7 @@
 			}
 		},
 
-		moveMonth: function(date, dir){
+		moveMonth: function (date, dir) {
 			if (!dir) return date;
 			var new_date = new Date(date.valueOf()),
 				day = new_date.getUTCDate(),
@@ -862,14 +860,14 @@
 				mag = Math.abs(dir),
 				new_month, test;
 			dir = dir > 0 ? 1 : -1;
-			if (mag == 1){
+			if (mag == 1) {
 				test = dir == -1
 					// If going back one month, make sure month is not current month
 					// (eg, Mar 31 -> Feb 31 == Feb 28, not Mar 02)
-					? function(){ return new_date.getUTCMonth() == month; }
+					? function () { return new_date.getUTCMonth() == month; }
 					// If going forward one month, make sure month is as expected
 					// (eg, Jan 31 -> Feb 31 == Feb 28, not Mar 02)
-					: function(){ return new_date.getUTCMonth() != new_month; };
+					: function () { return new_date.getUTCMonth() != new_month; };
 				new_month = month + dir;
 				new_date.setUTCMonth(new_month);
 				// Dec -> Jan (12) or Jan -> Dec (-1) -- limit expected date to 0-11
@@ -877,33 +875,33 @@
 					new_month = (new_month + 12) % 12;
 			} else {
 				// For magnitudes >1, move one month at a time...
-				for (var i=0; i<mag; i++)
+				for (var i = 0; i < mag; i++)
 					// ...which might decrease the day (eg, Jan 31 to Feb 28, etc)...
 					new_date = this.moveMonth(new_date, dir);
 				// ...then reset the day, keeping it in the new month
 				new_month = new_date.getUTCMonth();
 				new_date.setUTCDate(day);
-				test = function(){ return new_month != new_date.getUTCMonth(); };
+				test = function () { return new_month != new_date.getUTCMonth(); };
 			}
 			// Common date-resetting loop -- if date is beyond end of month, make it
 			// end of month
-			while (test()){
+			while (test()) {
 				new_date.setUTCDate(--day);
 				new_date.setUTCMonth(new_month);
 			}
 			return new_date;
 		},
 
-		moveYear: function(date, dir){
-			return this.moveMonth(date, dir*12);
+		moveYear: function (date, dir) {
+			return this.moveMonth(date, dir * 12);
 		},
 
-		dateWithinRange: function(date){
+		dateWithinRange: function (date) {
 			return date >= this.o.startDate && date <= this.o.endDate;
 		},
 
-		keydown: function(e){
-			if (this.picker.is(':not(:visible)')){
+		keydown: function (e) {
+			if (this.picker.is(':not(:visible)')) {
 				if (e.keyCode == 27) // allow escape to hide and re-show picker
 					this.show();
 				return;
@@ -911,7 +909,7 @@
 			var dateChanged = false,
 				dir, day, month,
 				newDate, newViewDate;
-			switch(e.keyCode){
+			switch (e.keyCode) {
 				case 27: // escape
 					this.hide();
 					e.preventDefault();
@@ -920,11 +918,11 @@
 				case 39: // right
 					if (!this.o.keyboardNavigation) break;
 					dir = e.keyCode == 37 ? -1 : 1;
-					if (e.ctrlKey){
+					if (e.ctrlKey) {
 						newDate = this.moveYear(this.date, dir);
 						newViewDate = this.moveYear(this.viewDate, dir);
 						this._trigger('changeYear', this.viewDate);
-					} else if (e.shiftKey){
+					} else if (e.shiftKey) {
 						newDate = this.moveMonth(this.date, dir);
 						newViewDate = this.moveMonth(this.viewDate, dir);
 						this._trigger('changeMonth', this.viewDate);
@@ -934,7 +932,7 @@
 						newViewDate = new Date(this.viewDate);
 						newViewDate.setUTCDate(this.viewDate.getUTCDate() + dir);
 					}
-					if (this.dateWithinRange(newDate)){
+					if (this.dateWithinRange(newDate)) {
 						this.date = newDate;
 						this.viewDate = newViewDate;
 						this.setValue();
@@ -947,11 +945,11 @@
 				case 40: // down
 					if (!this.o.keyboardNavigation) break;
 					dir = e.keyCode == 38 ? -1 : 1;
-					if (e.ctrlKey){
+					if (e.ctrlKey) {
 						newDate = this.moveYear(this.date, dir);
 						newViewDate = this.moveYear(this.viewDate, dir);
 						this._trigger('changeYear', this.viewDate);
-					} else if (e.shiftKey){
+					} else if (e.shiftKey) {
 						newDate = this.moveMonth(this.date, dir);
 						newViewDate = this.moveMonth(this.viewDate, dir);
 						this._trigger('changeMonth', this.viewDate);
@@ -961,7 +959,7 @@
 						newViewDate = new Date(this.viewDate);
 						newViewDate.setUTCDate(this.viewDate.getUTCDate() + dir * 7);
 					}
-					if (this.dateWithinRange(newDate)){
+					if (this.dateWithinRange(newDate)) {
 						this.date = newDate;
 						this.viewDate = newViewDate;
 						this.setValue();
@@ -978,12 +976,12 @@
 					this.hide();
 					break;
 			}
-			if (dateChanged){
+			if (dateChanged) {
 				this._trigger('changeDate');
 				var element;
 				if (this.isInput) {
 					element = this.element;
-				} else if (this.component){
+				} else if (this.component) {
 					element = this.element.find('input');
 				}
 				if (element) {
@@ -992,7 +990,7 @@
 			}
 		},
 
-		showMode: function(dir) {
+		showMode: function (dir) {
 			if (dir) {
 				this.viewMode = Math.max(this.o.minViewMode, Math.min(2, this.viewMode + dir));
 			}
@@ -1006,76 +1004,76 @@
 				In jquery 1.7.2+ everything works fine.
 			*/
 			//this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).show();
-			this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).css('display', 'block');
+			this.picker.find('>div').hide().filter('.datepicker-' + DPGlobal.modes[this.viewMode].clsName).css('display', 'block');
 			this.updateNavArrows();
 		}
 	};
 
-	var DateRangePicker = function(element, options){
+	var DateRangePicker = function (element, options) {
 		this.element = $(element);
-		this.inputs = $.map(options.inputs, function(i){ return i.jquery ? i[0] : i; });
+		this.inputs = $.map(options.inputs, function (i) { return i.jquery ? i[0] : i; });
 		delete options.inputs;
 
 		$(this.inputs)
 			.datepicker(options)
 			.bind('changeDate', $.proxy(this.dateUpdated, this));
 
-		this.pickers = $.map(this.inputs, function(i){ return $(i).data('datepicker'); });
+		this.pickers = $.map(this.inputs, function (i) { return $(i).data('datepicker'); });
 		this.updateDates();
 	};
 	DateRangePicker.prototype = {
-		updateDates: function(){
-			this.dates = $.map(this.pickers, function(i){ return i.date; });
+		updateDates: function () {
+			this.dates = $.map(this.pickers, function (i) { return i.date; });
 			this.updateRanges();
 		},
-		updateRanges: function(){
-			var range = $.map(this.dates, function(d){ return d.valueOf(); });
-			$.each(this.pickers, function(i, p){
+		updateRanges: function () {
+			var range = $.map(this.dates, function (d) { return d.valueOf(); });
+			$.each(this.pickers, function (i, p) {
 				p.setRange(range);
 			});
 		},
-		dateUpdated: function(e){
+		dateUpdated: function (e) {
 			var dp = $(e.target).data('datepicker'),
 				new_date = dp.getUTCDate(),
 				i = $.inArray(e.target, this.inputs),
 				l = this.inputs.length;
 			if (i == -1) return;
 
-			if (new_date < this.dates[i]){
+			if (new_date < this.dates[i]) {
 				// Date being moved earlier/left
-				while (i>=0 && new_date < this.dates[i]){
+				while (i >= 0 && new_date < this.dates[i]) {
 					this.pickers[i--].setUTCDate(new_date);
 				}
 			}
-			else if (new_date > this.dates[i]){
+			else if (new_date > this.dates[i]) {
 				// Date being moved later/right
-				while (i<l && new_date > this.dates[i]){
+				while (i < l && new_date > this.dates[i]) {
 					this.pickers[i++].setUTCDate(new_date);
 				}
 			}
 			this.updateDates();
 		},
-		remove: function(){
-			$.map(this.pickers, function(p){ p.remove(); });
+		remove: function () {
+			$.map(this.pickers, function (p) { p.remove(); });
 			delete this.element.data().datepicker;
 		}
 	};
 
-	function opts_from_el(el, prefix){
+	function opts_from_el(el, prefix) {
 		// Derive options from element data-attrs
 		var data = $(el).data(),
 			out = {}, inkey,
 			replace = new RegExp('^' + prefix.toLowerCase() + '([A-Z])'),
 			prefix = new RegExp('^' + prefix.toLowerCase());
 		for (var key in data)
-			if (prefix.test(key)){
-				inkey = key.replace(replace, function(_,a){ return a.toLowerCase(); });
+			if (prefix.test(key)) {
+				inkey = key.replace(replace, function (_, a) { return a.toLowerCase(); });
 				out[inkey] = data[key];
 			}
 		return out;
 	}
 
-	function opts_from_locale(lang){
+	function opts_from_locale(lang) {
 		// Derive options from locale plugins
 		var out = {};
 		// Check if "de-DE" style date is available, if not language should
@@ -1086,7 +1084,7 @@
 				return;
 		}
 		var d = dates[lang];
-		$.each(locale_opts, function(i,k){
+		$.each(locale_opts, function (i, k) {
 			if (k in d)
 				out[k] = d[k];
 		});
@@ -1094,7 +1092,7 @@
 	}
 
 	var old = $.fn.datepicker;
-	$.fn.datepicker = function ( option ) {
+	$.fn.datepicker = function (option) {
 		var args = Array.apply(null, arguments);
 		args.shift();
 		var internal_return,
@@ -1110,13 +1108,13 @@
 					locopts = opts_from_locale(xopts.language),
 					// Options priority: js args, data-attrs, locales, defaults
 					opts = $.extend({}, defaults, locopts, elopts, options);
-				if ($this.is('.input-daterange') || opts.inputs){
+				if ($this.is('.input-daterange') || opts.inputs) {
 					var ropts = {
 						inputs: opts.inputs || $this.find('input').toArray()
 					};
 					$this.data('datepicker', (data = new DateRangePicker(this, $.extend(opts, ropts))));
 				}
-				else{
+				else {
 					$this.data('datepicker', (data = new Datepicker(this, opts)));
 				}
 			}
@@ -1186,7 +1184,7 @@
 				clsName: 'years',
 				navFnc: 'FullYear',
 				navStep: 10
-		}],
+			}],
 		isLeapYear: function (year) {
 			return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));
 		},
@@ -1195,17 +1193,17 @@
 		},
 		validParts: /dd?|DD?|mm?|MM?|yy(?:yy)?/g,
 		nonpunctuation: /[^ -\/:-@\[\u3400-\u9fff-`{-~\t\n\r]+/g,
-		parseFormat: function(format){
+		parseFormat: function (format) {
 			// IE treats \0 as a string end in inputs (truncating the value),
 			// so it's a bad format delimiter, anyway
 			var separators = format.replace(this.validParts, '\0').split('\0'),
 				parts = format.match(this.validParts);
-			if (!separators || !separators.length || !parts || parts.length === 0){
+			if (!separators || !separators.length || !parts || parts.length === 0) {
 				throw new Error("Invalid date format.");
 			}
-			return {separators: separators, parts: parts};
+			return { separators: separators, parts: parts };
 		},
-		parseDate: function(date, format, language) {
+		parseDate: function (date, format, language) {
 			if (date instanceof Date) return date;
 			if (typeof format === 'string')
 				format = DPGlobal.parseFormat(format);
@@ -1214,10 +1212,10 @@
 					parts = date.match(/([\-+]\d+)([dmwy])/g),
 					part, dir;
 				date = new Date();
-				for (var i=0; i<parts.length; i++) {
+				for (var i = 0; i < parts.length; i++) {
 					part = part_re.exec(parts[i]);
 					dir = parseInt(part[1]);
-					switch(part[2]){
+					switch (part[2]) {
 						case 'd':
 							date.setUTCDate(date.getUTCDate() + dir);
 							break;
@@ -1239,20 +1237,20 @@
 				parsed = {},
 				setters_order = ['yyyy', 'yy', 'M', 'MM', 'm', 'mm', 'd', 'dd'],
 				setters_map = {
-					yyyy: function(d,v){ return d.setUTCFullYear(v); },
-					yy: function(d,v){ return d.setUTCFullYear(2000+v); },
-					m: function(d,v){
+					yyyy: function (d, v) { return d.setUTCFullYear(v); },
+					yy: function (d, v) { return d.setUTCFullYear(2000 + v); },
+					m: function (d, v) {
 						if (isNaN(d))
 							return d;
 						v -= 1;
-						while (v<0) v += 12;
+						while (v < 0) v += 12;
 						v %= 12;
 						d.setUTCMonth(v);
 						while (d.getUTCMonth() != v)
-							d.setUTCDate(d.getUTCDate()-1);
+							d.setUTCDate(d.getUTCDate() - 1);
 						return d;
 					},
-					d: function(d,v){ return d.setUTCDate(v); }
+					d: function (d, v) { return d.setUTCDate(v); }
 				},
 				val, filtered, part;
 			setters_map['M'] = setters_map['MM'] = setters_map['mm'] = setters_map['m'];
@@ -1261,19 +1259,19 @@
 			var fparts = format.parts.slice();
 			// Remove noop parts
 			if (parts.length != fparts.length) {
-				fparts = $(fparts).filter(function(i,p){
+				fparts = $(fparts).filter(function (i, p) {
 					return $.inArray(p, setters_order) !== -1;
 				}).toArray();
 			}
 			// Process remainder
 			if (parts.length == fparts.length) {
-				for (var i=0, cnt = fparts.length; i < cnt; i++) {
+				for (var i = 0, cnt = fparts.length; i < cnt; i++) {
 					val = parseInt(parts[i], 10);
 					part = fparts[i];
 					if (isNaN(val)) {
-						switch(part) {
+						switch (part) {
 							case 'MM':
-								filtered = $(dates[language].months).filter(function(){
+								filtered = $(dates[language].months).filter(function () {
 									var m = this.slice(0, parts[i].length),
 										p = parts[i].slice(0, m.length);
 									return m == p;
@@ -1281,7 +1279,7 @@
 								val = $.inArray(filtered[0], dates[language].months) + 1;
 								break;
 							case 'M':
-								filtered = $(dates[language].monthsShort).filter(function(){
+								filtered = $(dates[language].monthsShort).filter(function () {
 									var m = this.slice(0, parts[i].length),
 										p = parts[i].slice(0, m.length);
 									return m == p;
@@ -1292,9 +1290,9 @@
 					}
 					parsed[part] = val;
 				}
-				for (var i=0, _date, s; i<setters_order.length; i++){
+				for (var i = 0, _date, s; i < setters_order.length; i++) {
 					s = setters_order[i];
-					if (s in parsed && !isNaN(parsed[s])){
+					if (s in parsed && !isNaN(parsed[s])) {
 						_date = new Date(date);
 						setters_map[s](_date, parsed[s]);
 						if (!isNaN(_date))
@@ -1304,7 +1302,7 @@
 			}
 			return date;
 		},
-		formatDate: function(date, format, language){
+		formatDate: function (date, format, language) {
 			if (typeof format === 'string')
 				format = DPGlobal.parseFormat(format);
 			var val = {
@@ -1321,46 +1319,46 @@
 			val.mm = (val.m < 10 ? '0' : '') + val.m;
 			var date = [],
 				seps = $.extend([], format.separators);
-			for (var i=0, cnt = format.parts.length; i <= cnt; i++) {
+			for (var i = 0, cnt = format.parts.length; i <= cnt; i++) {
 				if (seps.length)
 					date.push(seps.shift());
 				date.push(val[format.parts[i]]);
 			}
 			return date.join('');
 		},
-		headTemplate: '<thead>'+
-							'<tr>'+
-								'<th class="prev">&laquo;</th>'+
-								'<th colspan="5" class="datepicker-switch"></th>'+
-								'<th class="next">&raquo;</th>'+
-							'</tr>'+
-						'</thead>',
+		headTemplate: '<thead>' +
+			'<tr>' +
+			'<th class="prev">&laquo;</th>' +
+			'<th colspan="5" class="datepicker-switch"></th>' +
+			'<th class="next">&raquo;</th>' +
+			'</tr>' +
+			'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
 		footTemplate: '<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'
 	};
-	DPGlobal.template = '<div class="datepicker">'+
-							'<div class="datepicker-days">'+
-								'<table class=" table-condensed">'+
-									DPGlobal.headTemplate+
-									'<tbody></tbody>'+
-									DPGlobal.footTemplate+
-								'</table>'+
-							'</div>'+
-							'<div class="datepicker-months">'+
-								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
-								'</table>'+
-							'</div>'+
-							'<div class="datepicker-years">'+
-								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
-								'</table>'+
-							'</div>'+
-						'</div>';
+	DPGlobal.template = '<div class="datepicker">' +
+		'<div class="datepicker-days">' +
+		'<table class=" table-condensed">' +
+		DPGlobal.headTemplate +
+		'<tbody></tbody>' +
+		DPGlobal.footTemplate +
+		'</table>' +
+		'</div>' +
+		'<div class="datepicker-months">' +
+		'<table class="table-condensed">' +
+		DPGlobal.headTemplate +
+		DPGlobal.contTemplate +
+		DPGlobal.footTemplate +
+		'</table>' +
+		'</div>' +
+		'<div class="datepicker-years">' +
+		'<table class="table-condensed">' +
+		DPGlobal.headTemplate +
+		DPGlobal.contTemplate +
+		DPGlobal.footTemplate +
+		'</table>' +
+		'</div>' +
+		'</div>';
 
 	$.fn.datepicker.DPGlobal = DPGlobal;
 
@@ -1368,11 +1366,10 @@
 	/* DATEPICKER NO CONFLICT
 	* =================== */
 
-	$.fn.datepicker.noConflict = function(){
+	$.fn.datepicker.noConflict = function () {
 		$.fn.datepicker = old;
 		return this;
 	};
-
 
 	/* DATEPICKER DATA-API
 	* ================== */
@@ -1380,7 +1377,7 @@
 	$(document).on(
 		'focus.datepicker.data-api click.datepicker.data-api',
 		'[data-provide="datepicker"]',
-		function(e){
+		function (e) {
 			var $this = $(this);
 			if ($this.data('datepicker')) return;
 			e.preventDefault();
@@ -1388,8 +1385,8 @@
 			$this.datepicker('show');
 		}
 	);
-	$(function(){
+	$(function () {
 		$('[data-provide="datepicker-inline"]').datepicker();
 	});
 
-}( window.jQuery ));
+}(window.jQuery));

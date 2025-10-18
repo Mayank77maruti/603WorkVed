@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,13 +30,15 @@ body, html {
   margin-bottom: 20px;
 }
 
-.workspace, .cabins {
+.workspace,
+.cabins {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.workspace img, .cabins img {
+.workspace img,
+.cabins img {
   width: 150px;
   height: 150px;
   margin-right: 20px;

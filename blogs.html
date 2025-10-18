@@ -1,589 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
     - primary meta tags
   -->
-    <title>603 The Coworking Space</title>
-    <meta name="title" content="603 The Coworking Space" />
+  <title>603 The Coworking Space</title>
+  <meta name="title" content="603 The Coworking Space" />
 
-    <!-- 
+  <!-- 
     - favicon
   -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
+  <!-- 
     - preload images
   -->
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif"
-    />
-    
+  <link rel="preload" as="image" href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif" />
+
   <!--
         - Font Awesome
       -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--
       - Ionic Icons CDN
     -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
 
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
-  <body id="top">
-    <!-- 
+</head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet" />
+
+<body id="top">
+  <!-- 
     - #PRELOADER
   -->
 
-    <div class="preload" data-preaload>
-      <div class="circle"></div>
-      <p class="text">603</p>
-    </div>
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">603</p>
+  </div>
 
-    <!-- 
+  <!-- 
     - #TOP BAR
   -->
 
-    <div class="topbar">
-      <div class="container">
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">
-            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-          </span>
-        </address>
-
-        <div class="separator"></div>
-
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">Daily : 8.00 am to 10.00 pm</span>
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <a href="tel:+11234567890" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <span class="span">
+          Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+        </span>
+      </address>
 
-          <span class="span"> +91 9136036603</span>
-        </a>
+      <div class="separator"></div>
 
-        <div class="separator"></div>
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
 
-        <a
-          href="mailto:	
-      sales@603thecoworkingspace.com"
-          class="topbar-item link"
-        >
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span"> sales@603thecoworkingspace.com</span>
-        </a>
+        <span class="span">Daily : 8.00 am to 10.00 pm</span>
       </div>
-    </div>
 
-    <!-- 
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> +91 9136036603</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:	
+      sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> sales@603thecoworkingspace.com</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header" data-header>
-      <div class="container">
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
         <a href="index.html#" class="logo">
-          <img
-            src="./assets/images/603logo (1).avif"
-            width="160"
-            height="50"
-            alt="Grilli - Home"
-          />
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
         </a>
 
-        <nav class="navbar" data-navbar>
-          <button
-            class="close-btn scale-up"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
 
-          <a href="index.html#" class="logo">
-            <img
-              src="./assets/images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-            />
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Restaurant St, Delicious City, <br />
+            London 9578, UK
+          </address>
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +88-123-123456
           </a>
+        </div>
+      </nav>
 
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a
-                href="index.html#home"
-                class="navbar-link hover-underline active"
-              >
-                <div class="separator"></div>
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
 
-                <span class="span">Home</span>
-              </a>
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="section service bg-black-10 text-center m-3" aria-label="service">
+        <div class="container">
+          <div class="bg-dark p-5 m-3"></div>
+          <p class="section-subtitle label-2 mt-[10rem]"></p>
+
+          <h2 class="headline-1 section-title">Blogs</h2>
+
+          <p class="section-text">
+            Stay updated with our latest blog posts where we share insights,
+            tips, and trends on office interiors, productivity, and workspace
+            design. Our expert writers bring you valuable content to help you
+            create a workspace that inspires and motivates.
+          </p>
+
+          <ul class="grid-list">
+            <li>
+              <div class="service-card">
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="Breakfast" class="img-cover" />
+                  </figure>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost1.html">10 Years of 603:How We Are</a>
+                  </h3>
+
+                  <a href="HowWeAre.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
 
-            <li class="navbar-item">
-              <a href="blogpost4.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Spaces</span>
-              </a>
+            <li>
+              <div class="service-card">
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="Appetizers" class="img-cover" />
+                  </figure>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost2.html">Meet Our Team</a>
+                  </h3>
+
+                  <a href="MeetOurTeam.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
 
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">About Us</span>
-              </a>
-            </li>
+            <li>
+              <div class="service-card">
+                <a href="assets/blogpages/blogpost3.html" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/the-9th-coworking--MezGpfNBTo-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="Drinks" class="img-cover" />
+                  </figure>
+                </a>
 
-            <li class="navbar-item">
-              <a href="index.html#images" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Images</span>
-              </a>
-            </li>
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost3.html">Our Achievements</a>
+                  </h3>
 
-            <li class="navbar-item">
-              <a href="blogs.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Blogs</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="contact.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-
-                <span class="span">Contact</span>
-              </a>
+                  <a href="Achievements.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
           </ul>
+        </div>
+      </section>
 
-          <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
-            </address>
-
-            <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
-              >booking@grilli.com</a
-            >
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a
-              href="tel:+88123123456"
-              class="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
-            </a>
-          </div>
-        </nav>
-
-        <a href="indexLayout.html" class="btn btn-secondary scale-up">
-          <span class="text text-1">Make Your Space</span>
-
-          <span class="text text-2" aria-hidden="true">Make Your Space</span>
-        </a>
-
-        <button
-          class="nav-open-btn scale-up"
-          aria-label="open menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <article>
-        <section
-          class="section service bg-black-10 text-center m-3"
-          aria-label="service"
-        >
-          <div class="container">
-            <div class="bg-dark p-5 m-3"></div>
-            <p class="section-subtitle label-2 mt-[10rem]"></p>
-
-            <h2 class="headline-1 section-title">Blogs</h2>
-
-            <p class="section-text">
-              Stay updated with our latest blog posts where we share insights,
-              tips, and trends on office interiors, productivity, and workspace
-              design. Our expert writers bring you valuable content to help you
-              create a workspace that inspires and motivates.
-            </p>
-
-            <ul class="grid-list">
-              <li>
-                <div class="service-card">
-                  <a href="#" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Breakfast"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost1.html">10 Years of 603:How We Are</a>
-                    </h3>
-
-                    <a href="HowWeAre.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <a href="#" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Appetizers"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost2.html">Meet Our Team</a>
-                    </h3>
-
-                    <a href="MeetOurTeam.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <a
-                    href="assets/blogpages/blogpost3.html"
-                    class="has-before hover:shine"
-                  >
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/the-9th-coworking--MezGpfNBTo-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Drinks"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost3.html">Our Achievements</a>
-                    </h3>
-
-                    <a href="Achievements.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 
+      <!-- 
         - #ABOUT
       -->
 
-        <style>
-          .glass-box {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            padding: 20px;
-            backdrop-filter: blur(9px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            display: inline-block;
-            margin: 0 auto;
-          }
-          .glass-box p {
-            margin: 10px 0;
-          }
-          .profile {
-            margin-top: 20px;
-            text-align: center;
-          }
-          .profile .img {
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 5px;
-          }
-        </style>
+      <style>
+        .glass-box {
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 10px;
+          padding: 20px;
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(10px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          display: inline-block;
+          margin: 0 auto;
+        }
 
-        <!-- 
+        .glass-box p {
+          margin: 10px 0;
+        }
+
+        .profile {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        .profile .img {
+          border-radius: 50%;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          padding: 5px;
+        }
+      </style>
+
+      <!-- 
         - #EVENT
-      --></article>
-    </main>
+      -->
+    </article>
+  </main>
 
-    <!--                        no change-->
-    <!-- 
+  <!-- no change-->
+  <!-- 
     - #FOOTER
   -->
 
-    <footer
-      class="footer section has-bg-image text-center"
-      style="
+  <footer class="footer section has-bg-image text-center" style="
         background-image: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif');
-      "
-    >
-      <div class="container">
-        <div class="footer-top grid-list">
-          <div class="footer-brand has-before has-after">
-            <a href="#" class="logo">
-              <img
-                src="./assets/images/603logo (1).avif"
-                width="160"
-                height="50"
-                loading="lazy"
-                alt="grilli home"
-              />
-            </a>
+      ">
+    <div class="container">
+      <div class="footer-top grid-list">
+        <div class="footer-brand has-before has-after">
+          <a href="#" class="logo">
+            <img src="./assets/images/603logo (1).avif" width="160" height="50" loading="lazy" alt="grilli home" />
+          </a>
 
-            <address class="body-4">
-              Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
-              400052
-            </address>
+          <address class="body-4">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
+            400052
+          </address>
 
-            <a href="mailto:booking@grilli.com" class="body-4 contact-link"
-              >booking@grilli.com</a
-            >
+          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
 
-            <a href="tel:+88123123456" class="body-4 contact-link"
-              >Booking Request : +88-123-123456</a
-            >
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
 
-            <p class="body-4">Open : 09:00 am - 01:00 pm</p>
+          <p class="body-4">Open : 09:00 am - 01:00 pm</p>
 
-            <div class="wrapper">
-              <div class="separator"></div>
-              <div class="separator"></div>
-              <div class="separator"></div>
-            </div>
-
-            <p class="title-1">Get News & Offers</p>
-
-            <p class="label-1">
-              Subscribe us & Get <span class="span">25% Off.</span>
-            </p>
-
-            <form action="" class="input-wrapper">
-              <div class="icon-wrapper">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-                <input
-                  type="email"
-                  name="email_address"
-                  placeholder="Your email"
-                  autocomplete="off"
-                  class="input-field"
-                />
-              </div>
-
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Subscribe</span>
-
-                <span class="text text-2" aria-hidden="true">Subscribe</span>
-              </button>
-            </form>
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
           </div>
 
-          <ul class="footer-list">
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Home</a>
-            </li>
+          <p class="title-1">Get News & Offers</p>
 
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Menus</a>
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >About Us</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Our Chefs</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <!-- Facebook Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-facebook"></ion-icon> Facebook
-              </a>
-            </li>
-          
-            <!-- Instagram Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-instagram"></ion-icon> Instagram
-              </a>
-            </li>
-          
-            <!-- Twitter Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <i class="fa-brands fa-x-twitter"></i>
-                Twitter
-              </a>
-            </li>
-          
-            <!-- Youtube Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-youtube"></ion-icon>Youtube
-              </a>
-            </li>
-          
-            <!-- Google Map Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="location-outline"></ion-icon> Google Map
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-bottom">
-          <p class="copyright">
-            &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
-            <a href="603thecoworkingspace.com" target="_blank" class="link"
-              >603 The Coworking Space</a
-            >
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
           </p>
-        </div>
-      </div>
-    </footer>
 
-    <!-- 
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off"
+                class="input-field" />
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <!-- Facebook Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-facebook"></ion-icon> Facebook
+            </a>
+          </li>
+
+          <!-- Instagram Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-instagram"></ion-icon> Instagram
+            </a>
+          </li>
+
+          <!-- Twitter Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <i class="fa-brands fa-x-twitter"></i>
+              Twitter
+            </a>
+          </li>
+
+          <!-- Youtube Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-youtube"></ion-icon>Youtube
+            </a>
+          </li>
+
+          <!-- Google Map Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="location-outline"></ion-icon> Google Map
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
+          <a href="603thecoworkingspace.com" target="_blank" class="link">603 The Coworking Space</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
     - #BACK TO TOP
   -->
 
-    <a
-      href="#top"
-      class="back-top-btn active"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-    </a>
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

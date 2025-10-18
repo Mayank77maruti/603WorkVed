@@ -1,10 +1,8 @@
 #classic-elegance {
-    color: white;
-    font-weight: bolder;
-    font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
 }
-
-
 
 .user-profile {
   position: relative;
@@ -48,12 +46,9 @@
   color: white;
 }
 
-
-
 .user-profile:hover .dropdown-menu,
 .user-profile:focus-within .dropdown-menu {
   display: block;
   opacity: 1;
   visibility: visible;
 }
-

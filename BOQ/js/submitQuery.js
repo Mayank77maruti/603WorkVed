@@ -38,7 +38,7 @@ function submitEmail() {
     var formData = new FormData(document.getElementById("formEmail"))
 
     // Implement EmailJS API Here to make this work
-    url = "" 
+    url = ""
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", url)

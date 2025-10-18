@@ -29,17 +29,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px; /* Added margin to separate from area input */
+  margin-bottom: 20px;
+  /* Added margin to separate from area input */
 }
 
 .flexbox-container {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  height: 300px; /* Adjusted height */
-  background: white; /* Set to white */
+  height: 300px;
+  /* Adjusted height */
+  background: white;
+  /* Set to white */
   padding: 10px;
-  border: none; /* Removed border */
+  border: none;
+  /* Removed border */
 }
 
 .flexbox-item {
@@ -50,7 +54,8 @@ body {
   color: black;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid #ccc; /* Thin border between flexboxes */
+  border: 1px solid #ccc;
+  /* Thin border between flexboxes */
   box-sizing: border-box;
   position: relative;
 }
@@ -59,20 +64,44 @@ body {
   background-color: #f0f0f0;
 }
 
-.flexbox-item.linear { background-color: #4caf50; }
-.flexbox-item.lType { background-color: #2196f3; }
-.flexbox-item.md { background-color: #ff9800; }
-.flexbox-item.manager { background-color: #f44336; }
-.flexbox-item.small { background-color: #9c27b0; }
-.flexbox-item.ups { background-color: #3f51b5; }
-.flexbox-item.bms { background-color: #00bcd4; }
-.flexbox-item.server { background-color: #8bc34a; }
+.flexbox-item.linear {
+  background-color: #4caf50;
+}
+
+.flexbox-item.lType {
+  background-color: #2196f3;
+}
+
+.flexbox-item.md {
+  background-color: #ff9800;
+}
+
+.flexbox-item.manager {
+  background-color: #f44336;
+}
+
+.flexbox-item.small {
+  background-color: #9c27b0;
+}
+
+.flexbox-item.ups {
+  background-color: #3f51b5;
+}
+
+.flexbox-item.bms {
+  background-color: #00bcd4;
+}
+
+.flexbox-item.server {
+  background-color: #8bc34a;
+}
 
 .sections {
   width: 45%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Vertical scrollbar */
+  overflow-y: auto;
+  /* Vertical scrollbar */
 }
 
 .section {
@@ -94,20 +123,25 @@ body {
 
 .workspace-row {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-x: auto; /* Add horizontal scroll */
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+  overflow-x: auto;
+  /* Add horizontal scroll */
 }
 
 .workspace {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  flex: 0 0 auto; /* Ensure items don't shrink */
+  flex: 0 0 auto;
+  /* Ensure items don't shrink */
 }
 
 .workspace img {
-  width: 120px; /* Increased size */
-  height: 120px; /* Increased size */
+  width: 120px;
+  /* Increased size */
+  height: 120px;
+  /* Increased size */
   margin-right: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -123,8 +157,10 @@ body {
 }
 
 .control-btn {
-  padding: 5px 10px; /* Adjusted size */
-  font-size: 16px; /* Adjusted size */
+  padding: 5px 10px;
+  /* Adjusted size */
+  font-size: 16px;
+  /* Adjusted size */
   font-weight: bold;
   background-color: #fff;
   border: 1px solid #ccc;

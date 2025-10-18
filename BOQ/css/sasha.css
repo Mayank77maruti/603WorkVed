@@ -2,9 +2,8 @@
 	height: 2px;
 }
 
-
 .margin10 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 /* product sidebar and contents location */
@@ -54,8 +53,9 @@
 }
 
 #sort-text {
-	vertical-align:-webkit-baseline-middle;
+	vertical-align: -webkit-baseline-middle;
 }
+
 #sort-select {
 	width: 160px;
 	float: right;
@@ -63,10 +63,6 @@
 	height: 30px;
 	padding: 2px;
 }
-
-
-
-
 
 /* control panel product section */
 
@@ -78,13 +74,13 @@ ul.breadcrumbs2 li {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	font-weight: 300;
-    margin-left: 3px;
+	margin-left: 3px;
 	color: #999;
 	float: left;
 }
 
 ul.breadcrumbs2 li:before {
-    content: '/';
+	content: '/';
 	margin: 0 4px 0 2px;
 	color: #bbb;
 }
@@ -94,7 +90,7 @@ ul.breadcrumbs2 li:first-child {
 }
 
 ul.breadcrumbs2 li:first-child:before {
-    content: ' ';
+	content: ' ';
 	margin: 0;
 }
 
@@ -102,169 +98,197 @@ ul.breadcrumbs2 li a {
 	color: #888;
 	font-weight: 600;
 	transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
 }
-
 
 /* css table generator */
 
 .CSSTableGenerator {
-	margin:0px;padding:0px;
-	width:100%;
-	border:1px solid #eeeeee;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border: 1px solid #eeeeee;
 	table-layout: fixed;
-	
-	-moz-border-radius-bottomleft:4px;
-	-webkit-border-bottom-left-radius:4px;
-	border-bottom-left-radius:4px;
-	
-	-moz-border-radius-bottomright:4px;
-	-webkit-border-bottom-right-radius:4px;
-	border-bottom-right-radius:4px;
-	
-	-moz-border-radius-topright:4px;
-	-webkit-border-top-right-radius:4px;
-	border-top-right-radius:4px;
-	
-	-moz-border-radius-topleft:4px;
-	-webkit-border-top-left-radius:4px;
-	border-top-left-radius:4px;
-}.CSSTableGenerator table{
-    border-collapse: collapse;
-        border-spacing: 0;
-	width:100%;
-	height:100%;
-	margin:0px;padding:0px;
-}.CSSTableGenerator tr:last-child td:last-child {
-	-moz-border-radius-bottomright:4px;
-	-webkit-border-bottom-right-radius:4px;
-	border-bottom-right-radius:4px;
+
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
 }
+
+.CSSTableGenerator table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
 .CSSTableGenerator table tr:first-child td:first-child {
-	-moz-border-radius-topleft:4px;
-	-webkit-border-top-left-radius:4px;
-	border-top-left-radius:4px;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
 }
+
 .CSSTableGenerator table tr:first-child td:last-child {
-	-moz-border-radius-topright:4px;
-	-webkit-border-top-right-radius:4px;
-	border-top-right-radius:4px;
-}.CSSTableGenerator tr:last-child td:first-child{
-	-moz-border-radius-bottomleft:4px;
-	-webkit-border-bottom-left-radius:4px;
-	border-bottom-left-radius:4px;
-}.CSSTableGenerator tr:hover td{
-	
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
 }
-.CSSTableGenerator tr:nth-child(odd){ background-color:#ffffff; }
-.CSSTableGenerator tr:nth-child(even)    { background-color:#eeeeee; }.CSSTableGenerator td{
-	vertical-align:middle;
-	
-	
-	border:1px solid #eeeeee;
-	border-width:0px 1px 1px 0px;
-	text-align:center;
-	padding:3px;
-	font-size:12px;
+
+.CSSTableGenerator tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.CSSTableGenerator tr:hover td {}
+
+.CSSTableGenerator tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+.CSSTableGenerator tr:nth-child(even) {
+	background-color: #eeeeee;
+}
+
+.CSSTableGenerator td {
+	vertical-align: middle;
+	border: 1px solid #eeeeee;
+	border-width: 0px 1px 1px 0px;
+	text-align: center;
+	padding: 3px;
+	font-size: 12px;
 	font-family: inherit;
-	font-weight:normal;
-	color:#444444;
-}.CSSTableGenerator tr:last-child td{
-	border-width:0px 1px 0px 0px;
-}.CSSTableGenerator tr td:last-child{
-	border-width:0px 0px 1px 0px;
-}.CSSTableGenerator tr:last-child td:last-child{
-	border-width:0px 0px 0px 0px;
+	font-weight: normal;
+	color: #444444;
 }
-.CSSTableGenerator tr:first-child td{
-		background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
-	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");	background: -o-linear-gradient(top,#ffffff,ffffff);
 
-	background-color:#ffffff;
-	border:0px solid #eeeeee;
-	text-align:center;
-	border-width:0px 0px 1px 1px;
-	font-size:13px;
+.CSSTableGenerator tr:last-child td {
+	border-width: 0px 1px 0px 0px;
+}
+
+.CSSTableGenerator tr td:last-child {
+	border-width: 0px 0px 1px 0px;
+}
+
+.CSSTableGenerator tr:last-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.CSSTableGenerator tr:first-child td {
+	background: -o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff));
+	background: -moz-linear-gradient(center top, #ffffff 5%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top, #ffffff, ffffff);
+
+	background-color: #ffffff;
+	border: 0px solid #eeeeee;
+	text-align: center;
+	border-width: 0px 0px 1px 1px;
+	font-size: 13px;
 	font-family: inherit;
-	font-weight:bold;
-	color:#f36510;
-}
-.CSSTableGenerator tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
-	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");	background: -o-linear-gradient(top,#ffffff,ffffff);
-
-	background-color:#ffffff;
-}
-.CSSTableGenerator tr:first-child td:first-child{
-	border-width:0px 0px 1px 0px;
-}
-.CSSTableGenerator tr:first-child td:last-child{
-	border-width:0px 0px 1px 1px;
+	font-weight: bold;
+	color: #f36510;
 }
 
+.CSSTableGenerator tr:first-child:hover td {
+	background: -o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff));
+	background: -moz-linear-gradient(center top, #ffffff 5%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top, #ffffff, ffffff);
+	background-color: #ffffff;
+}
 
+.CSSTableGenerator tr:first-child td:first-child {
+	border-width: 0px 0px 1px 0px;
+}
 
-.CSSTableGenerator .orange-row td{
-	vertical-align:middle;
-	
+.CSSTableGenerator tr:first-child td:last-child {
+	border-width: 0px 0px 1px 1px;
+}
+
+.CSSTableGenerator .orange-row td {
+	vertical-align: middle;
 	text-indent: -10px;
-	border:none ;
-	border-width:0px 1px 1px 0px;
-	text-align:center;
-	padding:6px;
-	font-size:12px;
+	border: none;
+	border-width: 0px 1px 1px 0px;
+	text-align: center;
+	padding: 6px;
+	font-size: 12px;
 	font-family: inherit;
-	font-weight:normal;
+	font-weight: normal;
 	color: white;
-	background-color:#f36510;
+	background-color: #f36510;
 }
 
-
-.CSSTableGenerator .dark-grey-row td{
-	vertical-align:middle;
-	
+.CSSTableGenerator .dark-grey-row td {
+	vertical-align: middle;
 	text-indent: -10px;
-	border:none ;
-	border-width:0px 1px 1px 0px;
-	text-align:center;
-	padding:3px;
+	border: none;
+	border-width: 0px 1px 1px 0px;
+	text-align: center;
+	padding: 3px;
 	padding-left: 10px;
-	font-size:12px;
+	font-size: 12px;
 	font-family: inherit;
-	font-weight:normal;
+	font-weight: normal;
 	color: #ffffff;
-	background-color:#888888;
+	background-color: #888888;
 }
 
- .CSSTableGenerator #mytable tr > td:first-child {
- 	 font-weight: bold;
- 	 font-size: 12px;
- 	 text-align: left;
- 	 padding-left: 25px;
- 	 } /* first column */
- 	
- 	 .CSSTableGenerator #mytable #narrow tr > td:first-child {
- 	 font-weight: bold;
- 	 font-size: 12px;
- 	 text-align: left;
- 	 padding-left: 10px;
- 	 } /* first column */
-
-
-
- .CSSTableGenerator .row-2 {
-  width: 15%;
+.CSSTableGenerator #mytable tr>td:first-child {
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 25px;
 }
+
+/* first column */
+
+.CSSTableGenerator #mytable #narrow tr>td:first-child {
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+/* first column */
+
+.CSSTableGenerator .row-2 {
+	width: 15%;
+}
+
 .CSSTableGenerator .row-3 {
-  width: 15%;
+	width: 15%;
 }
+
 .CSSTableGenerator .row-4 {
-  width: 15%;
+	width: 15%;
 }
+
 .CSSTableGenerator .row-5 {
-  width: 15%;
+	width: 15%;
 }

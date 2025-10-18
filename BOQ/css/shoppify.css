@@ -3,7 +3,6 @@
    See scss source here -> http://codepen.io/j0be/pen/MKRVyN
 */
 
-
 .cart-wrapper .type--center {
   text-align: center;
 }
@@ -26,6 +25,7 @@
 .cart-wrapper .variant-selectors {
   margin-bottom: 20px;
 }
+
 .cart-wrapper .variant-selectors label {
   display: block;
   margin-bottom: 5px;
@@ -66,7 +66,14 @@
   -moz-appearance: none;
 }
 
-html, body, h1, h2, h3, h4, h5, p {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   padding: 0;
   margin: 0;
 }
@@ -128,6 +135,7 @@ html {
   transform: translateX(100%);
   transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
 }
+
 .cart-wrapper .cart.js-active {
   transform: translateX(0);
   box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
@@ -165,6 +173,7 @@ html {
   transition: transform 100ms ease;
   cursor: pointer;
 }
+
 .cart-wrapper .btn--close:hover {
   transform: scale(1.2);
   color: dimgray;
@@ -198,9 +207,11 @@ html {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
+
 .cart-wrapper .cart-item.js-hidden {
   opacity: 0;
 }
+
 .cart-wrapper .cart-item.js-working:after {
   content: '';
   position: absolute;
@@ -246,7 +257,8 @@ html {
   border-radius: 3px;
 }
 
-.cart-wrapper .quantity-decrement, .quantity-increment {
+.cart-wrapper .quantity-decrement,
+.quantity-increment {
   color: #767676;
   display: block;
   float: left;
@@ -317,32 +329,35 @@ html {
   color: #767676;
   margin-bottom: 10px;
 }
-.cart-wrapper .cart-discount-notice input[type=checkbox]{
-	width: 15px;
-    height: 15px;
-    border: 1px solid #f79d68;
-    float: left;
-    margin-top: 3px;
-    outline: none;
-    -webkit-appearance: none;
-    appearance: none;
-    display: inline-block;
-	position: relative;
+
+.cart-wrapper .cart-discount-notice input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #f79d68;
+  float: left;
+  margin-top: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
 }
+
 .cart-wrapper .cart-discount-notice input[type=checkbox]:checked {
-	background-color: #fafbfc;
-	border: 1px solid #f79d68;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #f79d68;
+  background-color: #fafbfc;
+  border: 1px solid #f79d68;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #f79d68;
 }
+
 .cart-wrapper .cart-discount-notice input[type=checkbox]:checked:after {
-	content: '\2714\FE0E';
-	font-size: 14px;
-	position: absolute;
-	top: -3px;
-	left: 1px;
-	color: #f79d68;
-	font-family: 'Open Sans', sans-serif;
+  content: '\2714\FE0E';
+  font-size: 14px;
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  color: #f79d68;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .cart-wrapper .cart-actions-container {
@@ -376,7 +391,9 @@ html {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-.cart-wrapper .btn:hover, .cart-wrapper .btn:focus {
+
+.cart-wrapper .btn:hover,
+.cart-wrapper .btn:focus {
   background: #77a960;
 }
 
@@ -402,6 +419,7 @@ html {
   z-index: 2;
   z-index: 9999999;
 }
+
 .cart-wrapper .btn--cart-tab.js-active {
   transform: translateY(-50%);
   transform: translateY(-16%);
@@ -419,25 +437,24 @@ html {
   width: 20px;
 }
 
-
-
-
-.cart-wrapper .cart-section input[type="submit"]	{
-	width: auto !important;
+.cart-wrapper .cart-section input[type="submit"] {
+  width: auto !important;
 }
 
-.cart-wrapper .variant-title, .cart-wrapper .variant-price	{
-	font-size: 16px;
-    margin-bottom: 0px;
-    font-weight: 300;
-    color: #797979 !important;
-}
-.cart-wrapper .product-title	{
-	margin-bottom: 5px;
-}
-.cart-wrapper .variant-price	{
-	margin-bottom: 20px;
-	font-weight: bold;
-	color: #343434 !important;
+.cart-wrapper .variant-title,
+.cart-wrapper .variant-price {
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-weight: 300;
+  color: #797979 !important;
 }
 
+.cart-wrapper .product-title {
+  margin-bottom: 5px;
+}
+
+.cart-wrapper .variant-price {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #343434 !important;
+}

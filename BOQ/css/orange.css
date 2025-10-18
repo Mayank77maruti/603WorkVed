@@ -1,5 +1,5 @@
 a {
-    color: #f36510;
+	color: #f36510;
 }
 
 .accent-color {
@@ -26,33 +26,38 @@ a {
 	color: #f36510;
 }
 
-a.main-button, input[type="submit"] {
+a.main-button,
+input[type="submit"] {
 	background-color: #f36510;
 }
 
-.navbar-default .navbar-nav > li:hover > a,
-.navbar-default .navbar-nav > li > a.active {
+.navbar-default .navbar-nav>li:hover>a,
+.navbar-default .navbar-nav>li>a.active {
 	color: #f36510;
 }
 
-.dropdown > li:hover > a, .dropdown > div > li:hover > a, .sup-dropdown li:hover > a {
+.dropdown>li:hover>a,
+.dropdown>div>li:hover>a,
+.sup-dropdown li:hover>a {
 	color: #f36510;
 }
 
-.navbar-default .navbar-nav > li > a:after {
+.navbar-default .navbar-nav>li>a:after {
 	background-color: #f36510;
 }
 
-.navbar-default .navbar-nav > li > a.active, .navbar-default .navbar-nav > li:hover > a {
+.navbar-default .navbar-nav>li>a.active,
+.navbar-default .navbar-nav>li:hover>a {
 	border-color: #f36510;
 }
 
-.dropdown  li a.active, .sup-dropdown li a.active {
+.dropdown li a.active,
+.sup-dropdown li a.active {
 	color: #f36510;
 }
 
 ul.breadcrumbs li a:hover {
-    color: #f36510;
+	color: #f36510;
 }
 
 .full-width-recent-projects .portfolio-item:hover .portfolio-thumb .thumb-overlay {
@@ -108,11 +113,11 @@ ul.breadcrumbs li a:hover {
 }
 
 .pricing-tables .pricing-table.highlight-plan .plan-name h3 {
-	//color: #f36510;
+	color: #f36510;
 }
 
 .pricing-tables .pricing-table.highlight-plan .plan-signup {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 .pricing-tables .pricing-table.highlight-plan .plan-name {
@@ -136,7 +141,7 @@ ul.breadcrumbs li a:hover {
 	color: #f36510;
 }
 
-.btn-system.btn-wite{
+.btn-system.btn-wite {
 	color: #f36510;
 }
 
@@ -144,11 +149,13 @@ ul.icons-list li i {
 	color: #f36510;
 }
 
-.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
 	background-color: #f36510;
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover {
 	color: #f36510;
 }
 
@@ -156,14 +163,17 @@ ul.icons-list li i {
 	text-shadow: 0 0 0 #f36510;
 }
 
-.icon-small:hover, .service-box:hover .icon-small {
+.icon-small:hover,
+.service-box:hover .icon-small {
 	color: #f36510;
 }
+
 .icon-medium {
 	text-shadow: 0 0 0 #f36510;
 }
 
-.icon-medium:hover, .service-box:hover .icon-medium {
+.icon-medium:hover,
+.service-box:hover .icon-medium {
 	color: #f36510;
 }
 
@@ -171,7 +181,8 @@ ul.icons-list li i {
 	text-shadow: 0 0 0 #f36510;
 }
 
-.icon-large:hover, .service-box:hover .icon-large {
+.icon-large:hover,
+.service-box:hover .icon-large {
 	color: #f36510;
 }
 
@@ -179,14 +190,15 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .icon-effect-1:after {
 	background-color: #f36510;
 }
 
-.icon-effect-1:hover, .service-box:hover .icon-effect-1 {
+.icon-effect-1:hover,
+.service-box:hover .icon-effect-1 {
 	color: #f36510;
 }
 
@@ -195,7 +207,7 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .icon-effect-2:after {
@@ -207,7 +219,7 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .icon-effect-4 {
@@ -215,7 +227,7 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .icon-effect-5 {
@@ -223,7 +235,7 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .icon-effect-6 {
@@ -231,7 +243,7 @@ ul.icons-list li i {
 	box-shadow: 0 0 0 3px #f36510;
 	-o-box-shadow: 0 0 0 3px #f36510;
 	-moz-box-shadow: 0 0 0 3px #f36510;
-  	-webkit-box-shadow: 0 0 0 3px #f36510;
+	-webkit-box-shadow: 0 0 0 3px #f36510;
 }
 
 .team-member .member-photo .member-name span {
@@ -293,11 +305,11 @@ ul.post-meta li a:hover {
 }
 
 .sidebar .tagcloud a:hover {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 .back-to-top:hover i {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 .touch-slider .owl-controls.clickable .owl-buttons div:hover {
@@ -318,53 +330,56 @@ ul.post-meta li a:hover {
 
 
 #portfolio-list li .portfolio-item-content {
-    background: rgb(243, 101, 16);
+	background: rgb(243, 101, 16);
 }
 
 .services-3-icon i {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 .services-2-icon i {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 #main-slide .animated2 strong {
-    color: #f36510;
-}
-#main-slide .animated4 strong {
-    color: #f36510;
-}
-#main-slide .animated7 strong {
-    color: #f36510;
+	color: #f36510;
 }
 
-#main-slide .carousel-control i:hover{
+#main-slide .animated4 strong {
+	color: #f36510;
+}
+
+#main-slide .animated7 strong {
+	color: #f36510;
+}
+
+#main-slide .carousel-control i:hover {
 	background-color: #f36510;
 }
+
 .slider.btn {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 #main-slide .carousel-indicators .active {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 
 .counter-item i {
-    color: #f36510;
+	color: #f36510;
 }
 
 .timer {
-    color: #f36510;
+	color: #f36510;
 }
 
 .progress-bar {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 .team-member.modern .member-photo:after {
-    background-color: #f36510;
+	background-color: #f36510;
 }
 
 
@@ -372,17 +387,20 @@ ul.post-meta li a:hover {
 	color: #f36510;
 }
 
-.dot1, .dot2 {
-    background-color: #f36510;
+.dot1,
+.dot2 {
+	background-color: #f36510;
 }
 
 
 /* sasha added */
-.nav-pills > li > a:hover, .nav-pills > li > a:focus {
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus {
 	background-color: #f36510;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover {
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover {
 	color: #f36510;
 	background-color: #FFFFFF;
 }

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - 603 The Coworking Space</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+        rel="stylesheet">
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
     <style>
         :root {
@@ -69,6 +71,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -175,9 +178,20 @@
             border-radius: 3px;
         }
 
-        .strength-weak { width: 33%; background: #ff4444; }
-        .strength-medium { width: 66%; background: #ffbb33; }
-        .strength-strong { width: 100%; background: #00C851; }
+        .strength-weak {
+            width: 33%;
+            background: #ff4444;
+        }
+
+        .strength-medium {
+            width: 66%;
+            background: #ffbb33;
+        }
+
+        .strength-strong {
+            width: 100%;
+            background: #00C851;
+        }
 
         .error-message {
             color: #ff4444;
@@ -256,35 +270,44 @@
         }
 
         .password-strength-text {
-    font-size: 12px;
-    margin-top: 5px;
-    font-weight: 600;
-    display: none;
-}
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 600;
+            display: none;
+        }
 
-.password-strength-text.show {
-    display: block;
-}
+        .password-strength-text.show {
+            display: block;
+        }
 
-.text-weak { color: #ff4444; }
-.text-medium { color: #ffbb33; }
-.text-strong { color: #00C851; }
+        .text-weak {
+            color: #ff4444;
+        }
+
+        .text-medium {
+            color: #ffbb33;
+        }
+
+        .text-strong {
+            color: #00C851;
+        }
 
         @media (max-width: 480px) {
             .signup-container {
                 padding: 40px 25px;
             }
-            
+
             .logo-text {
                 font-size: 36px;
             }
-            
+
             .signup-container h1 {
                 font-size: 24px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="signup-container">
         <div class="logo">
@@ -292,7 +315,7 @@
         </div>
         <h1>Create Account</h1>
         <p class="subtitle">Join our premium coworking community</p>
-        
+
         <form id="signupForm" novalidate>
             <div class="form-group">
                 <ion-icon name="person-outline"></ion-icon>
@@ -319,15 +342,16 @@
                     <div class="password-strength-bar" id="strengthBar"></div>
                 </div>
                 <div class="password-strength">
-    <div class="password-strength-bar" id="strengthBar"></div>
-</div>
-<span class="password-strength-text" id="strengthText"></span>
+                    <div class="password-strength-bar" id="strengthBar"></div>
+                </div>
+                <span class="password-strength-text" id="strengthText"></span>
                 <span class="error-message" id="passwordError">Password must be at least 8 characters</span>
             </div>
 
             <div class="form-group">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required
+                    autocomplete="new-password">
                 <ion-icon name="eye-outline" class="password-toggle" id="toggleConfirmPassword"></ion-icon>
                 <span class="error-message" id="confirmPasswordError">Passwords do not match</span>
             </div>
@@ -364,38 +388,38 @@
         });
 
         // Password strength checker with text display
-password.addEventListener('input', (e) => {
-    const val = e.target.value;
-    const strengthText = document.getElementById('strengthText');
-    let strength = 0;
-    
-    // Check password criteria
-    if (val.length >= 8) strength++;
-    if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
-    if (/\d/.test(val)) strength++;
-    if (/[^a-zA-Z\d]/.test(val)) strength++;
+        password.addEventListener('input', (e) => {
+            const val = e.target.value;
+            const strengthText = document.getElementById('strengthText');
+            let strength = 0;
 
-    // Update strength bar and text
-    strengthBar.className = 'password-strength-bar';
-    strengthText.className = 'password-strength-text';
-    
-    if (val.length === 0) {
-        strengthBar.style.width = '0%';
-        strengthText.classList.remove('show');
-    } else if (strength >= 3) {
-        strengthBar.classList.add('strength-strong');
-        strengthText.classList.add('show', 'text-strong');
-        strengthText.textContent = '✓ Strong Password';
-    } else if (strength >= 2) {
-        strengthBar.classList.add('strength-medium');
-        strengthText.classList.add('show', 'text-medium');
-        strengthText.textContent = '⚠ Medium Password - Add more variety';
-    } else {
-        strengthBar.classList.add('strength-weak');
-        strengthText.classList.add('show', 'text-weak');
-        strengthText.textContent = '✗ Weak Password - Use 8+ chars, mixed case, numbers & symbols';
-    }
-});
+            // Check password criteria
+            if (val.length >= 8) strength++;
+            if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
+            if (/\d/.test(val)) strength++;
+            if (/[^a-zA-Z\d]/.test(val)) strength++;
+
+            // Update strength bar and text
+            strengthBar.className = 'password-strength-bar';
+            strengthText.className = 'password-strength-text';
+
+            if (val.length === 0) {
+                strengthBar.style.width = '0%';
+                strengthText.classList.remove('show');
+            } else if (strength >= 3) {
+                strengthBar.classList.add('strength-strong');
+                strengthText.classList.add('show', 'text-strong');
+                strengthText.textContent = '✓ Strong Password';
+            } else if (strength >= 2) {
+                strengthBar.classList.add('strength-medium');
+                strengthText.classList.add('show', 'text-medium');
+                strengthText.textContent = '⚠ Medium Password - Add more variety';
+            } else {
+                strengthBar.classList.add('strength-weak');
+                strengthText.classList.add('show', 'text-weak');
+                strengthText.textContent = '✗ Weak Password - Use 8+ chars, mixed case, numbers & symbols';
+            }
+        });
 
         // Form validation
         function validateEmail(email) {
@@ -404,28 +428,28 @@ password.addEventListener('input', (e) => {
         }
 
         // Password strength checker
-password.addEventListener('input', (e) => {
-    const val = e.target.value;
-    let strength = 0;
-    
-    // Check password criteria
-    if (val.length >= 8) strength++;
-    if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
-    if (/\d/.test(val)) strength++;
-    if (/[^a-zA-Z\d]/.test(val)) strength++;
+        password.addEventListener('input', (e) => {
+            const val = e.target.value;
+            let strength = 0;
 
-    // Update strength bar
-    strengthBar.className = 'password-strength-bar';
-    if (strength >= 3) {
-        strengthBar.classList.add('strength-strong');
-    } else if (strength >= 2) {
-        strengthBar.classList.add('strength-medium');
-    } else if (strength >= 1) {
-        strengthBar.classList.add('strength-weak');
-    } else {
-        strengthBar.style.width = '0%';
-    }
-    });
+            // Check password criteria
+            if (val.length >= 8) strength++;
+            if (/[a-z]/.test(val) && /[A-Z]/.test(val)) strength++;
+            if (/\d/.test(val)) strength++;
+            if (/[^a-zA-Z\d]/.test(val)) strength++;
+
+            // Update strength bar
+            strengthBar.className = 'password-strength-bar';
+            if (strength >= 3) {
+                strengthBar.classList.add('strength-strong');
+            } else if (strength >= 2) {
+                strengthBar.classList.add('strength-medium');
+            } else if (strength >= 1) {
+                strengthBar.classList.add('strength-weak');
+            } else {
+                strengthBar.style.width = '0%';
+            }
+        });
 
         function showError(input, message) {
             const errorElement = document.getElementById(input.id + 'Error');
@@ -485,4 +509,5 @@ password.addEventListener('input', (e) => {
         });
     </script>
 </body>
+
 </html>

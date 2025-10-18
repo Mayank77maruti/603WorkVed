@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -12,49 +13,61 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="./assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Image Hover Transition</title>
 
   <style>
-    body, html {
-      
+    body,
+    html {
+
       height: 100%;
-      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-x: hidden;
+      /* Prevent horizontal scroll */
     }
 
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
+
     h2 {
       text-align: center;
     }
+
     .container {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 100vh; /* Ensure the container takes the full height */
+      height: 100vh;
+      /* Ensure the container takes the full height */
     }
+
     .image-container {
       position: relative;
       width: 25%;
-      height: 100vh; /* Full height of the screen */
+      height: 100vh;
+      /* Full height of the screen */
       overflow: hidden;
       transition: width 0.5s ease, transform 0.5s ease;
     }
+
     .image-container img {
       width: 100%;
-      height: 100%; /* Full height of the screen */
+      height: 100%;
+      /* Full height of the screen */
       object-fit: cover;
       transition: transform 0.5s ease;
     }
+
     .image-container:hover {
       width: 100%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .image-container:hover img {
       transform: scale(1.05);
     }
+
     .image-container::after {
       content: attr(data-text);
       position: absolute;
@@ -66,6 +79,7 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+
     .button {
       position: fixed;
       bottom: 20px;
@@ -79,28 +93,26 @@
       border-radius: 5px;
     }
 
-    #nav{
-     background-color: gainsboro;
-    color: orangered;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 2vh;
-    height: 10vh;
+    #nav {
+      background-color: gainsboro;
+      color: orangered;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 2vh;
+      height: 10vh;
     }
 
-    .next-button-container{
-
+    .next-button-container {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       margin-top: 5vh;
     }
 
-    .next-button{
-
-      width:10vw;
-      height:5vh;
+    .next-button {
+      width: 10vw;
+      height: 5vh;
       margin-bottom: 5vh;
       background-color: orangered;
       border-radius: 100px;
@@ -112,25 +124,30 @@
         width: 30%;
         height: 80vh;
       }
+
       .image-container img {
         height: 80vh;
         object-fit: cover;
       }
     }
+
     @media only screen and (max-width: 768px) {
       .container {
         flex-direction: column;
         align-items: center;
       }
+
       .image-container {
         width: 80%;
         height: 200px;
         margin-bottom: 20px;
       }
+
       .image-container img {
         height: 200px;
         object-fit: cover;
       }
+
       .button {
         position: relative;
         bottom: auto;
@@ -138,12 +155,14 @@
         margin: 20px auto;
       }
     }
+
     @media only screen and (max-width: 480px) {
       .image-container {
         width: 90%;
         height: 150px;
         margin-bottom: 15px;
       }
+
       .image-container img {
         height: 150px;
         object-fit: cover;
@@ -151,42 +170,47 @@
     }
   </style>
 </head>
-<div id="nav"><h1>Select Your Layout</h1></div>
+<div id="nav">
+  <h1>Select Your Layout</h1>
+</div>
+
 <body>
   <div class="container">
     <div class="image-container" data-text="Combination">
       <a href="./BOQ/indexBOQ.html">
-      <!-- <img src="./image/Combination.2a9f876caf5f775d9087.jpg" alt="Image 1"> -->
-      
-      <img src="https://abhiram.sirv.com/img/Combination.2a9f876caf5f775d9087.jpg?format=webp" alt="Image 1">
+        <!-- <img src="./image/Combination.2a9f876caf5f775d9087.jpg" alt="Image 1"> -->
 
-    </a>
+        <img src="https://abhiram.sirv.com/img/Combination.2a9f876caf5f775d9087.jpg?format=webp" alt="Image 1">
+
+      </a>
     </div>
     <div class="image-container" data-text="Coworking">
       <a href="./BOQ/indexBOQ.html">
-      <!-- <img src="./image/Coworking.74e92a69fdb3e29e43b9.jpg" alt="Image 2"> -->
-      <img src="https://abhiram.sirv.com/img/Coworking.74e92a69fdb3e29e43b9.jpg?format=webp"alt="Image 2">
+        <!-- <img src="./image/Coworking.74e92a69fdb3e29e43b9.jpg" alt="Image 2"> -->
+        <img src="https://abhiram.sirv.com/img/Coworking.74e92a69fdb3e29e43b9.jpg?format=webp" alt="Image 2">
 
-    </a>
+      </a>
     </div>
     <div class="image-container" data-text="Minimal">
       <a href="./BOQ/indexBOQ.html">
-      <!-- <img src="./image/Minimal.6070a8a8ec2ed28895e4.jpg" alt="Image 3"> -->
-      <img src="https://abhiram.sirv.com/img/Minimal.6070a8a8ec2ed28895e4.jpg?format=webp" alt="Image 3">
+        <!-- <img src="./image/Minimal.6070a8a8ec2ed28895e4.jpg" alt="Image 3"> -->
+        <img src="https://abhiram.sirv.com/img/Minimal.6070a8a8ec2ed28895e4.jpg?format=webp" alt="Image 3">
 
-    </a>
+      </a>
     </div>
     <div class="image-container" data-text="Open Plan">
       <a href="./BOQ/indexBOQ.html">
-      <!-- <img src="./image/Open Plan.77a43648aa1d556dca34.jpg" alt="Image 4"> -->
-      
-      <img src="https://abhiram.sirv.com/img/Open%20Plan.77a43648aa1d556dca34.jpg?format=webp" alt="Image 4">
+        <!-- <img src="./image/Open Plan.77a43648aa1d556dca34.jpg" alt="Image 4"> -->
 
-    </a>
+        <img src="https://abhiram.sirv.com/img/Open%20Plan.77a43648aa1d556dca34.jpg?format=webp" alt="Image 4">
+
+      </a>
     </div>
   </div>
 
-  <div class="next-button-container"> <button class="next-button"><a href="./BOQ/indexBOQ.html" style="text-decoration: none;color: white;">Next</a></button></div> 
+  <div class="next-button-container"> <button class="next-button"><a href="./BOQ/indexBOQ.html"
+        style="text-decoration: none;color: white;">Next</a></button></div>
 
 </body>
+
 </html>

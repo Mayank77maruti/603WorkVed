@@ -1,673 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
     - primary meta tags
   -->
-    <title>603 The Coworking Space</title>
-    <meta name="title" content="603 The Coworking Space" />
-    <!-- 
+  <title>603 The Coworking Space</title>
+  <meta name="title" content="603 The Coworking Space" />
+  <!-- 
     - favicon
   -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <!-- 
+  <!-- 
     - preload images
   -->
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif"
-    />
-    <!-- <link rel="preload" as="image" href="./assets/images/sunshine-loc.png">
+  <link rel="preload" as="image" href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif" />
+  <!-- <link rel="preload" as="image" href="./assets/images/sunshine-loc.png">
   <link rel="preload" as="image" href="./assets/images/heroLocation.png"> -->
 
   <!--
           - Font Awesome
         -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--
         - Ionic Icons CDN
       -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
 
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
-  <body id="top">
-    <!-- 
+</head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet" />
+
+<body id="top">
+  <!-- 
     - #PRELOADER
   -->
 
-    <div class="preload" data-preaload>
-      <div class="circle"></div>
-      <p class="text">603</p>
-    </div>
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">603</p>
+  </div>
 
-    <!-- 
+  <!-- 
     - #TOP BAR
   -->
 
-    <div class="topbar">
-      <div class="container">
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">
-            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-          </span>
-        </address>
-
-        <div class="separator"></div>
-
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">Daily : 8.00 am to 10.00 pm</span>
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <a href="tel:+11234567890" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <span class="span">
+          Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+        </span>
+      </address>
 
-          <span class="span"> +91 9136036603</span>
-        </a>
+      <div class="separator"></div>
 
-        <div class="separator"></div>
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
 
-        <a
-          href="mailto:	
-      sales@603thecoworkingspace.com"
-          class="topbar-item link"
-        >
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span"> sales@603thecoworkingspace.com</span>
-        </a>
+        <span class="span">Daily : 8.00 am to 10.00 pm</span>
       </div>
-    </div>
 
-    <!-- 
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> +91 9136036603</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:	
+      sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> sales@603thecoworkingspace.com</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header" data-header>
-      <div class="container">
-        <a href="index.html#" class="logo">
-          <img
-            src="./assets/images/603logo (1).avif"
-            width="160"
-            height="50"
-            alt="Grilli - Home"
-          />
-        </a>
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+      </a>
 
-        <nav class="navbar" data-navbar>
-          <button
-            class="close-btn scale-up"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <a href="index.html#" class="logo">
-            <img
-              src="./assets/images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-            />
-          </a>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a
-                href="index.html#home"
-                class="navbar-link hover-underline active"
-              >
-                <div class="separator"></div>
-
-                <span class="span">Home</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogpost4.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Spaces</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">About Us</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="index.html#images" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Images</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogs.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Blogs</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="contact.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-
-                <span class="span">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
-            </address>
-
-            <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
-              >booking@grilli.com</a
-            >
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a
-              href="tel:+88123123456"
-              class="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
-            </a>
-          </div>
-        </nav>
-
-        <a href="indexLayout.html" class="btn btn-secondary scale-up">
-          <span class="text text-1">Make Your Space</span>
-
-          <span class="text text-2" aria-hidden="true">Make Your Space</span>
-        </a>
-
-        <button
-          class="nav-open-btn scale-up"
-          aria-label="open menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
-      </div>
-    </header>
 
-    <main>
-      <article>
-        <!-- HERO SECTION -->
-        <section class="hero text-center space-section">
-          <ul class="hero-slider" data-hero-slider>
-            <li class="slider-item active" data-hero-slider-item>
-              <div class="space-container">
-                <div class="space-description-div" id="space-1">
-                  <h3 class="space-description-heading container slider-reveal">
-                    Small - Scale Offices
-                  </h3>
-                  <div class="space-description-overlay">
-                    <p class="space-description slider-reveal">
-                      Small-scale offices are often budget-friendly and easier
-                      to maintain, making them ideal for businesses seeking an
-                      intimate, agile workspace where communication flows
-                      naturally among team members.
-                    </p>
-                  </div>
-                </div>
-                <div class="space-canvas-div">
-                  <div class="space-canvas-border-div">
-                    <img
-                      src="assets/images/blob.svg"
-                      alt=""
-                      class="space-canvas-border-blob"
-                    />
+        <a href="index.html#" class="logo">
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+        </a>
 
-                    <img
-                      src="assets/images/blob2.svg"
-                      alt=""
-                      class="space-canvas-border-blob2"
-                    />
-                  </div>
-                  <img
-                    src="assets/images/office1.png"
-                    alt=""
-                    class="space-canvas"
-                  />
-                  <img
-                    src="assets/images/office1.png"
-                    alt=""
-                    class="space-canvas-shadow"
-                  />
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Restaurant St, Delicious City, <br />
+            London 9578, UK
+          </address>
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +88-123-123456
+          </a>
+        </div>
+      </nav>
+
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
+
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- HERO SECTION -->
+      <section class="hero text-center space-section">
+        <ul class="hero-slider" data-hero-slider>
+          <li class="slider-item active" data-hero-slider-item>
+            <div class="space-container">
+              <div class="space-description-div" id="space-1">
+                <h3 class="space-description-heading container slider-reveal">
+                  Small - Scale Offices
+                </h3>
+                <div class="space-description-overlay">
+                  <p class="space-description slider-reveal">
+                    Small-scale offices are often budget-friendly and easier
+                    to maintain, making them ideal for businesses seeking an
+                    intimate, agile workspace where communication flows
+                    naturally among team members.
+                  </p>
                 </div>
               </div>
-            </li>
-            <li class="slider-item" data-hero-slider-item>
-              <div class="space-container">
-                <div class="space-description-div" id="space-2">
-                  <h3 class="space-description-heading container slider-reveal">
-                    Intermediate - Scale Offices
-                  </h3>
-                  <div class="space-description-overlay">
-                    <p class="space-description slider-reveal">
-                      Intermediate-scale offices prioritize adaptable layouts to
-                      accommodate growth and foster a close-knit work
-                      environment, while also providing essential amenities like
-                      shared kitchens, lounges, and technology infrastructure.
-                    </p>
-                  </div>
+              <div class="space-canvas-div">
+                <div class="space-canvas-border-div">
+                  <img src="assets/images/blob.svg" alt="" class="space-canvas-border-blob" />
+
+                  <img src="assets/images/blob2.svg" alt="" class="space-canvas-border-blob2" />
                 </div>
-                <div class="space-canvas-div">
-                  <div class="space-canvas-border-div">
-                    <img
-                      src="assets/images/blob.svg"
-                      alt=""
-                      class="space-canvas-border-blob"
-                    />
-                    <img
-                      src="assets/images/blob2.svg"
-                      alt=""
-                      class="space-canvas-border-blob2"
-                    />
-                  </div>
-                  <img
-                    src="assets/images/office2.png"
-                    alt=""
-                    class="space-canvas"
-                  />
-                  <img
-                    src="assets/images/office2.png"
-                    alt=""
-                    class="space-canvas-shadow"
-                  />
+                <img src="assets/images/office1.png" alt="" class="space-canvas" />
+                <img src="assets/images/office1.png" alt="" class="space-canvas-shadow" />
+              </div>
+            </div>
+          </li>
+          <li class="slider-item" data-hero-slider-item>
+            <div class="space-container">
+              <div class="space-description-div" id="space-2">
+                <h3 class="space-description-heading container slider-reveal">
+                  Intermediate - Scale Offices
+                </h3>
+                <div class="space-description-overlay">
+                  <p class="space-description slider-reveal">
+                    Intermediate-scale offices prioritize adaptable layouts to
+                    accommodate growth and foster a close-knit work
+                    environment, while also providing essential amenities like
+                    shared kitchens, lounges, and technology infrastructure.
+                  </p>
                 </div>
               </div>
-            </li>
-            <li class="slider-item" data-hero-slider-item>
-              <div class="space-container">
-                <div class="space-description-div" id="space-3">
-                  <h3 class="space-description-heading container slider-reveal">
-                    Medium - Scale Offices
-                  </h3>
-                  <div class="space-description-overlay">
-                    <p class="space-description slider-reveal">
-                      These offer a balance between a personal workspace feel
-                      and the infrastructure required to support larger teams.
-                      These offices typically feature a blend of open-plan
-                      areas, private offices, and meeting rooms that allow for
-                      both collaborative and focused work.
-                    </p>
-                  </div>
+              <div class="space-canvas-div">
+                <div class="space-canvas-border-div">
+                  <img src="assets/images/blob.svg" alt="" class="space-canvas-border-blob" />
+                  <img src="assets/images/blob2.svg" alt="" class="space-canvas-border-blob2" />
                 </div>
-                <div class="space-canvas-div">
-                  <div class="space-canvas-border-div">
-                    <img
-                      src="assets/images/blob.svg"
-                      alt=""
-                      class="space-canvas-border-blob"
-                    />
-                    <img
-                      src="assets/images/blob2.svg"
-                      alt=""
-                      class="space-canvas-border-blob2"
-                    />
-                  </div>
-                  <img
-                    src="assets/images/office3.png"
-                    alt=""
-                    class="space-canvas"
-                  />
-                  <img
-                    src="assets/images/office3.png"
-                    alt=""
-                    class="space-canvas-shadow"
-                  />
+                <img src="assets/images/office2.png" alt="" class="space-canvas" />
+                <img src="assets/images/office2.png" alt="" class="space-canvas-shadow" />
+              </div>
+            </div>
+          </li>
+          <li class="slider-item" data-hero-slider-item>
+            <div class="space-container">
+              <div class="space-description-div" id="space-3">
+                <h3 class="space-description-heading container slider-reveal">
+                  Medium - Scale Offices
+                </h3>
+                <div class="space-description-overlay">
+                  <p class="space-description slider-reveal">
+                    These offer a balance between a personal workspace feel
+                    and the infrastructure required to support larger teams.
+                    These offices typically feature a blend of open-plan
+                    areas, private offices, and meeting rooms that allow for
+                    both collaborative and focused work.
+                  </p>
                 </div>
               </div>
-            </li>
-            <li class="slider-item" data-hero-slider-item>
-              <div class="space-container">
-                <div class="space-description-div" id="space-4">
-                  <h3 class="space-description-heading container slider-reveal">
-                    Large - Scale Offices
-                  </h3>
-                  <div class="space-description-overlay">
-                    <p class="space-description slider-reveal">
-                      Large offices include open-plan layouts to foster
-                      communication, along with private meeting rooms, break
-                      areas, and sometimes wellness zones for relaxation.
-                    </p>
-                  </div>
+              <div class="space-canvas-div">
+                <div class="space-canvas-border-div">
+                  <img src="assets/images/blob.svg" alt="" class="space-canvas-border-blob" />
+                  <img src="assets/images/blob2.svg" alt="" class="space-canvas-border-blob2" />
                 </div>
-                <div class="space-canvas-div">
-                  <div class="space-canvas-border-div">
-                    <img
-                      src="assets/images/blob.svg"
-                      alt=""
-                      class="space-canvas-border-blob"
-                    />
-                    <img
-                      src="assets/images/blob2.svg"
-                      alt=""
-                      class="space-canvas-border-blob2"
-                    />
-                  </div>
-                  <img
-                    src="assets/images/office4.png"
-                    alt=""
-                    class="space-canvas"
-                  />
-                  <img
-                    src="assets/images/office4.png"
-                    alt=""
-                    class="space-canvas-shadow"
-                  />
+                <img src="assets/images/office3.png" alt="" class="space-canvas" />
+                <img src="assets/images/office3.png" alt="" class="space-canvas-shadow" />
+              </div>
+            </div>
+          </li>
+          <li class="slider-item" data-hero-slider-item>
+            <div class="space-container">
+              <div class="space-description-div" id="space-4">
+                <h3 class="space-description-heading container slider-reveal">
+                  Large - Scale Offices
+                </h3>
+                <div class="space-description-overlay">
+                  <p class="space-description slider-reveal">
+                    Large offices include open-plan layouts to foster
+                    communication, along with private meeting rooms, break
+                    areas, and sometimes wellness zones for relaxation.
+                  </p>
                 </div>
               </div>
-            </li>
-          </ul>
+              <div class="space-canvas-div">
+                <div class="space-canvas-border-div">
+                  <img src="assets/images/blob.svg" alt="" class="space-canvas-border-blob" />
+                  <img src="assets/images/blob2.svg" alt="" class="space-canvas-border-blob2" />
+                </div>
+                <img src="assets/images/office4.png" alt="" class="space-canvas" />
+                <img src="assets/images/office4.png" alt="" class="space-canvas-shadow" />
+              </div>
+            </div>
+          </li>
+        </ul>
 
-          <button
-            class="slider-btn prev"
-            aria-label="slide to previous"
-            data-prev-btn
-          >
-            <ion-icon name="chevron-back"></ion-icon>
-          </button>
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
 
-          <button
-            class="slider-btn next"
-            aria-label="slide to next"
-            data-next-btn
-          >
-            <ion-icon name="chevron-forward"></ion-icon>
-          </button>
-        </section>
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+      </section>
 
-        <style>
-          .space-section {
-            background-image: linear-gradient(
-                to right,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              ),
-              linear-gradient(
-                to bottom,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              );
-            background-size: 120px 120px;
-          }
+      <style>
+        .space-section {
+          background-image: linear-gradient(to right,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px),
+            linear-gradient(to bottom,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px);
+          background-size: 120px 120px;
+        }
+
+        .space-container {
+          display: grid;
+          padding-bottom: 15rem;
+        }
+
+        .space-container {
+          grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 600px) {
           .space-container {
-            display: grid;
-            padding-bottom: 15rem;
+            grid-template-columns: repeat(1, 1fr);
+            width: 95vw;
           }
+        }
+
+        @media (min-width: 900px) {
           .space-container {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, 1fr);
+            width: 95vw;
           }
-          @media (min-width: 600px) {
-            .space-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
-          }
+        }
 
-          @media (min-width: 900px) {
-            .space-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
+        @media (min-width: 1200px) {
+          .space-container {
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 0;
+            width: 88vw;
           }
-          @media (min-width: 1200px) {
-            .space-container {
-              grid-template-columns: repeat(2, 1fr);
-              padding-bottom: 0;
-              width: 88vw;
-            }
-          }
+        }
 
-          .space-canvas-div {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 4em;
-          }
+        .space-canvas-div {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 4em;
+        }
 
-          .space-canvas {
-            width: 100%;
-            height: auto;
-          }
+        .space-canvas {
+          width: 100%;
+          height: auto;
+        }
 
-          .space-canvas-border-div {
-            position: absolute;
-            height: 100%;
-            aspect-ratio: 1;
-            border: 0.5em solid hsl(42, 94%, 51%);
-            background-image: url("assets/images/footer-form-bg.png");
-            border-radius: 20% 10% 20% 10%;
-            animation: rotate360 linear 10s infinite;
-            z-index: -1;
-          }
+        .space-canvas-border-div {
+          position: absolute;
+          height: 100%;
+          aspect-ratio: 1;
+          border: 0.5em solid hsl(42, 94%, 51%);
+          background-image: url("assets/images/footer-form-bg.png");
+          border-radius: 20% 10% 20% 10%;
+          animation: rotate360 linear 10s infinite;
+          z-index: -1;
+        }
 
-          .space-canvas-border-blob {
-            position: fixed;
-            height: 60%;
-            width: 60%;
-            top: 0;
-            left: 80%;
-          }
+        .space-canvas-border-blob {
+          position: fixed;
+          height: 60%;
+          width: 60%;
+          top: 0;
+          left: 80%;
+        }
 
-          .space-canvas-border-blob2 {
-            position: fixed;
-            height: 60%;
-            width: 60%;
-            bottom: -20%;
-            right: 80%;
-          }
+        .space-canvas-border-blob2 {
+          position: fixed;
+          height: 60%;
+          width: 60%;
+          bottom: -20%;
+          right: 80%;
+        }
 
-          .space-canvas-shadow {
-            position: absolute;
-            width: 100%;
-            height: auto;
-            top: 2em;
-            left: 1em;
-            z-index: -1;
-            filter: grayscale(100%) brightness(50%) contrast(200%);
-          }
+        .space-canvas-shadow {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          top: 2em;
+          left: 1em;
+          z-index: -1;
+          filter: grayscale(100%) brightness(50%) contrast(200%);
+        }
 
-          .space-description-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            min-height: 100%;
-            box-sizing: content-box;
-            border: 3px double #f7b10e;
-          }
+        .space-description-div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          min-height: 100%;
+          box-sizing: content-box;
+          border: 3px double #f7b10e;
+        }
 
-          .space-description-heading {
-            font-size: 3.5rem;
-            line-height: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2em;
-            font-weight: 900;
-            color: hsl(38, 61%, 55%);
-            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-              6px 0px 0px hsl(38, 61%, 25%);
-            background-image: linear-gradient(
-              to bottom,
+        .space-description-heading {
+          font-size: 3.5rem;
+          line-height: 1.25em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 2em;
+          font-weight: 900;
+          color: hsl(38, 61%, 55%);
+          text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+            4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+            5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+            6px 0px 0px hsl(38, 61%, 25%);
+          background-image: linear-gradient(to bottom,
               rgb(54, 54, 54),
               rgba(54, 54, 54, 0.8),
-              transparent
-            );
-            background-size: cover;
-          }
+              transparent);
+          background-size: cover;
+        }
 
-          .space-description-overlay {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            background-image: linear-gradient(
-                to top,
-                rgb(54, 54, 54),
-                rgba(54, 54, 54, 0.8),
-                rgba(54, 54, 54, 0.6),
-                rgba(54, 54, 54, 0.4),
-                rgba(54, 54, 54, 0.2),
-                transparent
-              ),
-              url("assets/images/footer-form-bg.png");
-          }
+        .space-description-overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          background-image: linear-gradient(to top,
+              rgb(54, 54, 54),
+              rgba(54, 54, 54, 0.8),
+              rgba(54, 54, 54, 0.6),
+              rgba(54, 54, 54, 0.4),
+              rgba(54, 54, 54, 0.2),
+              transparent),
+            url("assets/images/footer-form-bg.png");
+        }
 
-          .space-description-div {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
+        .space-description-div {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
 
-          .space-description {
-            line-height: normal;
-            padding-bottom: 2em;
-          }
+        .space-description {
+          line-height: normal;
+          padding-bottom: 2em;
+        }
 
-          #space-1 {
-            background-image: url("assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif");
-          }
+        #space-1 {
+          background-image: url("assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif");
+        }
 
-          #space-2 {
-            background-image: url("assets/images/uneebo-office-design-6182SnH84II-unsplash.jpg");
-          }
+        #space-2 {
+          background-image: url("assets/images/uneebo-office-design-6182SnH84II-unsplash.jpg");
+        }
 
-          #space-3 {
-            background-image: url("assets/images/uneebo-office-design-UgYT5nkXdK4-unsplash.avif");
-          }
+        #space-3 {
+          background-image: url("assets/images/uneebo-office-design-UgYT5nkXdK4-unsplash.avif");
+        }
 
-          #space-4 {
-            background-image: url("assets/images/sunshine-loc.webp");
-          }
-        </style>
+        #space-4 {
+          background-image: url("assets/images/sunshine-loc.webp");
+        }
+      </style>
 
-        <!-- PHILOSOPHY SECTION -->
-        <section class="philosophy-section">
-          <div class="curve-top">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-              </svg>
+      <!-- PHILOSOPHY SECTION -->
+      <section class="philosophy-section">
+        <div class="curve-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"></path>
+          </svg>
+        </div>
+        <img src="assets/images/divider.jpg" alt="" class="card-heading-img" />
+        <h1 class="philosophy-heading">Deciding Factors In a Space</h1>
+        <div class="card-container">
+          <div class="card">
+            <div class="divider"></div>
+            <img src="assets/images/divider.jpg" alt="" class="card-heading-img" />
+            <h3 class="card-heading">Functionality and Flow</h3>
+            <p class="card-content">Any space should promote effective workflows, allowing easy transitions between
+              various types of work, like collaboration, focused work, and relaxation. The physical layout impacts
+              efficiency, and creating smooth transitions can reduce friction and support creativity.</p>
           </div>
-          <img
-                  src="assets/images/divider.jpg"
-                  alt=""
-                  class="card-heading-img"
-                />
-          <h1 class="philosophy-heading">Deciding Factors In a Space</h1>
-          <div class="card-container">
-              <div class="card">
-                  <div class="divider"></div>
-                  <img
-                  src="assets/images/divider.jpg"
-                  alt=""
-                  class="card-heading-img"
-                />
-                  <h3 class="card-heading">Functionality and Flow</h3>
-                  <p class="card-content">Any space should promote effective workflows, allowing easy transitions between various types of work, like collaboration, focused work, and relaxation. The physical layout impacts efficiency, and creating smooth transitions can reduce friction and support creativity.</p>
-              </div>
-              <div class="card">
-                  <div class="divider"></div>
-                  <img
-                  src="assets/images/divider.jpg"
-                  alt=""
-                  class="card-heading-img"
-                />
-                  <h3 class="card-heading">Sustainability</h3>
-                  <p class="card-content">Environmentally conscious design choices reflect a commitment to sustainability. Using energy-efficient lighting, recyclable materials, and indoor plants can reduce an office's ecological footprint and align with values that attract environmentally conscious employees.</p>
-              </div>
-              <div class="card">
-                  <div class="divider"></div>
-                  <img
-                  src="assets/images/divider.jpg"
-                  alt=""
-                  class="card-heading-img"
-                />
-                  <h3 class="card-heading">Balance Between Technology and Humanity</h3>
-                  <p class="card-content">Integration between technology and the workspace enhances productivity but shouldn’t overlook the human experience. Thoughtful integration ensures tech enhances rather than overwhelms, preserving human connection and engagement in the process.</p>
-              </div>
+          <div class="card">
+            <div class="divider"></div>
+            <img src="assets/images/divider.jpg" alt="" class="card-heading-img" />
+            <h3 class="card-heading">Sustainability</h3>
+            <p class="card-content">Environmentally conscious design choices reflect a commitment to sustainability.
+              Using energy-efficient lighting, recyclable materials, and indoor plants can reduce an office's ecological
+              footprint and align with values that attract environmentally conscious employees.</p>
           </div>
-      
-          <div class="curve-bottom">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                  <path d="M0,120 C300,80 600,160 1200,20 V120 H0 Z" class="shape-fill"></path>
-              </svg>
+          <div class="card">
+            <div class="divider"></div>
+            <img src="assets/images/divider.jpg" alt="" class="card-heading-img" />
+            <h3 class="card-heading">Balance Between Technology and Humanity</h3>
+            <p class="card-content">Integration between technology and the workspace enhances productivity but shouldn’t
+              overlook the human experience. Thoughtful integration ensures tech enhances rather than overwhelms,
+              preserving human connection and engagement in the process.</p>
           </div>
+        </div>
+
+        <div class="curve-bottom">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,120 C300,80 600,160 1200,20 V120 H0 Z" class="shape-fill"></path>
+          </svg>
+        </div>
       </section>
-      
+
       <style>
-      .philosophy-section {
+        .philosophy-section {
           background-color: #2e3033;
           position: relative;
           padding: 100px 50px;
@@ -677,400 +547,356 @@
           align-items: center;
           justify-content: center;
           min-height: 100vh;
-      }
-      
-      .curve-top .shape-fill,
-      .curve-bottom .shape-fill {
+        }
+
+        .curve-top .shape-fill,
+        .curve-bottom .shape-fill {
           fill: #1a1a1d;
-      }
-      
-      .curve-top {
+        }
+
+        .curve-top {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 150px;
-      }
-      
-      .curve-bottom {
+        }
+
+        .curve-bottom {
           position: absolute;
           bottom: 0;
           left: 0;
           width: 100%;
           height: 100px;
-      }
-      
-      .philosophy-heading {
+        }
+
+        .philosophy-heading {
           color: #dba562;
           font-size: 36px;
           font-weight: bold;
           margin-bottom: 30px;
-          text-shadow: 
-              1px 1px 0px #ffffff,
-              2px 2px 0px #dba562;
-      }
-      
-      .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch; 
-        gap: 30px;
-        max-width: 1200px;
-        margin-top: 50px;
-      }
-      
-      .card {
-        background-color: #2e3033;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 300px;
-        color: #f1f1f1;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; 
-        border: 2px solid transparent; 
-      }
-      .card:hover {
-        transform: translateY(-10px); 
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); 
-        border: 2px solid #dba562;
-      }
-      .card:hover .card-heading {
-         font-weight: bolder; 
-         font-size: 22px;
-      }
+          text-shadow:
+            1px 1px 0px #ffffff,
+            2px 2px 0px #dba562;
+        }
 
-      .divider {
-        width: 100%; 
-        height: 30px; 
-        margin: 10px auto 20px;
-        overflow: hidden;
-      }
+        .card-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: stretch;
+          gap: 30px;
+          max-width: 1200px;
+          margin-top: 50px;
+        }
 
-      
-      .card-heading {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #dba562;
-      }
-      
-      .card-content {
+        .card {
+          background-color: #2e3033;
+          border-radius: 10px;
+          padding: 20px;
+          max-width: 300px;
+          color: #f1f1f1;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 2px solid transparent;
+        }
+
+        .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+          border: 2px solid #dba562;
+        }
+
+        .card:hover .card-heading {
+          font-weight: bolder;
+          font-size: 22px;
+        }
+
+        .divider {
+          width: 100%;
+          height: 30px;
+          margin: 10px auto 20px;
+          overflow: hidden;
+        }
+
+
+        .card-heading {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #dba562;
+        }
+
+        .card-content {
           font-size: 16px;
           line-height: 1.6;
           color: #dcdcdc;
-      }
-      .card-heading-img {
-      display: block; 
-      margin: 0 auto; 
-      max-width: 100%; 
-      height: auto; 
-    }
-      @media (max-width: 768px) {
+        }
+
+        .card-heading-img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+        }
+
+        @media (max-width: 768px) {
           .philosophy-heading {
-              font-size: 28px;
+            font-size: 28px;
           }
-      
+
           .card-container {
-              flex-direction: column;
-              align-items: center;
+            flex-direction: column;
+            align-items: center;
           }
-      }
+        }
       </style>
 
-        <!-- MARKETING SECTION -->
-        <section class="section text-center marketing-section">
-          <div class="marketing-container container">
-            <div class="marketing-div">
-              <h1 class="marketing-heading">
-                Try Our Budget Calculator, For Your Next Space
-              </h1>
-              <img
-                src="/assets/images/separator.svg"
-                alt=""
-                class="seperator"
-              />
-              <a
-                href="indexLayout.html"
-                class="btn btn-secondary calculator-btn"
-              >
-                <span class="text text-1">Make Your Space</span>
+      <!-- MARKETING SECTION -->
+      <section class="section text-center marketing-section">
+        <div class="marketing-container container">
+          <div class="marketing-div">
+            <h1 class="marketing-heading">
+              Try Our Budget Calculator, For Your Next Space
+            </h1>
+            <img src="/assets/images/separator.svg" alt="" class="seperator" />
+            <a href="indexLayout.html" class="btn btn-secondary calculator-btn">
+              <span class="text text-1">Make Your Space</span>
 
-                <span class="text text-2" aria-hidden="true"
-                  >Make Your Space</span
-                >
-              </a>
-            </div>
-            <a href="indexLayout.html" class="calculator-img-link">
-              <figure>
-                <img
-                  src="/assets/images/calculator.png"
-                  alt=""
-                  loading="lazy"
-                  class="calculator-img"
-                />
-              </figure>
+              <span class="text text-2" aria-hidden="true">Make Your Space</span>
             </a>
           </div>
-        </section>
-        <style>
-          .marketing-section {
-            background-image: linear-gradient(
-                to right,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              ),
-              linear-gradient(
-                to bottom,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              );
-            background-size: 120px 120px;
-          }
+          <a href="indexLayout.html" class="calculator-img-link">
+            <figure>
+              <img src="/assets/images/calculator.png" alt="" loading="lazy" class="calculator-img" />
+            </figure>
+          </a>
+        </div>
+      </section>
+      <style>
+        .marketing-section {
+          background-image: linear-gradient(to right,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px),
+            linear-gradient(to bottom,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px);
+          background-size: 120px 120px;
+        }
+
+        .marketing-container {
+          display: grid;
+          padding-bottom: 10rem;
+        }
+
+        .marketing-container {
+          grid-template-columns: 1fr;
+          min-height: max-content;
+        }
+
+        @media (min-width: 600px) {
           .marketing-container {
-            display: grid;
-            padding-bottom: 10rem;
+            grid-template-columns: repeat(1, 1fr);
+            width: 95vw;
           }
+        }
+
+        @media (min-width: 900px) {
           .marketing-container {
-            grid-template-columns: 1fr;
-            min-height: max-content;
+            grid-template-columns: repeat(1, 1fr);
+            width: 95vw;
           }
-          @media (min-width: 600px) {
-            .marketing-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
-          }
+        }
 
-          @media (min-width: 900px) {
-            .marketing-container {
-              grid-template-columns: repeat(1, 1fr);
-              width: 95vw;
-            }
+        @media (min-width: 1200px) {
+          .marketing-container {
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 0;
+            width: 88vw;
           }
-          @media (min-width: 1200px) {
-            .marketing-container {
-              grid-template-columns: repeat(2, 1fr);
-              padding-bottom: 0;
-              width: 88vw;
-            }
-          }
+        }
 
-          .marketing-section {
-            background-color: #212121;
-          }
-          .calculator-img {
-            width: 100%;
-            height: auto;
-            border: 5px solid hsl(42, 94%, 51%);
-          }
+        .marketing-section {
+          background-color: #212121;
+        }
 
-          .marketing-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 100%;
-            margin: 1em;
-          }
+        .calculator-img {
+          width: 100%;
+          height: auto;
+          border: 5px solid hsl(42, 94%, 51%);
+        }
 
-          .marketing-heading {
-            font-size: 3.5rem;
-            color: hsl(38, 61%, 55%);
-            text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-              4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-              5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-              6px 0px 0px hsl(38, 61%, 25%);
-            line-height: 1.25em;
-          }
+        .marketing-div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          height: 100%;
+          margin: 1em;
+        }
 
-          .seperator {
-            width: 40%;
-            height: auto;
-          }
+        .marketing-heading {
+          font-size: 3.5rem;
+          color: hsl(38, 61%, 55%);
+          text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+            4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+            5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+            6px 0px 0px hsl(38, 61%, 25%);
+          line-height: 1.25em;
+        }
 
-          .calculator-btn {
-            position: relative !important;
-            margin-bottom: 5em;
-          }
-        </style>
-      </article>
-    </main>
+        .seperator {
+          width: 40%;
+          height: auto;
+        }
 
-    <!-- 
+        .calculator-btn {
+          position: relative !important;
+          margin-bottom: 5em;
+        }
+      </style>
+    </article>
+  </main>
+
+  <!-- 
     - #FOOTER
   -->
-    <footer
-      class="footer section has-bg-image text-center"
-      style="
+  <footer class="footer section has-bg-image text-center" style="
         background-image: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif');
-      "
-    >
-      <div class="container" style="margin-bottom: -100px;">
-        <div class="footer-top grid-list">
-          <div class="footer-brand has-before has-after">
-            <a href="#" class="logo">
-              <img
-                src="./assets/images/603logo (1).avif"
-                width="160"
-                height="50"
-                loading="lazy"
-                alt="grilli home"
-              />
-            </a>
+      ">
+    <div class="container" style="margin-bottom: -100px;">
+      <div class="footer-top grid-list">
+        <div class="footer-brand has-before has-after">
+          <a href="#" class="logo">
+            <img src="./assets/images/603logo (1).avif" width="160" height="50" loading="lazy" alt="grilli home" />
+          </a>
 
-            <address class="body-4">
-              Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
-              400052
-            </address>
+          <address class="body-4">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
+            400052
+          </address>
 
-            <a href="mailto:booking@grilli.com" class="body-4 contact-link"
-              >booking@grilli.com</a
-            >
+          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
 
-            <a href="tel:+88123123456" class="body-4 contact-link"
-              >Booking Request : +88-123-123456</a
-            >
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
 
-            <p class="body-4">Open : 09:00 am - 01:00 pm</p>
+          <p class="body-4">Open : 09:00 am - 01:00 pm</p>
 
-            <div class="wrapper">
-              <div class="separator"></div>
-              <div class="separator"></div>
-              <div class="separator"></div>
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <p class="title-1">Get News & Offers</p>
+
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
+          </p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off"
+                class="input-field" />
             </div>
 
-            <p class="title-1">Get News & Offers</p>
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
 
-            <p class="label-1">
-              Subscribe us & Get <span class="span">25% Off.</span>
-            </p>
-
-            <form action="" class="input-wrapper">
-              <div class="icon-wrapper">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-                <input
-                  type="email"
-                  name="email_address"
-                  placeholder="Your email"
-                  autocomplete="off"
-                  class="input-field"
-                />
-              </div>
-
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Subscribe</span>
-
-                <span class="text text-2" aria-hidden="true">Subscribe</span>
-              </button>
-            </form>
-          </div>
-            <ul class="footer-list">
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Home</a>
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Menus</a>
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >About Us</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Our Chefs</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Contact</a
-              >
-            </li>
-          </ul>
-          <ul class="footer-list">
-            <!-- Facebook Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-facebook"></ion-icon> Facebook
-              </a>
-            </li>
-          
-            <!-- Instagram Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-instagram"></ion-icon> Instagram
-              </a>
-            </li>
-          
-            <!-- Twitter Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <i class="fa-brands fa-x-twitter"></i>
-                Twitter
-              </a>
-            </li>
-          
-            <!-- Youtube Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-youtube"></ion-icon>Youtube
-              </a>
-            </li>
-          
-            <!-- Google Map Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="location-outline"></ion-icon> Google Map
-              </a>
-            </li>
-          </ul>
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
         </div>
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
 
-        <div class="footer-bottom">
-          <p class="copyright">
-            &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
-            <a href="603thecoworkingspace.com" target="_blank" class="link"
-              >603 The Coworking Space</a
-            >
-          </p>
-        </div>
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <!-- Facebook Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-facebook"></ion-icon> Facebook
+            </a>
+          </li>
+
+          <!-- Instagram Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-instagram"></ion-icon> Instagram
+            </a>
+          </li>
+
+          <!-- Twitter Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <i class="fa-brands fa-x-twitter"></i>
+              Twitter
+            </a>
+          </li>
+
+          <!-- Youtube Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-youtube"></ion-icon>Youtube
+            </a>
+          </li>
+
+          <!-- Google Map Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="location-outline"></ion-icon> Google Map
+            </a>
+          </li>
+        </ul>
       </div>
-    </footer>
-    <!-- 
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
+          <a href="603thecoworkingspace.com" target="_blank" class="link">603 The Coworking Space</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- 
     - #BACK TO TOP
   -->
 
-    <a
-      href="#top"
-      class="back-top-btn active"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-    </a>
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

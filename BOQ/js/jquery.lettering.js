@@ -10,37 +10,37 @@
 *
 * Date: Mon Sep 20 17:14:00 2010 -0600
 */
-(function($){
+(function ($) {
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
 		if (a.length) {
-			$(a).each(function(i, item) {
-				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
-			});	
+			$(a).each(function (i, item) {
+				inject += '<span class="' + klass + (i + 1) + '">' + item + '</span>' + after;
+			});
 			t.empty().append(inject);
 		}
 	}
-	
-	var methods = {
-		init : function() {
 
-			return this.each(function() {
+	var methods = {
+		init: function () {
+
+			return this.each(function () {
 				injector($(this), '', 'char', '');
 			});
 
 		},
 
-		words : function() {
+		words: function () {
 
-			return this.each(function() {
+			return this.each(function () {
 				injector($(this), ' ', 'word', ' ');
 			});
 
 		},
-		
-		lines : function() {
 
-			return this.each(function() {
+		lines: function () {
+
+			return this.each(function () {
 				var r = "eefec303079ad17405c889e092e105b0";
 				// Because it's hard to split a <br/> tag consistently across browsers,
 				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
@@ -52,14 +52,14 @@
 		}
 	};
 
-	$.fn.lettering = function( method ) {
+	$.fn.lettering = function (method) {
 		// Method calling logic
-		if ( method && methods[method] ) {
-			return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
-		} else if ( method === 'letters' || ! method ) {
-			return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
+		if (method && methods[method]) {
+			return methods[method].apply(this, [].slice.call(arguments, 1));
+		} else if (method === 'letters' || !method) {
+			return methods.init.apply(this, [].slice.call(arguments, 0)); // always pass an array
 		}
-		$.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
+		$.error('Method ' + method + ' does not exist on jQuery.lettering');
 		return this;
 	};
 

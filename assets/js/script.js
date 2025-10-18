@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /**
  * PRELOAD
  * 
@@ -15,8 +13,6 @@ window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
-
-
 /**
  * add event listener on multiple elements
  */
@@ -26,8 +22,6 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 }
-
-
 
 /**
  * NAVBAR
@@ -73,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 /**
  * HEADER & BACK TOP BTN
  */
@@ -105,8 +97,6 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
-
-
 
 /**
  * HERO SLIDER
@@ -170,8 +160,6 @@ addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide
 
 window.addEventListener("load", autoSlide);
 
-
-
 /**
  * PARALLAX EFFECT
  */
@@ -196,7 +184,6 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
-
 
 const fadeInElements = document.querySelectorAll('.fade-in');
 const slideInElements = document.querySelectorAll('.slide-in');
@@ -240,17 +227,17 @@ handleScroll();
 
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-        } else {
-            answer.style.display = 'block';
-        }
-        faqQuestions.forEach(q => {
-            if (q !== question) {
-                q.nextElementSibling.style.display = 'none';
-            }
-        });
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+    faqQuestions.forEach(q => {
+      if (q !== question) {
+        q.nextElementSibling.style.display = 'none';
+      }
     });
+  });
 });

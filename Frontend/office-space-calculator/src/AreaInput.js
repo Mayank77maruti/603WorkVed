@@ -17,10 +17,10 @@ const AreaInput = ({ setTotalArea }) => {
 
   return (
     <div className="area-input">
-      <input 
-        type="number" 
-        value={inputValue} 
-        onChange={handleInputChange} 
+      <input
+        type="number"
+        value={inputValue}
+        onChange={handleInputChange}
         placeholder="Enter total area (sq ft)"
       />
       <button onClick={handleSubmit}>Set Area</button>
