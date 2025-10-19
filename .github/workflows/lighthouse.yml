@@ -1,0 +1,22 @@
+name: Lighthouse CI Audit
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types:
+      - completed
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Run Lighthouse audit
+        run: |
+          lhci autorun --collect.url=https://Mayank77maruti.github.io/603WorkVed \
+                       --upload.target=temporary-public-storage
