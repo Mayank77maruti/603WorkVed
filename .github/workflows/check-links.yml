@@ -1,0 +1,26 @@
+name: Broken Link & Accessibility Checker
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose --no-progress .
+
+      - name: Accessibility check
+        uses: pa11y/pa11y-ci-action@v2
+        with:
+          config: |
+            {
+              "urls": ["index.html"]
+            }
