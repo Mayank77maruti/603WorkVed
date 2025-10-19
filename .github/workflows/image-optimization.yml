@@ -1,0 +1,20 @@
+name: Image Optimization
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Optimize images
+        uses: calibreapp/image-actions@v1.1.0
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
+          ignorePaths: "node_modules/**"
