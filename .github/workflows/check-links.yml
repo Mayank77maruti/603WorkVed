@@ -22,5 +22,5 @@ jobs:
         with:
           config: |
             {
-              "urls": ["index.html"]
+              "urls": ["https://Mayank77maruti.github.io/603WorkVed/index.html"]
             }
