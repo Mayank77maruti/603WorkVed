@@ -33,9 +33,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 60px;
             position: relative;
-            overflow: hidden;
         }
 
         body::before {
@@ -114,7 +113,7 @@
             margin-bottom: 25px;
         }
 
-        .form-group ion-icon {
+        .form-group .input-icon {
             position: absolute;
             left: 15px;
             top: 50%;
@@ -165,7 +164,6 @@
 
         .password-strength {
             height: 3px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 3px;
             margin-top: 8px;
             overflow: hidden;
@@ -318,24 +316,24 @@
 
         <form id="signupForm" novalidate>
             <div class="form-group">
-                <ion-icon name="person-outline"></ion-icon>
+                <ion-icon name="person-outline" class="input-icon"></ion-icon>
                 <input type="text" id="username" placeholder="Full Name" required autocomplete="name">
                 <span class="error-message" id="usernameError">Please enter your full name</span>
             </div>
 
             <div class="form-group">
-                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="mail-outline" class="input-icon"></ion-icon>
                 <input type="email" id="email" placeholder="Email Address" required autocomplete="email">
                 <span class="error-message" id="emailError">Please enter a valid email</span>
             </div>
 
             <div class="form-group">
-                <ion-icon name="call-outline"></ion-icon>
+                <ion-icon name="call-outline" class="input-icon"></ion-icon>
                 <input type="tel" id="phone" placeholder="Phone Number (Optional)" autocomplete="tel">
             </div>
 
             <div class="form-group">
-                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
                 <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
                 <ion-icon name="eye-outline" class="password-toggle" id="togglePassword"></ion-icon>
                 <div class="password-strength">
@@ -349,7 +347,7 @@
             </div>
 
             <div class="form-group">
-                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
                 <input type="password" id="confirmPassword" placeholder="Confirm Password" required
                     autocomplete="new-password">
                 <ion-icon name="eye-outline" class="password-toggle" id="toggleConfirmPassword"></ion-icon>

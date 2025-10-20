@@ -294,10 +294,6 @@ body.nav-active {
   transition: all 0.3s ease-in-out;
 }
 
-.newHero:hover {
-  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
-}
-
 .newHero2 {
   color: var(--gold-crayola-dark);
   font-size: 2rem;
@@ -946,6 +942,7 @@ body.nav-active {
   pointer-events: none;
   user-select: none;
   z-index: -1;
+  opacity: 0.7;
 }
 
 .hero .slider-item.active .slider-bg {
@@ -1097,7 +1094,7 @@ body.nav-active {
 
 .service-card .card-banner {
   transition: var(--transition-2);
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -1355,6 +1352,7 @@ body.nav-active {
   margin-inline: auto;
   border-radius: var(--radius-circle);
   margin-block-end: 15px;
+  margin-top: 30px;
 }
 
 .testi .profile-name {
@@ -1362,6 +1360,7 @@ body.nav-active {
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-3);
+  font-size: 20px !important;
 }
 
 /*-----------------------------------*\
@@ -1423,7 +1422,7 @@ body.nav-active {
 
 /* Add subtle background gradient to the header */
 .faqs {
-  padding: 40px 20px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #111, #1b1b1b);
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
@@ -1448,12 +1447,10 @@ body.nav-active {
 }
 
 .faq-section {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 50px auto;
-  padding: 20px;
-  background-color: #111;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  background-color: transparent;
   transition: all 0.3s ease;
   animation: sectionEntrance 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
@@ -1471,13 +1468,11 @@ body.nav-active {
 }
 
 .faq-section:hover {
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95);
   transform: translateY(-5px);
 }
 
 .faq {
   margin-bottom: 20px;
-  border-bottom: 1px solid #333;
   transition: all 0.3s ease;
 }
 
@@ -1540,7 +1535,10 @@ body.nav-active {
 }
 
 .contact-link-container p {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   font-size: 2rem;
   color: #f5f5f5;
   transition: transform 0.3s ease;
@@ -1563,27 +1561,6 @@ body.nav-active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin: 2px 0px 0px 5px;
   position: relative;
-}
-
-.contact-link:hover {
-  color: #ffcc00;
-  font-size: 1.8rem;
-  text-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
-}
-
-.contact-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #ffcc00;
-  transition: width 0.3s ease;
-}
-
-.contact-link:hover::after {
-  width: 100%;
 }
 
 /* Responsive Styling */
@@ -1807,7 +1784,6 @@ textarea.input-field {
 
 .footer-brand :is(.body-4, .label-1) {
   color: var(--quick-silver);
-  line-height: var(--lineHeight-3);
 }
 
 .footer-brand .contact-link {
@@ -1851,6 +1827,7 @@ textarea.input-field {
   display: grid;
   gap: 20px;
   background-color: var(--black-alpha-80);
+  padding: 20px;
 }
 
 .footer-list-left {
@@ -1989,10 +1966,11 @@ textarea.input-field {
     top: 0;
     left: 0;
     width: 100%;
-    padding-block: 10px;
+    padding: 10px 30px;
     border-block-end: 1px solid var(--white-alpha-20);
     z-index: 4;
     transition: var(--transition-1);
+    background-color: var(--eerie-black-4);
   }
 
   .topbar:has(~ .header.active) {
@@ -2198,13 +2176,14 @@ textarea.input-field {
     z-index: 1;
     color: var(--gold-crayola);
     font-size: 2.4rem;
-    border: 1px solid var(--gold-crayola);
     width: 45px;
     height: 45px;
     place-items: center;
+    border-radius: 8px;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     transition: var(--transition-1);
+    background-color: var(--eerie-black-4);
   }
 
   .hero .slider-btn ion-icon {

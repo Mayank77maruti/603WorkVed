@@ -371,7 +371,6 @@ body.nav-active {
 }
 
 .btn {
-  margin-top: 15px;
   position: relative;
   color: #ffffff;
   font-size: var(--fontSize-label-2);
@@ -395,7 +394,6 @@ body.nav-active {
   transform: translateX(-50%);
   width: 120%;
   height: 120%;
-  border-radius: var(--radius-circle);
   background-color: var(--gold-crayola);
   transition: var(--transition-2);
   z-index: -1;
@@ -415,7 +413,7 @@ body.nav-active {
 }
 
 .btn:is(:hover, :focus-visible)::before {
-  bottom: -50%;
+  bottom: -10%;
 }
 
 .btn:is(:hover, :focus-visible) .text-1 {
@@ -430,7 +428,6 @@ body.nav-active {
 .btn-secondary {
   background-color: var(--gold-crayola);
   color: var(--black);
-  margin-top: 15px;
 }
 
 .btn-secondary::before {
@@ -1597,6 +1594,7 @@ textarea.input-field {
   display: grid;
   gap: 20px;
   background-color: var(--black-alpha-80);
+  padding: 20px;
 }
 
 .footer-link {
