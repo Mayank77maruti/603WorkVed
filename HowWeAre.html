@@ -3,54 +3,942 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Years of 603: Our Journey</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <title>How We Are - 603 The Coworking Space</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum:wght@400&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./styles.css">
+
     <style>
-        .golden { color: rgb(247, 177, 14); }
-        .golden-bg { background-color: rgb(247, 177, 14); }
-        .golden-border { border: 4px solid rgb(247, 177, 14); }
+    :root {
+      --section-padding: 100px;
+    }
+
+    .howweare-page {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .scroll-watcher {
+      height: 10px;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      border-radius: 1rem;
+      scale: 0 1;
+      animation: scroll-watcher ease-in;
+      background-color: var(--gold-crayola-dark);
+      animation-timeline: scroll();
+    }
+
+    @keyframes scroll-watcher {
+      to {
+        scale: 1 1;
+      }
+    }
+
+    .floating-element {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    .floating-element:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+      top: 60%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+      bottom: 30%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    .hero-section {
+      padding: 16rem 0 4rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section .section-subtitle {
+      color: var(--gold-crayola);
+      font-size: 1.8rem;
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-2);
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-section .section-subtitle::after {
+      content: url('./assets/images/separator.svg');
+      display: block;
+      width: 100px;
+      margin: 15px auto 0;
+    }
+
+    .hero-section h1 {
+      font-family: var(--fontFamily-forum);
+      font-size: calc(3rem + 3vw);
+      color: var(--white);
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .hero-section p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-2);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: var(--lineHeight-5);
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .journey-section {
+      padding: 6rem 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .journey-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .journey-text h2 {
+      font-family: var(--fontFamily-forum);
+      font-size: calc(2rem + 2vw);
+      color: var(--gold-crayola);
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .journey-text p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-2);
+      line-height: var(--lineHeight-5);
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .journey-image {
+      position: relative;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .journey-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius-16);
+      box-shadow: var(--shadow-4);
+      border: 2px solid var(--gold-crayola);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-16);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .feature-card:hover::before {
+      left: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold-crayola);
+      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+    }
+
+    .feature-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius-8);
+      margin-bottom: 1.5rem;
+      border: 2px solid var(--gold-crayola);
+    }
+
+    .feature-card h3 {
+      font-family: var(--fontFamily-forum);
+      font-size: 1.5rem;
+      color: var(--gold-crayola);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-3);
+      line-height: var(--lineHeight-4);
+    }
+
+    .stats-section {
+      padding: 6rem 0;
+      background: rgba(255, 255, 255, 0.02);
+      margin: 4rem 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .stat-number {
+      font-family: var(--fontFamily-forum);
+      font-size: 3rem;
+      color: var(--gold-crayola);
+      font-weight: var(--weight-bold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-3);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-2);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes rotate360 {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .journey-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        padding: 6rem 0 2rem;
+      }
+
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer Visibility Fix */
+    .footer {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%) !important;
+      color: var(--white) !important;
+      padding: 4rem 0 2rem !important;
+      position: relative;
+      z-index: 10;
+      margin-top: 4rem;
+      min-height: 400px !important;
+      border: 2px solid red !important; /* Debug border */
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .footer-top {
+      display: grid !important;
+      grid-template-columns: 2fr 1fr 1fr !important;
+      gap: 3rem !important;
+      margin-bottom: 2rem !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-brand {
+      text-align: left !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-brand .logo img {
+      margin-bottom: 1rem !important;
+      visibility: visible !important;
+    }
+
+    .footer-brand address,
+    .footer-brand .contact-link,
+    .footer-brand p {
+      color: var(--quick-silver) !important;
+      margin-bottom: 0.5rem !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-list {
+      list-style: none !important;
+      padding: 0 !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-list li {
+      margin-bottom: 0.5rem !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-link {
+      color: var(--quick-silver) !important;
+      text-decoration: none !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      transition: color 0.3s ease !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .footer-link:hover {
+      color: var(--gold-crayola);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+      padding-top: 2rem !important;
+      text-align: center !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .copyright {
+      color: var(--quick-silver) !important;
+      margin: 0 !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .copyright .link {
+      color: var(--gold-crayola);
+      text-decoration: none;
+    }
+
+    .copyright .link:hover {
+      text-decoration: underline;
+    }
+
+    .input-wrapper {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .icon-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-8);
+      color: var(--white);
+      font-size: var(--fontSize-body-3);
+    }
+
+    .input-field::placeholder {
+      color: var(--quick-silver);
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--gold-crayola);
+    }
+
+    .separator {
+      width: 30px;
+      height: 2px;
+      background: var(--gold-crayola);
+      margin: 0.5rem 0;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .input-wrapper {
+        flex-direction: column;
+      }
+    }
     </style>
 </head>
-<body class="bg-black text-white">
-    <header class="text-center py-20 bg-gray-800 text-white relative">
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10">
-            <h1 class="text-7xl font-extrabold golden animate-pulse">10 Years of 603</h1>
-            <p class="text-2xl mt-6 text-gray-300 max-w-4xl mx-auto">A decade of excellence in workspace design, blending sophistication and functionality.</p>
-            <button class="mt-6 px-6 py-3 golden-bg text-black font-semibold text-lg rounded-lg shadow-lg hover:scale-105 transition-transform">Discover More</button>
+
+<body class="howweare-page">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-watcher"></div>
+  
+  <!-- 
+    - #TOP BAR
+  -->
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
-    </header>
-    
-    <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-4xl font-bold mb-6 golden">Redefining Workspaces</h2>
-            <p class="text-lg text-gray-300 leading-relaxed">For ten years, 603 has been transforming office spaces with cutting-edge design, premium materials, and innovative concepts. Our commitment to excellence makes every workspace a perfect blend of elegance and efficiency.</p>
+        <span class="span newSpan"> Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052 </span>
+      </address>
+
+      <div class="separator"></div>
+
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
         </div>
-        <div>
-            <img src="./assets/images/office-space.png" alt="Luxurious Office" class="rounded-lg shadow-lg w-full h-80 object-cover golden-border">
+        <span class="span newSpan">Daily : 8.00 am to 10.00 pm</span>
+      </div>
+
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan">+91 9136036603</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan">sales@603thecoworkingspace.com</span>
+      </a>
+
+      <!-- User Profile Icon with Dropdown -->
+      <div class="user-profile">
+        <ion-icon name="person-circle-outline" class="profile-icon"></ion-icon>
+        <div class="dropdown-menu">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 - Home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="index.html#" class="logo">
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 - Home">
+        </a>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Home</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        
+          <!-- User Dropdown -->
+          <li class="navbar-item">
+            <a href="signup.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Register</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Makhija Arcade, 35th Rd, Khar, Khar West,<br>
+            Mumbai, Maharashtra 400052
+          </address>
+
+          <p class="body-4 navbar-text">Open: 8.00 am - 10.00 pm</p>
+
+          <a href="mailto:sales@603thecoworkingspace.com" class="body-4 sidebar-link">sales@603thecoworkingspace.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+919136036603" class="body-1 contact-number hover-underline">
+            +91-9136036603
+          </a>
+        </div>
+      </nav>
+
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Floating Elements -->
+  <div class="floating-element">
+    <img src="./assets/images/separator.svg" alt="" width="50" height="50">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <p class="section-subtitle">Our Journey</p>
+        <h1 class="headline-1">10 Years of 603</h1>
+        <p>A decade of excellence in workspace design, blending sophistication and functionality. We've been transforming office spaces with cutting-edge design, premium materials, and innovative concepts that make every workspace a perfect blend of elegance and efficiency.</p>
         </div>
     </section>
     
-    <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-            <img src="./assets/images/breakfast.png" alt="Breakfast Area" class="w-full h-60 object-cover rounded-lg mb-6 golden-border">
-            <h3 class="text-2xl font-semibold golden">Breakfast Area</h3>
-            <p class="mt-4 text-gray-300">A stylish space designed to start your day with inspiration and comfort.</p>
+    <!-- Journey Section -->
+    <section class="journey-section">
+      <div class="container">
+        <div class="journey-content">
+          <div class="journey-text">
+            <h2 class="headline-2">Redefining Workspaces</h2>
+            <p>For ten years, 603 has been at the forefront of workspace transformation. Our commitment to excellence and innovation has made us a trusted partner for businesses looking to create inspiring work environments.</p>
+            <p>We believe that great spaces inspire great work. That's why every project we undertake is designed with meticulous attention to detail, ensuring that form meets function in the most elegant way possible.</p>
+          </div>
+          <div class="journey-image">
+            <img src="./assets/images/office-space.png" alt="Luxurious Office Space">
+          </div>
         </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-            <img src="./assets/images/meetingRoom.png" alt="Meeting Rooms" class="w-full h-60 object-cover rounded-lg mb-6 golden-border">
-            <h3 class="text-2xl font-semibold golden">Meeting Rooms</h3>
-            <p class="mt-4 text-gray-300">High-tech meeting rooms built for productivity and collaboration.</p>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+          <div class="container">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Team Members</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-            <img src="./assets/images/viewSpaces.png" alt="View Spaces" class="w-full h-60 object-cover rounded-lg mb-6 golden-border">
-            <h3 class="text-2xl font-semibold golden">View Spaces</h3>
-            <p class="mt-4 text-gray-300">Enjoy breathtaking views in our carefully designed open spaces.</p>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="./assets/images/breakfast.png" alt="Breakfast Area">
+            <h3 class="headline-3">Breakfast Area</h3>
+            <p>A stylish space designed to start your day with inspiration and comfort. Our breakfast areas are crafted to provide the perfect morning experience for your team.</p>
+          </div>
+          <div class="feature-card">
+            <img src="./assets/images/meetingRoom.png" alt="Meeting Rooms">
+            <h3 class="headline-3">Meeting Rooms</h3>
+            <p>High-tech meeting rooms built for productivity and collaboration. Each space is equipped with modern technology and designed for optimal communication.</p>
+          </div>
+          <div class="feature-card">
+            <img src="./assets/images/viewSpaces.png" alt="View Spaces">
+            <h3 class="headline-3">View Spaces</h3>
+            <p>Enjoy breathtaking views in our carefully designed open spaces. These areas provide the perfect balance between work and inspiration.</p>
+          </div>
+        </div>
         </div>
     </section>
-    
-    <footer class="text-center py-10 bg-gray-900 text-white">
-        <p class="text-lg text-gray-400">&copy; <script>document.write(new Date().getFullYear());</script> 603 Interiors. All rights reserved.</p>
-    </footer>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); color: white; padding: 4rem 0; margin-top: 4rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem;">
+        
+        <!-- Brand Section -->
+        <div style="text-align: left;">
+          <a href="index.html#" style="display: block; margin-bottom: 1rem;">
+            <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 home" style="display: block;">
+          </a>
+
+          <address style="color: #ccc; margin-bottom: 0.5rem; font-style: normal; display: block;">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+          </address>
+
+          <a href="mailto:sales@603thecoworkingspace.com" style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">sales@603thecoworkingspace.com</a>
+
+          <a href="tel:+919136036603" style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">Booking Request : +91-9136036603</a>
+
+          <p style="color: #ccc; margin-bottom: 0.5rem;">
+            Open : 08:00 am - 10:00 pm
+          </p>
+
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0;">
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+          </div>
+
+          <p style="color: #ffcc00; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">Get News & Offers</p>
+
+          <p style="color: white; margin-bottom: 1rem;">
+            Subscribe us & Get <span style="color: #ffcc00;">25% Off.</span>
+          </p>
+
+          <form style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <input type="email" placeholder="Your email" style="flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
+            <button type="submit" style="padding: 1rem 2rem; background: #ffcc00; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Quick Links</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">
+              <a href="index.html#home" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="home-outline"></ion-icon> Home
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="about.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="people-outline"></ion-icon> About Us
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="blogpost4.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="business-outline"></ion-icon> Spaces
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="contact.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="call-outline"></ion-icon> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Social Links -->
+        <div>
+          <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Follow Us</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-facebook"></ion-icon> Facebook
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-instagram"></ion-icon> Instagram
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-twitter"></ion-icon> Twitter
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-youtube"></ion-icon> Youtube
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="location-outline"></ion-icon> Google Map
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
+        <p style="color: #ccc; margin: 0;">
+          &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
+          <a href="https://603thecoworkingspace.com" target="_blank" style="color: #ffcc00; text-decoration: none;">
+            603 The Coworking Space
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <script>
+    // Navbar functionality
+    const navbar = document.querySelector('[data-navbar]');
+    const navTogglers = document.querySelectorAll('[data-nav-toggler]');
+    const overlay = document.querySelector('[data-overlay]');
+
+    const addEventOnElements = function (elements, eventType, callback) {
+      for (let i = 0, len = elements.length; i < len; i++) {
+        elements[i].addEventListener(eventType, callback);
+      }
+    }
+
+    const toggleNavbar = function () {
+      navbar.classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    }
+
+    addEventOnElements(navTogglers, 'click', toggleNavbar);
+
+    // Header scroll behavior
+    const header = document.querySelector('[data-header]');
+    let lastScrollPos = 0;
+
+    const hideHeader = function () {
+      const isScrollBottom = lastScrollPos < window.scrollY;
+      if (isScrollBottom) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+      lastScrollPos = window.scrollY;
+    }
+
+    window.addEventListener('scrollend', hideHeader);
+
+    // Back to top button
+    const backTopBtn = document.querySelector('[data-back-top-btn]');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY >= 100) {
+        backTopBtn.classList.add('active');
+      } else {
+        backTopBtn.classList.remove('active');
+      }
+    });
+
+    backTopBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.feature-card, .stat-item, .journey-text, .journey-image').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = 'all 0.6s ease-out';
+      observer.observe(item);
+    });
+  </script>
 </body>
 </html>
