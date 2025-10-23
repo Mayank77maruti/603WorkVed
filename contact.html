@@ -1,884 +1,1005 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - 603 The Coworking Space</title>
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
-    <!-- 
-    - primary meta tags
-  -->
-    <title>603 The Coworking Space</title>
-    <meta name="title" content="603 The Coworking Space" />
-    <!-- 
-    - favicon
-  -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
-    <!-- font-awesome link-->    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- 
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+  <!-- Ionic Icons -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- 
-    - preload images
-  -->
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif"
-    />
-    <!-- <link rel="preload" as="image" href="./assets/images/sunshine-loc.png">
-  <link rel="preload" as="image" href="./assets/images/heroLocation.png"> -->
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
-  <body id="top">
-    <!-- 
-    - #PRELOADER
-  -->
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./styles.css">
 
-    <div class="preload" data-preaload>
-      <div class="circle"></div>
-      <p class="text">603</p>
-    </div>
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-page {
+      background: linear-gradient(135deg, var(--eerie-black-1) 0%, var(--smoky-black-2) 50%, var(--eerie-black-3) 100%);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
-    <!-- 
+    /* Scroll Progress Bar */
+    .scroll-watcher {
+      height: 10px;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      border-radius: 1rem;
+      scale: 0 1;
+      animation: scroll-watcher ease-in;
+      background-color: var(--gold-crayola-dark);
+      animation-timeline: scroll();
+    }
+
+    @keyframes scroll-watcher {
+      to {
+        scale: 1 1;
+      }
+    }
+
+    .contact-page::before {
+      content: '';
+      position: absolute;
+      top: 330px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./assets/images/uneebo-office-design-UgYT5nkXdK4-unsplash.avif') center/cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 20px 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-top: 6rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .contact-header .section-subtitle {
+      color: var(--gold-crayola);
+      font-size: 1.8rem;
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-2);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .contact-header .section-subtitle::after {
+      content: url('./assets/images/separator.svg');
+      display: block;
+      width: 100px;
+      margin: 15px auto 0;
+    }
+
+    .contact-header h1 {
+      font-family: var(--fontFamily-forum);
+      font-size: calc(2.5rem + 2vw);
+      color: var(--white);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-header p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-2);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: var(--lineHeight-5);
+    }
+
+    .contact-form-wrapper {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .contact-form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--gold-crayola), var(--gold-crayola-dark), var(--gold-crayola));
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--white);
+      font-weight: var(--weight-bold);
+      margin-bottom: 10px;
+      font-size: var(--fontSize-label-2);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-1);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background-color: var(--eerie-black-2);
+      color: var(--white);
+      border: 2px solid var(--white-alpha-10);
+      border-radius: 10px;
+      padding: 15px 20px;
+      font-size: var(--fontSize-body-4);
+      font-family: var(--fontFamily-dm_sans);
+      transition: all var(--transition-1);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold-crayola);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .form-group textarea {
+      height: 150px;
+      resize: vertical;
+      line-height: var(--lineHeight-5);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--quick-silver);
+      opacity: 0.7;
+    }
+
+    .submit-btn {
+      position: relative;
+      color: var(--white);
+      font-size: var(--fontSize-label-2);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-5);
+      max-width: 100%;
+      width: 100%;
+      border: 2px solid var(--gold-crayola);
+      padding: 18px 45px;
+      overflow: hidden;
+      z-index: 1;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all var(--transition-1);
+    }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200%;
+      height: 200%;
+      border-radius: var(--radius-circle);
+      background-color: var(--gold-crayola);
+      transition: var(--transition-2);
+      z-index: -1;
+    }
+
+    .submit-btn .text {
+      transition: var(--transition-1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .submit-btn .text-2 {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: max-content;
+      color: var(--smoky-black-1);
+    }
+
+    .submit-btn:hover::before {
+      bottom: -50%;
+    }
+
+    .submit-btn:hover .text {
+      transform: translateY(-40px);
+    }
+
+    .submit-btn:hover .text-2 {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+      animation: fadeInUp 1s ease-out 0.6s both;
+    }
+
+    .contact-info-item {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all var(--transition-1);
+    }
+
+    .contact-info-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border-color: var(--gold-crayola);
+    }
+
+    .contact-info-item ion-icon {
+      font-size: 3rem;
+      color: var(--gold-crayola);
+      margin-bottom: 20px;
+      transition: all var(--transition-1);
+    }
+
+    .contact-info-item:hover ion-icon {
+      transform: scale(1.2);
+      color: var(--white);
+    }
+
+    .contact-info-item h3 {
+      color: var(--white);
+      font-family: var(--fontFamily-forum);
+      font-size: var(--fontSize-title-4);
+      margin-bottom: 15px;
+    }
+
+    .contact-info-item p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-4);
+      line-height: var(--lineHeight-5);
+    }
+
+    /* Floating Elements */
+    .floating-element {
+      position: absolute;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-element:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+      top: 20%;
+      right: 10%;
+      animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-container {
+        padding: 100px 15px 60px;
+      }
+
+      .contact-form-wrapper {
+        padding: 30px 20px;
+      }
+
+      .contact-header h1 {
+        font-size: 2.5rem;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    /* Back to Top Button */
+    .back-top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--gold-crayola);
+      color: var(--smoky-black-1);
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-circle);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-1);
+      transition: var(--transition-1);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    .back-top-btn.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-top-btn:hover {
+      background-color: var(--white);
+      color: var(--gold-crayola);
+      transform: translateY(-5px);
+    }
+
+    /* Additional Information Sections */
+    .additional-info {
+      margin-top: 80px;
+      animation: fadeInUp 1s ease-out 0.9s both;
+    }
+
+    .info-section {
+      margin-bottom: 80px;
+    }
+
+    .info-section h2,
+    .faq-section h2 {
+      font-family: var(--fontFamily-forum);
+      font-size: var(--fontSize-headline-2);
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .info-section h2::after,
+    .faq-section h2::after {
+      content: url('./assets/images/separator.svg');
+      display: block;
+      width: 100px;
+      margin: 15px auto 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .info-item {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all var(--transition-1);
+    }
+
+    .info-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border-color: var(--gold-crayola);
+    }
+
+    .info-item ion-icon {
+      font-size: 3rem;
+      color: var(--gold-crayola);
+      margin-bottom: 20px;
+      transition: all var(--transition-1);
+    }
+
+    .info-item:hover ion-icon {
+      transform: scale(1.2);
+      color: var(--white);
+    }
+
+    .info-item h3 {
+      color: var(--white);
+      font-family: var(--fontFamily-forum);
+      font-size: var(--fontSize-title-4);
+      margin-bottom: 15px;
+    }
+
+    .info-item p {
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-4);
+      line-height: var(--lineHeight-5);
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      transition: all var(--transition-1);
+    }
+
+    .faq-item:hover {
+      border-color: var(--gold-crayola);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-question {
+      padding: 25px 30px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      transition: all var(--transition-1);
+    }
+
+    .faq-question:hover {
+      background: rgba(255, 215, 0, 0.1);
+    }
+
+    .faq-question h3 {
+      color: var(--white);
+      font-family: var(--fontFamily-forum);
+      font-size: var(--fontSize-title-4);
+      margin: 0;
+    }
+
+    .faq-question ion-icon {
+      color: var(--gold-crayola);
+      font-size: 1.5rem;
+      transition: transform var(--transition-1);
+    }
+
+    .faq-item.active .faq-question ion-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-2);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    .faq-answer p {
+      padding: 0 30px 25px;
+      color: var(--quick-silver);
+      font-size: var(--fontSize-body-4);
+      line-height: var(--lineHeight-5);
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-watcher"></div>
+  
+  <!-- 
     - #TOP BAR
   -->
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan"> Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052 </span>
+      </address>
 
-    <div class="topbar">
-      <div class="container">
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
+      <div class="separator"></div>
 
-          <span class="span">
-            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-          </span>
-        </address>
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan">Daily : 8.00 am to 10.00 pm</span>
+      </div>
 
-        <div class="separator"></div>
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan">+91 9136036603</span>
+      </a>
 
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
+      <div class="separator"></div>
 
-          <span class="span">Daily : 8.00 am to 10.00 pm</span>
+      <a href="mailto:sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span newSpan">sales@603thecoworkingspace.com</span>
+      </a>
+
+      <!-- User Profile Icon with Dropdown -->
+      <div class="user-profile">
+        <ion-icon name="person-circle-outline" class="profile-icon"></ion-icon>
+        <div class="dropdown-menu">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 - Home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="index.html#" class="logo">
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 - Home">
+        </a>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Home</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+        
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        
+          <!-- User Dropdown -->
+          <li class="navbar-item">
+            <a href="signup.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Register</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Makhija Arcade, 35th Rd, Khar, Khar West,<br>
+            Mumbai, Maharashtra 400052
+          </address>
+
+          <p class="body-4 navbar-text">Open: 8.00 am - 10.00 pm</p>
+
+          <a href="mailto:sales@603thecoworkingspace.com" class="body-4 sidebar-link">sales@603thecoworkingspace.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+919136036603" class="body-1 contact-number hover-underline">
+            +91-9136036603
+          </a>
+        </div>
+      </nav>
+
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Floating Elements -->
+  <div class="floating-element">
+    <img src="./assets/images/separator.svg" alt="" width="50" height="50">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
+  </div>
+
+  <div class="contact-container">
+    <!-- Header Section -->
+    <div class="contact-header">
+      <p class="section-subtitle">Get In Touch</p>
+      <h1>Contact Us</h1>
+      <p>Ready to transform your workspace? We're here to help you create the perfect environment for your business needs. Reach out to us today and let's bring your vision to life.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">
+            <ion-icon name="person-outline"></ion-icon>
+            Full Name
+          </label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
 
-        <a href="tel:+11234567890" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <div class="form-group">
+          <label for="email">
+            <ion-icon name="mail-outline"></ion-icon>
+            Email Address
+          </label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
 
-          <span class="span"> +91 9136036603</span>
-        </a>
+        <div class="form-group">
+          <label for="phone">
+            <ion-icon name="call-outline"></ion-icon>
+            Phone Number
+          </label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
 
-        <div class="separator"></div>
+        <div class="form-group">
+          <label for="subject">
+            <ion-icon name="document-text-outline"></ion-icon>
+            Subject
+          </label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+        </div>
 
-        <a
-          href="mailto:	
-      sales@603thecoworkingspace.com"
-          class="topbar-item link"
-        >
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <div class="form-group">
+          <label for="message">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            Message
+          </label>
+          <textarea id="message" name="message" placeholder="Tell us about your project or requirements..." required></textarea>
+        </div>
 
-          <span class="span"> sales@603thecoworkingspace.com</span>
-        </a>
+        <button type="submit" class="submit-btn">
+          <span class="text text-1">Send Message</span>
+          <span class="text text-2">Send Message</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <div class="contact-info-item">
+        <ion-icon name="location-outline"></ion-icon>
+        <h3>Visit Us</h3>
+        <p>Makhija Arcade, 35th Rd,<br>Khar, Khar West,<br>Mumbai, Maharashtra 400052</p>
+      </div>
+
+      <div class="contact-info-item">
+        <ion-icon name="call-outline"></ion-icon>
+        <h3>Call Us</h3>
+        <p>+91 9136036603<br>Daily: 8.00 am to 10.00 pm</p>
+      </div>
+
+      <div class="contact-info-item">
+        <ion-icon name="mail-outline"></ion-icon>
+        <h3>Email Us</h3>
+        <p>sales@603thecoworkingspace.com<br>We'll respond within 24 hours</p>
       </div>
     </div>
 
-    <!-- 
-    - #HEADER
-  -->
-
-    <header class="header" data-header>
-      <div class="container">
-        <a href="index.html#" class="logo">
-          <img
-            src="./assets/images/603logo (1).avif"
-            width="160"
-            height="50"
-            alt="Grilli - Home"
-          />
-        </a>
-
-        <nav class="navbar" data-navbar>
-          <button
-            class="close-btn scale-up"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <a href="index.html#" class="logo">
-            <img
-              src="./assets/images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-            />
-          </a>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a
-                href="index.html#home"
-                class="navbar-link hover-underline active"
-              >
-                <div class="separator"></div>
-
-                <span class="span">Home</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogpost4.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Spaces</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">About Us</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="index.html#images" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Images</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogs.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Blogs</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#" class="navbar-link hover-underline">
-                <div class="separator"></div>
-
-                <span class="span">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
-            </address>
-
-            <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
-              >booking@grilli.com</a
-            >
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a
-              href="tel:+88123123456"
-              class="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
-            </a>
+    <!-- Additional Information Section -->
+    <div class="additional-info">
+      <div class="info-section">
+        <h2>Why Choose 603 The Coworking Space?</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <ion-icon name="business-outline"></ion-icon>
+            <h3>Premium Location</h3>
+            <p>Located in the heart of Mumbai's business district, easily accessible by public transport.</p>
           </div>
-        </nav>
-
-        <a href="indexLayout.html" class="btn btn-secondary scale-up">
-          <span class="text text-1">Make Your Space</span>
-
-          <span class="text text-2" aria-hidden="true">Make Your Space</span>
-        </a>
-
-        <button
-          class="nav-open-btn scale-up"
-          aria-label="open menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
-        </button>
+          <div class="info-item">
+            <ion-icon name="wifi-outline"></ion-icon>
+            <h3>High-Speed Internet</h3>
+            <p>Reliable, high-speed internet connection to keep you connected and productive.</p>
+          </div>
+          <div class="info-item">
+            <ion-icon name="people-outline"></ion-icon>
+            <h3>Networking Opportunities</h3>
+            <p>Connect with like-minded professionals and expand your business network.</p>
+          </div>
+          <div class="info-item">
+            <ion-icon name="shield-checkmark-outline"></ion-icon>
+            <h3>Secure Environment</h3>
+            <p>24/7 security and CCTV surveillance to ensure your safety and peace of mind.</p>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <main>
-        <!-- GET IN TOUCH SECTION -->
-        <section class="hero text-center space-section">
-          <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-                <div class="contact-left-title">
-                    <h2>Get in Touch</h2>
-                    <hr>
-                </div>
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-                <button type="submit" class="btn btn-secondary scale-up">
-                  <span class="text text-1">submit</span>
-                  <span class="text text-2" aria-hidden="true">submit</span>
-                </button>
-            </form>
-            <div class="contact-right">
-                <img src="assets/main3.png" alt="">
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What are your operating hours?</h3>
+              <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
-        </div>
-        </section>
-        <style>
+            <div class="faq-answer">
+              <p>We are open daily from 8:00 AM to 10:00 PM, including weekends and holidays.</p>
+            </div>
+          </div>
           
-          /*Contact Page*/
-          .contact-container{
-              height: 100vh;
-              display: grid;
-              align-items: center;
-              justify-content: space-evenly;
-              margin: 0 auto ;
-              box-sizing: border-box;
-          }
-          .contact-left{
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 20px;
-          }
-          .contact-left-title h2{
-              font-family: 'Forum', cursive;
-              font-size: 5rem;
-              margin-bottom: 5px;
-          }
-          .contact-left-title hr{
-              border: none;
-              width: 120px;
-              height: 5px;
-              background-color: rgb(247, 177, 14);
-              border-radius: 5px;
-              margin-bottom: 20px;
-          }
-          .contact-inputs {
-            width: 400px;
-            height: 50px;
-            border: 2px solid rgb(228, 197, 144);
-            padding-left: 20px;
-            font-weight: 500;
-            color: #666666;
-            position: relative;
-            z-index: 10;
-          }
-
-          .contact-left textarea{
-              height: 140px;
-              padding-top: 15px;
-          }
-          .contact-inputs:focus{
-              border: 2px solid rgb(247, 177, 14);
-          }
-          .contact-inputs::placeholder{
-              color: #a9a9a9a9;
-          }
-          .contact-left button img{
-              height: 15px;
-          }
-          .contact-right img{
-              width: 500px;
-          }
-          @media (max-width:800px) {
-              .contact-inputs{
-                  width: 80vw;
-              }
-              .contact-right{
-                  display: none;
-              }
-          }
-
-          /*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-.footer-top {
-  margin-block-end: 70px;
-}
-
-.footer-brand {
-  position: relative;
-  padding: 50px 40px;
-  background: var(--black) url("../images/footer-form-bg.png");
-  background-position: center top;
-  background-repeat: repeat;
-}
-
-.footer-brand::before,
-.footer-brand::after {
-  top: 0;
-  height: 100%;
-  background-image: url("../images/footer-form-pattern.svg");
-}
-
-.footer-brand::before {
-  left: 0;
-}
-
-.footer-brand::after {
-  right: 0;
-}
-
-.footer-brand .logo {
-  max-width: max-content;
-  margin-inline: auto;
-  margin-block-end: 40px;
-}
-
-.footer-brand :is(.body-4, .label-1) {
-  color: var(--quick-silver);
-  line-height: var(--lineHeight-3);
-}
-
-.footer-brand .contact-link {
-  margin-block: 6px;
-  transition: var(--transition-1);
-}
-
-.footer-brand .contact-link:is(:hover, :focus-visible) {
-  color: var(--gold-crayola);
-}
-
-.footer-brand .wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  margin-block: 40px 25px;
-}
-
-.footer-brand .separator {
-  animation: rotate360 15s linear infinite;
-}
-
-.footer-brand .label-1 {
-  margin-block-end: 30px;
-}
-
-.footer-brand .label-1 .span {
-  display: inline;
-  color: var(--white);
-}
-
-.footer-brand .icon-wrapper .input-field {
-  cursor: text;
-}
-
-.footer-brand .btn {
-  min-width: 100%;
-}
-
-.footer-list {
-  display: grid;
-  gap: 20px;
-  background-color: var(--black-alpha-80);
-}
-
-.footer-list-left{
-  padding: 15px;
-  margin-left: 2rem;
-}
-
-.footer-list-right{
-  margin-right: 2rem;
-  padding: 20px 10px;
-}
-
-.footer-link {
-  color: #fff;
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-4);
-  margin-inline: auto;
-  transition: var(--transition-1);
-  display: flex;
-  align-items: center;
-}
-.footer-link ion-icon {
-  margin-right: 8px;
-  font-size: 16px
-}
-.footer-link i {
-  margin-right: 8px;
-  font-size: 14px
-}
-.footer-link:is(:hover, :focus-visible) {
-  color: var(--gold-crayola);
-}
-
-.footer-bottom{
-  margin-bottom: -10rem;
-}
-
-.copyright {
-  color: var(--quick-silver);
-  background-color: var(--black-alpha-80);
-  text-align: center;
-  justify-content: center;
-  height: 50px;
-  padding-top: 10px;
-  line-height: var(--lineHeight-3);
-  margin: 0;
-}
-
-.copyright .link {
-  display: inline;
-  color: var(--gold-crayola);
-  text-decoration: underline;
-}
-
-  .space-section {
-    background-image: linear-gradient(
-        to right,
-        rgba(247, 177, 14, 0.1) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        to bottom,
-        rgba(247, 177, 14, 0.1) 1px,
-        transparent 1px
-      );
-    background-size: 120px 120px;
-  }
-  .space-container {
-    display: grid;
-    padding-bottom: 15rem;
-  }
-  .space-container {
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 600px) {
-    .space-container {
-      grid-template-columns: repeat(1, 1fr);
-      width: 95vw;
-    }
-  }
-
-  @media (min-width: 900px) {
-    .space-container {
-      grid-template-columns: repeat(1, 1fr);
-      width: 95vw;
-    }
-  }
-  @media (min-width: 1200px) {
-    .space-container {
-      grid-template-columns: repeat(2, 1fr);
-      padding-bottom: 0;
-      width: 88vw;
-    }
-  }
-
-  .space-canvas-div {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4em;
-  }
-
-  .space-canvas {
-    width: 100%;
-    height: auto;
-  }
-
-  .space-canvas-border-div {
-    position: absolute;
-    height: 100%;
-    aspect-ratio: 1;
-    border: 0.5em solid hsl(42, 94%, 51%);
-    background-image: url("assets/images/footer-form-bg.png");
-    border-radius: 20% 10% 20% 10%;
-    animation: rotate360 linear 10s infinite;
-    z-index: -1;
-  }
-
-
-  .space-canvas-shadow {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 2em;
-    left: 1em;
-    z-index: -1;
-    filter: grayscale(100%) brightness(50%) contrast(200%);
-  }
-
-  .space-description-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100%;
-    box-sizing: content-box;
-    border: 3px double #f7b10e;
-  }
-
-  .space-description-heading {
-    font-size: 3.5rem;
-    line-height: 1.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    font-weight: 900;
-    color: hsl(38, 61%, 55%);
-    text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-      4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-      5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-      6px 0px 0px hsl(38, 61%, 25%);
-    background-image: linear-gradient(
-      to bottom,
-      rgb(54, 54, 54),
-      rgba(54, 54, 54, 0.8),
-      transparent
-    );
-    background-size: cover;
-  }
-
-  .space-description-overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-image: linear-gradient(
-        to top,
-        rgb(54, 54, 54),
-        rgba(54, 54, 54, 0.8),
-        rgba(54, 54, 54, 0.6),
-        rgba(54, 54, 54, 0.4),
-        rgba(54, 54, 54, 0.2),
-        transparent
-      ),
-      url("assets/images/footer-form-bg.png");
-  }
-
-  .space-description-div {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .space-description {
-    line-height: normal;
-    padding-bottom: 2em;
-  }
-  .card-container {
-    display: grid;
-  }
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 600px) {
-    .card-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 900px) {
-    .card-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media (min-width: 1200px) {
-    .card-container {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  .philosophy-section {
-    background-color: #2e3033;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .philosophy-container {
-    width: 95vw;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .philosophy-heading {
-    font-size: 3em;
-    font-weight: bold;
-    color: hsl(38, 61%, 55%);
-    text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-      4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-      5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-      6px 0px 0px hsl(38, 61%, 25%);
-    line-height: 1.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .curve-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
-  .curve-top svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 200px;
-    transform: rotateY(180deg);
-  }
-
-  .curve-top .shape-fill {
-    fill: #161718;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    height: 50vh;
-  }
-
-  .card-heading {
-    color: hsl(38, 61%, 55%);
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-
-  .curve-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    z-index: -1;
-  }
-
-  .curve-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 200px;
-    transform: rotateY(180deg);
-  }
-
-  .curve-bottom .shape-fill {
-    fill: #212121;
-  }
-
-
-#top{
-  height: auto;
-}
-
-        </style>
-        <footer class="footer section has-bg-image text-center fade-in"
-        style="background-image: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif')">
-        <div class="container">
-          <div class="footer-top grid-list">
-            <div class="footer-brand has-before has-after">
-              <a href="#" class="logo">
-                <!-- <img src="./assets/images/603logo (1).avif" width="160" height="50" loading="lazy" alt="grilli home"> -->
-                <img src="https://abhiram.sirv.com/609%20Workved/assets/603logo%20(1).avif?format=webp" width="160" height="50" loading="lazy" alt="grilli home">
-              </a>
-    
-              <address class="body-4">
-                Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-              </address>
-    
-              <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
-    
-              <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
-    
-              <p class="body-4">
-                Open : 09:00 am - 01:00 pm
-              </p>
-    
-              <div class="wrapper">
-                <div class="separator"></div>
-                <div class="separator"></div>
-                <div class="separator"></div>
-              </div>
-    
-              <p class="title-1">Get News & Offers</p>
-    
-              <p class="label-1">
-                Subscribe us & Get <span class="span">25% Off.</span>
-              </p>
-    
-              <form action="" class="input-wrapper">
-                <div class="icon-wrapper">
-                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-    
-                  <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
-                </div>
-    
-                <button type="submit" class="btn btn-secondary scale-up">
-                  <span class="text text-1">Subscribe</span>
-    
-                  <span class="text text-2" aria-hidden="true">Subscribe</span>
-                </button>
-              </form>
-    
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you provide parking facilities?</h3>
+              <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
-    
-            <head>
-              <!-- Include Ionic Icons CDN -->
-              <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
-              <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
-            </head>
-            
-            <ul class="footer-list">
-              <!-- Home Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="home-outline"></ion-icon> Home
-                </a>
-              </li>
-            
-              <!-- Contact Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="call-outline"></ion-icon> Contact
-                </a>
-              </li>
-            </ul>
-            
-            <ul class="footer-list">
-              <!-- Facebook Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="logo-facebook"></ion-icon> Facebook
-                </a>
-              </li>
-            
-              <!-- Instagram Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="logo-instagram"></ion-icon> Instagram
-                </a>
-              </li>
-            
-              <!-- Twitter Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <i class="fa-brands fa-x-twitter"></i>
-                  Twitter
-                </a>
-              </li>
-            
-              <!-- Youtube Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="logo-youtube"></ion-icon>Youtube
-                </a>
-              </li>
-            
-              <!-- Google Map Link with Icon -->
-              <li>
-                <a href="#" class="label-2 footer-link hover-underline">
-                  <ion-icon name="location-outline"></ion-icon> Google Map
-                </a>
-              </li>
-            </ul>
-    
+            <div class="faq-answer">
+              <p>Yes, we have dedicated parking spaces available for our members at a nominal fee.</p>
+            </div>
           </div>
-    
-          <div class="footer-bottom">
-    
-            <p class="copyright">
-              &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by <a href="603thecoworkingspace.com" target="_blank"
-                class="link">603 The Coworking Space</a>
-            </p>
-    
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I book a meeting room?</h3>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! We have multiple meeting rooms available for booking. Contact us to reserve your preferred time slot.</p>
+            </div>
           </div>
-    
         </div>
-      </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-top-btn" id="backTopBtn" aria-label="back to top">
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Simple validation
+      if (!data.name || !data.email || !data.subject || !data.message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Simulate form submission
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.innerHTML = '<span class="text">Sending...</span>';
+      submitBtn.style.pointerEvents = 'none';
+      
+      setTimeout(() => {
+        alert('Thank you for your message! We\'ll get back to you soon.');
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.pointerEvents = 'auto';
+      }, 2000);
+    });
+
+    // Back to top functionality
+    const backTopBtn = document.getElementById('backTopBtn');
     
-    </main>
+    window.addEventListener('scroll', function() {
+      if (window.scrollY >= 300) {
+        backTopBtn.classList.add('active');
+      } else {
+        backTopBtn.classList.remove('active');
+      }
+    });
 
+    backTopBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
-    <!-- 
-    - #BACK TO TOP
-  -->
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-    <a
-      href="#top"
-      class="back-top-btn active"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-    </a>
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
 
-    <!-- 
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
+    // Observe elements for animation
+    document.querySelectorAll('.contact-info-item').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = 'all 0.6s ease-out';
+      observer.observe(item);
+    });
 
-    <!-- 
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+    // FAQ functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active', !isActive);
+      });
+    });
+
+    // Add scroll animations for new sections
+    document.querySelectorAll('.info-item').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = 'all 0.6s ease-out';
+      observer.observe(item);
+    });
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = 'all 0.6s ease-out';
+      observer.observe(item);
+    });
+
+    // Navbar functionality
+    const navbar = document.querySelector('[data-navbar]');
+    const navTogglers = document.querySelectorAll('[data-nav-toggler]');
+    const overlay = document.querySelector('[data-overlay]');
+
+    const addEventOnElements = function (elements, eventType, callback) {
+      for (let i = 0, len = elements.length; i < len; i++) {
+        elements[i].addEventListener(eventType, callback);
+      }
+    }
+
+    const toggleNavbar = function () {
+      navbar.classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    }
+
+    addEventOnElements(navTogglers, 'click', toggleNavbar);
+
+    // Header scroll behavior
+    const header = document.querySelector('[data-header]');
+    let lastScrollPos = 0;
+
+    const hideHeader = function () {
+      const isScrollBottom = lastScrollPos < window.scrollY;
+      if (isScrollBottom) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+      lastScrollPos = window.scrollY;
+    }
+
+    window.addEventListener('scrollend', hideHeader);
+  </script>
+</body>
 </html>
