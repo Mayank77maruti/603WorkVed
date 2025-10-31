@@ -241,16 +241,22 @@ handleScroll();
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
         const answer = question.nextElementSibling;
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-        } else {
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        faqQuestions.forEach(q => {
+            const parentFaq = q.parentElement;
+            const ans = q.nextElementSibling;
+            parentFaq.classList.remove('active');
+            ans.style.display = 'none';
+        });
+        
+        // Toggle current FAQ item
+        if (!isActive) {
+            faqItem.classList.add('active');
             answer.style.display = 'block';
         }
-        faqQuestions.forEach(q => {
-            if (q !== question) {
-                q.nextElementSibling.style.display = 'none';
-            }
-        });
     });
 });

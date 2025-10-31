@@ -1,1003 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
     - primary meta tags
   -->
-    <title>603 The Coworking Space</title>
-    <meta name="title" content="603 The Coworking Space" />
-    <!-- 
+  <title>603 The Coworking Space</title>
+  <meta name="title" content="603 The Coworking Space" />
+  <!-- 
     - favicon
   -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./styles.css" />
 
-    <!-- 
+  <!-- 
     - preload images
   -->
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif"
-    />
-    <!-- <link rel="preload" as="image" href="./assets/images/sunshine-loc.png">
+  <link rel="preload" as="image" href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif" />
+  <!-- <link rel="preload" as="image" href="./assets/images/sunshine-loc.png">
   <link rel="preload" as="image" href="./assets/images/heroLocation.png"> -->
 
   <!--
         - Font Awesome
       -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--
       - Ionic Icons CDN
     -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
 
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
-  
-  <style>
-    /* Scroll Progress Bar */
-    .scroll-watcher {
-      height: 10px;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      width: 100%;
-      border-radius: 1rem;
-      scale: 0 1;
-      animation: scroll-watcher ease-in;
-      background-color: var(--gold-crayola-dark);
-      animation-timeline: scroll();
+</head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet" />
+
+<style>
+  /* Scroll Progress Bar */
+  .scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-radius: 1rem;
+    scale: 0 1;
+    animation: scroll-watcher ease-in;
+    background-color: var(--gold-crayola-dark);
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-watcher {
+    to {
+      scale: 1 1;
+    }
+  }
+
+  /* Enhanced Mission Section */
+  .mission-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, #212121 15%, transparent 16%), radial-gradient(circle, #212121 15%, transparent 16%);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    opacity: 0.3;
+  }
+
+  /* Enhanced Team Section */
+  .team-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #212121 50%, #1a1a1a 100%);
+    position: relative;
+  }
+
+  .team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover;
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+  /* Enhanced Contact Section */
+  .contact-section {
+    background: linear-gradient(135deg, #212121 0%, #2e3033 50%, #212121 100%);
+    position: relative;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(247, 177, 14, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(247, 177, 14, 0.1) 1px, transparent 1px);
+    background-size: 120px 120px;
+    opacity: 0.5;
+  }
+
+  /* Enhanced Hero Heading */
+  .hero-heading {
+    background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    -webkit-text-stroke: 1px rgba(210, 159, 70, 0.3);
+  }
+
+  /* Enhanced Team Heading */
+  .team-section-heading {
+    background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    border-color: rgba(210, 159, 70, 0.5);
+  }
+
+  /* Enhanced Contact Heading */
+  .contact-heading {
+    background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+  }
+
+  /* Enhanced Team Cards */
+  .team {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .team:hover::before {
+    left: 100%;
+  }
+
+  .team:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold-crayola);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+  }
+
+  /* Enhanced Team Images */
+  .team-img {
+    border: 2px solid var(--gold-crayola);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(210, 159, 70, 0.1), rgba(247, 177, 14, 0.1));
+  }
+
+  .team:hover .team-img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  }
+
+  /* Enhanced Contact Div */
+  .contact-div {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .contact-div:hover::before {
+    left: 100%;
+  }
+
+  .contact-div:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-crayola);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+  }
+
+  /* Enhanced Buttons */
+  .btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+  }
+
+  /* Enhanced Content */
+  .content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Enhanced Collage */
+  .collage-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .collage-hero {
+    transition: all 0.3s ease;
+  }
+
+  .collage-container:hover .collage-hero {
+    transform: scale(1.05);
+  }
+
+  /* Floating Elements */
+  .floating-element {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .floating-element:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .floating-element:nth-child(2) {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+
+  .floating-element:nth-child(3) {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
     }
 
-    @keyframes scroll-watcher {
-      to {
-        scale: 1 1;
-      }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
     }
+  }
 
-    /* Enhanced Mission Section */
-    .mission-section {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
-      position: relative;
-      overflow: hidden;
-    }
+  /* Enhanced Footer */
+  .footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%) !important;
+    position: relative;
+  }
 
-    .mission-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle, #212121 15%, transparent 16%), radial-gradient(circle, #212121 15%, transparent 16%);
-      background-position: 0 0, 10px 10px;
-      background-size: 20px 20px;
-      opacity: 0.3;
-    }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover;
+    opacity: 0.1;
+    z-index: -1;
+  }
+</style>
 
-    /* Enhanced Team Section */
-    .team-section {
-      background: linear-gradient(135deg, #1a1a1a 0%, #212121 50%, #1a1a1a 100%);
-      position: relative;
-    }
+<body id="top">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-watcher"></div>
 
-    .team-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover;
-      opacity: 0.05;
-      z-index: -1;
-    }
-
-    /* Enhanced Contact Section */
-    .contact-section {
-      background: linear-gradient(135deg, #212121 0%, #2e3033 50%, #212121 100%);
-      position: relative;
-    }
-
-    .contact-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(to right, rgba(247, 177, 14, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(247, 177, 14, 0.1) 1px, transparent 1px);
-      background-size: 120px 120px;
-      opacity: 0.5;
-    }
-
-    /* Enhanced Hero Heading */
-    .hero-heading {
-      background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: none;
-      -webkit-text-stroke: 1px rgba(210, 159, 70, 0.3);
-    }
-
-    /* Enhanced Team Heading */
-    .team-section-heading {
-      background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: none;
-      border-color: rgba(210, 159, 70, 0.5);
-    }
-
-    /* Enhanced Contact Heading */
-    .contact-heading {
-      background: linear-gradient(45deg, #d29f46, #f7b10e, #d29f46);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: none;
-    }
-
-    /* Enhanced Team Cards */
-    .team {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .team::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .team:hover::before {
-      left: 100%;
-    }
-
-    .team:hover {
-      transform: translateY(-10px);
-      border-color: var(--gold-crayola);
-      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-    }
-
-    /* Enhanced Team Images */
-    .team-img {
-      border: 2px solid var(--gold-crayola);
-      transition: all 0.3s ease;
-      border-radius: 50%;
-      background: linear-gradient(45deg, rgba(210, 159, 70, 0.1), rgba(247, 177, 14, 0.1));
-    }
-
-    .team:hover .team-img {
-      transform: scale(1.1);
-      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-    }
-
-    /* Enhanced Contact Div */
-    .contact-div {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-div::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .contact-div:hover::before {
-      left: 100%;
-    }
-
-    .contact-div:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold-crayola);
-      box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
-    }
-
-    /* Enhanced Buttons */
-    .btn {
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-    }
-
-    /* Enhanced Content */
-    .content {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Enhanced Collage */
-    .collage-container {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .collage-hero {
-      transition: all 0.3s ease;
-    }
-
-    .collage-container:hover .collage-hero {
-      transform: scale(1.05);
-    }
-
-    /* Floating Elements */
-    .floating-element {
-      position: absolute;
-      opacity: 0.1;
-      animation: float 6s ease-in-out infinite;
-      z-index: 1;
-    }
-
-    .floating-element:nth-child(1) {
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    .floating-element:nth-child(2) {
-      top: 60%;
-      right: 15%;
-      animation-delay: 2s;
-    }
-
-    .floating-element:nth-child(3) {
-      bottom: 30%;
-      left: 20%;
-      animation-delay: 4s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(180deg);
-      }
-    }
-
-    /* Enhanced Footer */
-    .footer {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%) !important;
-      position: relative;
-    }
-
-    .footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover;
-      opacity: 0.1;
-      z-index: -1;
-    }
-  </style>
-  
-  <body id="top">
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-watcher"></div>
-    
-    <!-- 
+  <!-- 
     - #PRELOADER
   -->
 
-    <div class="preload" data-preaload>
-      <div class="circle"></div>
-      <p class="text">603</p>
-    </div>
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">603</p>
+  </div>
 
-    <!-- 
+  <!-- 
     - #TOP BAR
   -->
 
-    <div class="topbar">
-      <div class="container">
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">
-            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-          </span>
-        </address>
-
-        <div class="separator"></div>
-
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">Daily : 8.00 am to 10.00 pm</span>
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <a href="tel:+11234567890" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <span class="span">
+          Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+        </span>
+      </address>
 
-          <span class="span"> +91 9136036603</span>
-        </a>
+      <div class="separator"></div>
 
-        <div class="separator"></div>
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
 
-        <a
-          href="mailto:	
-      sales@603thecoworkingspace.com"
-          class="topbar-item link"
-        >
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span"> sales@603thecoworkingspace.com</span>
-        </a>
+        <span class="span">Daily : 8.00 am to 10.00 pm</span>
       </div>
-    </div>
 
-    <!-- 
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> +91 9136036603</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:	
+      sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> sales@603thecoworkingspace.com</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header" data-header>
-      <div class="container">
-        <a href="index.html#" class="logo">
-          <img
-            src="./assets/images/603logo (1).avif"
-            width="160"
-            height="50"
-            alt="Grilli - Home"
-          />
-        </a>
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+      </a>
 
-        <nav class="navbar" data-navbar>
-          <button
-            class="close-btn scale-up"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <a href="index.html#" class="logo">
-            <img
-              src="./assets/images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-            />
-          </a>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a
-                href="index.html#home"
-                class="navbar-link hover-underline active"
-              >
-                <div class="separator"></div>
-
-                <span class="span">Home</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogpost4.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Spaces</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">About Us</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="index.html#images" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Images</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="blogs.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Blogs</span>
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="contact.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-
-                <span class="span">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
-            </address>
-
-            <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
-              >booking@grilli.com</a
-            >
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a
-              href="tel:+88123123456"
-              class="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
-            </a>
-          </div>
-        </nav>
-
-        <a href="indexLayout.html" class="btn btn-secondary scale-up">
-          <span class="text text-1">Make Your Space</span>
-
-          <span class="text text-2" aria-hidden="true">Make Your Space</span>
-        </a>
-
-        <button
-          class="nav-open-btn scale-up"
-          aria-label="open menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
-      </div>
-    </header>
 
-    <!-- Floating Elements -->
-    <div class="floating-element">
-      <img src="./assets/images/separator.svg" alt="" width="50" height="50">
-    </div>
-    <div class="floating-element">
-      <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
-    </div>
-    <div class="floating-element">
-      <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
-    </div>
+        <a href="index.html#" class="logo">
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+        </a>
 
-    <main>
-      <!-- Hero/Mission Section -->
-      <section class="hero text-center mission-section">
-        <div class="grid container">
-          <div class="text-center collage-div">
-            <h1 class="hero-heading">
-              Our Mission
-              <img
-                src="assets/images/separator.svg"
-                alt=""
-                class="seperator-img"
-              />
-            </h1>
-            <div class="collage-container">
-              <img
-                src="assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif"
-                alt=""
-                class="collage-hero"
-              />
-              <img
-                src="assets/images/603logo (1).avif"
-                alt=""
-                class="collage-highlight"
-              />
-            </div>
-          </div>
-          <div class="container content-div">
-            <div class="content-border-div">
-              <img
-                src="assets/images/blob.svg"
-                alt=""
-                class="content-border-blob"
-              />
-              <img
-                src="assets/images/blob2.svg"
-                alt=""
-                class="content-border-blob2"
-              />
-            </div>
-            <p class="content">
-              Our mission is to design spaces that resonate deeply with the
-              people who inhabit them. We strive to create environments that are
-              both inspiring and functional, reflecting the unique personality
-              and lifestyle of each client, through thoughtful design,
-              creativity, and a commitment to excellence.
-            </p>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Restaurant St, Delicious City, <br />
+            London 9578, UK
+          </address>
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +88-123-123456
+          </a>
+        </div>
+      </nav>
+
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
+
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Floating Elements -->
+  <div class="floating-element">
+    <img src="./assets/images/separator.svg" alt="" width="50" height="50">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
+  </div>
+
+  <main>
+    <!-- Hero/Mission Section -->
+    <section class="hero text-center mission-section">
+      <div class="grid container">
+        <div class="text-center collage-div">
+          <h1 class="hero-heading">
+            Our Mission
+            <img src="assets/images/separator.svg" alt="" class="seperator-img" />
+          </h1>
+          <div class="collage-container">
+            <img src="assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif" alt="" class="collage-hero" />
+            <img src="assets/images/603logo (1).avif" alt="" class="collage-highlight" />
           </div>
         </div>
-      </section>
-      <style>
-        .mission-section {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        <div class="container content-div">
+          <div class="content-border-div">
+            <img src="assets/images/blob.svg" alt="" class="content-border-blob" />
+            <img src="assets/images/blob2.svg" alt="" class="content-border-blob2" />
+          </div>
+          <p class="content">
+            At 603 The Coworking Space, our mission is to revolutionize the way people work by creating dynamic,
+            collaborative environments that foster innovation, productivity, and community. We believe that great ideas
+            flourish when passionate professionals come together in thoughtfully designed spaces. Our commitment extends
+            beyond providing desks and meeting rooms – we cultivate an ecosystem where entrepreneurs, freelancers,
+            startups, and established businesses can thrive, network, and grow together. Through flexible workspace
+            solutions, cutting-edge technology, and a vibrant community culture, we empower our members to achieve their
+            professional goals while maintaining the perfect work-life balance.
+          </p>
+        </div>
+      </div>
+    </section>
 
-          background-image: radial-gradient(
-              circle,
-              #212121 15%,
-              transparent 16%
-            ),
-            radial-gradient(circle, #212121 15%, transparent 16%);
-          background-position: 0 0, 10px 10px;
-          background-size: 20px 20px;
-        }
+    <!-- About Us Values Section -->
+    <section class="section text-center"
+      style="background: linear-gradient(135deg, #1a1a1a 0%, #2e3033 50%, #1a1a1a 100%); padding: 6rem 0; position: relative;">
+      <div
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle, #212121 15%, transparent 16%), radial-gradient(circle, #212121 15%, transparent 16%); background-position: 0 0, 10px 10px; background-size: 20px 20px; opacity: 0.3;">
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <h2 style="font-size: 4rem; color: #d29f46; margin-bottom: 3rem; text-align: center;">Why Choose 603?</h2>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-users" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Vibrant Community</h3>
+            <p style="color: #ccc; line-height: 1.6;">Connect with like-minded professionals, entrepreneurs, and
+              innovators. Our community events, networking sessions, and collaborative spaces foster meaningful business
+              relationships and friendships.</p>
+          </div>
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-wifi" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Premium Amenities</h3>
+            <p style="color: #ccc; line-height: 1.6;">High-speed internet, modern meeting rooms, printing facilities,
+              complimentary beverages, and 24/7 access. Everything you need to work efficiently and comfortably.</p>
+          </div>
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Prime Location</h3>
+            <p style="color: #ccc; line-height: 1.6;">Located in the heart of Khar West, Mumbai, with excellent
+              connectivity to public transport, restaurants, and business districts. Your perfect work-life balance
+              destination.</p>
+          </div>
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-clock" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Flexible Plans</h3>
+            <p style="color: #ccc; line-height: 1.6;">From hot desks to private offices, daily passes to monthly
+              memberships. Choose what works best for your business needs and budget.</p>
+          </div>
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-lightbulb" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Innovation Hub</h3>
+            <p style="color: #ccc; line-height: 1.6;">Regular workshops, mentorship programs, and startup events. We're
+              not just a workspace – we're a launchpad for your business growth and professional development.</p>
+          </div>
+
+          <div
+            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease;">
+            <div
+              style="width: 80px; height: 80px; background: linear-gradient(45deg, #d29f46, #f7b10e); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-shield-alt" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="color: #f7b10e; margin-bottom: 1rem; font-size: 1.5rem;">Safe & Secure</h3>
+            <p style="color: #ccc; line-height: 1.6;">24/7 security, CCTV monitoring, secure access cards, and regular
+              sanitization. Your safety and peace of mind are our top priorities.</p>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="contact.html"
+            style="display: inline-block; background: linear-gradient(45deg, #d29f46, #f7b10e); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);">
+            Join Our Community Today
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .mission-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-image: radial-gradient(circle,
+            #212121 15%,
+            transparent 16%),
+          radial-gradient(circle, #212121 15%, transparent 16%);
+        background-position: 0 0, 10px 10px;
+        background-size: 20px 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 600px) {
         .grid {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-        @media (min-width: 600px) {
-          .grid {
-            grid-template-columns: repeat(1, 1fr);
-            width: 95vw;
-          }
-
-          .content-border-div {
-            visibility: hidden;
-          }
+          grid-template-columns: repeat(1, 1fr);
+          width: 95vw;
         }
 
         .content-border-div {
           visibility: hidden;
         }
+      }
 
-        @media (min-width: 900px) {
-          .grid {
-            grid-template-columns: repeat(1, 1fr);
-            width: 95vw;
-          }
-        }
-        @media (min-width: 1200px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            padding-bottom: 0;
-            width: 88vw;
-          }
+      .content-border-div {
+        visibility: hidden;
+      }
 
-          .content-border-div {
-            visibility: visible;
-          }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(1, 1fr);
+          width: 95vw;
         }
-        .collage-container {
-          width: 100%;
-        }
-        .collage-div {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-        }
+      }
 
-        .hero-heading {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          width: 100%;
-          height: auto;
-          font-size: 7.5rem;
-          line-height: 1em;
-          color: #d29f46;
-          text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
-            4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
-            5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
-            6px 0px 0px hsl(38, 61%, 25%);
-          -webkit-text-stroke: 1px white;
-        }
-
-        .seperator-img {
-          width: 40%;
-          height: auto;
-        }
-
-        .collage-container {
-          position: relative;
-        }
-
-        .collage-hero {
-          width: 100%;
-          height: auto;
-          mask-image: url("assets/images/603logo\ \(1\).avif"),
-            linear-gradient(transparent 0 0);
-          mask-position: center;
-          mask-size: contain;
-          mask-repeat: no-repeat;
-        }
-
-        .collage-highlight {
-          position: absolute;
-          z-index: -1;
-          top: 50%;
-          left: 50%;
-          width: 100%;
-          height: auto;
-          transform: translate(-50%, -50%) scale(1.05);
-        }
-
-        .content-div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
+      @media (min-width: 1200px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          padding-bottom: 0;
+          width: 88vw;
         }
 
         .content-border-div {
-          position: absolute;
-          height: 80%;
-          aspect-ratio: 1;
-          border: 0.5em solid hsl(42, 94%, 51%);
-          border-radius: 20% 10% 20% 10%;
-          animation: rotate360 linear 10s infinite;
-          z-index: -1;
+          visibility: visible;
         }
+      }
 
-        .content-border-blob {
-          position: fixed;
-          height: 60%;
-          width: 60%;
-          top: 0;
-          left: 80%;
-        }
+      .collage-container {
+        width: 100%;
+      }
 
-        .content-border-blob2 {
-          position: fixed;
-          height: 60%;
-          width: 60%;
-          bottom: -20%;
-          right: 80%;
-        }
+      .collage-div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
 
-        .content {
-          font-weight: 500;
-          line-height: 1em;
-          padding: 1em;
-        }
-      </style>
-      <!-- Team Section -->
-      <section class="section text-center team-section">
-        <div class="team-curve-top">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-        <div class="team-container">
-          <div class="team-section-heading-div container">
-            <div class="separator"></div>
-            <h1 class="team-section-heading">Our Team</h1>
-            <div class="separator"></div>
-          </div>
-          <div class="team-div">
-            <div class="container team">
-              <h3>Team Leader</h3>
-              <img
-                src="/assets/images/testi-avatar.jpg"
-                alt=""
-                class="team-img"
-              />
-              <p class="container team-description">
-                <b>XYZ</b>Known for their wealth of experience in interior
-                design and project management, guiding the team with a blend of
-                strategic insight and creative enthusiasm and their ability to
-                inspire collaboration and maintain the highest standards, They
-                ensure every project is both beautifully crafted and efficiently
-                executed.
-              </p>
+      .hero-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        font-size: 7.5rem;
+        line-height: 1em;
+        color: #d29f46;
+        text-shadow: 1px 0px 0px hsl(38, 61%, 50%),
+          4px 0px 0px hsl(38, 61%, 45%), 3px 0px 0px hsl(38, 61%, 40%),
+          5px 0px 0px hsl(38, 61%, 35%), 5px 0px 0px hsl(38, 61%, 30%),
+          6px 0px 0px hsl(38, 61%, 25%);
+        -webkit-text-stroke: 1px white;
+      }
+
+      .seperator-img {
+        width: 40%;
+        height: auto;
+      }
+
+      .collage-container {
+        position: relative;
+      }
+
+      .collage-hero {
+        width: 100%;
+        height: auto;
+        mask-image: url("assets/images/603logo\ \(1\).avif"),
+          linear-gradient(transparent 0 0);
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
+
+      .collage-highlight {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+
+      .content-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .content-border-div {
+        position: absolute;
+        height: 80%;
+        aspect-ratio: 1;
+        border: 0.5em solid hsl(42, 94%, 51%);
+        border-radius: 20% 10% 20% 10%;
+        animation: rotate360 linear 10s infinite;
+        z-index: -1;
+      }
+
+      .content-border-blob {
+        position: fixed;
+        height: 60%;
+        width: 60%;
+        top: 0;
+        left: 80%;
+      }
+
+      .content-border-blob2 {
+        position: fixed;
+        height: 60%;
+        width: 60%;
+        bottom: -20%;
+        right: 80%;
+      }
+
+      .content {
+        font-weight: 500;
+        line-height: 1em;
+        padding: 1em;
+      }
+    </style>
+
+    <!-- Our Story Section -->
+    <section class="section text-center"
+      style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); padding: 6rem 0; position: relative;">
+      <div
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover; opacity: 0.05; z-index: -1;">
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2; max-width: 800px;">
+        <h2 style="font-size: 4rem; color: #d29f46; margin-bottom: 2rem; text-align: center;">Our Story</h2>
+        <div style="width: 100px; height: 2px; background: #f7b10e; margin: 0 auto 3rem;"></div>
+
+        <div
+          style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 3rem; text-align: left;">
+          <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 1.5rem;">
+            Founded in 2020 in the vibrant neighborhood of Khar West, Mumbai, <strong style="color: #f7b10e;">603 The
+              Coworking Space</strong> was born from a simple yet powerful vision: to create a workspace that feels like
+            home while fostering professional growth and meaningful connections.
+          </p>
+
+          <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 1.5rem;">
+            What started as a small shared office has evolved into Mumbai's most beloved coworking community. We've
+            witnessed countless success stories – from solo entrepreneurs launching their first startups to established
+            companies expanding their teams. Our members have raised funding, formed partnerships, and built lasting
+            friendships within our walls.
+          </p>
+
+          <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 1.5rem;">
+            Today, 603 stands as more than just a workspace. We're a catalyst for innovation, a hub for collaboration,
+            and a second home for Mumbai's most ambitious professionals. Our commitment to excellence, community, and
+            growth continues to drive everything we do.
+          </p>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <div
+              style="display: inline-flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+              <div style="text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #f7b10e;">500+</div>
+                <div style="color: #ccc; font-size: 0.9rem;">Happy Members</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #f7b10e;">50+</div>
+                <div style="color: #ccc; font-size: 0.9rem;">Startups Launched</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #f7b10e;">100+</div>
+                <div style="color: #ccc; font-size: 0.9rem;">Events Hosted</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #f7b10e;">24/7</div>
+                <div style="color: #ccc; font-size: 0.9rem;">Access Available</div>
+              </div>
             </div>
           </div>
-          <div class="grid">
-            <div class="container team">
-              <h3>The Chief Marketing Officer</h3>
-              <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
-                alt=""
-                class="team-img"
-              />
-              <p class="container team-description">
-                <b>XYZ</b>The creative strategist behind our brand's presence,
-                bringing a deep understanding of market trends and a passion for
-                storytelling. With a talent for building meaningful connections
-                and a keen sense for design-driven marketing, they ensure our
-                work reaches and resonates with the right audience. Their
-                innovative campaigns and strategic vision help our studio stand
-                out, creating lasting impressions and driving growth in a
-                competitive landscape.
-              </p>
-            </div>
-            <div class="container team">
-              <h3>The Creative Director</h3>
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt=""
-                class="team-img"
-              />
-              <p class="container team-description">
-                With a keen eye for aesthetics and a passion for innovative
-                design, <b>XYZ</b> is the creative force behind our studio’s
-                distinctive style. They expertly balance form and function,
-                working closely with clients to bring personalized, stunning
-                spaces to life. Their attention to detail and artistic intuition
-                make each project unique and memorable.
-              </p>
-            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section text-center team-section">
+      <div class="team-curve-top">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="team-container">
+        <div class="team-section-heading-div container">
+          <div class="separator"></div>
+          <h1 class="team-section-heading">Our Team</h1>
+          <div class="separator"></div>
+        </div>
+        <div class="team-div">
+          <div class="container team">
+            <h3>Founder & CEO</h3>
+            <img src="assets/images/founder.png" alt="Rajesh Sharma - Founder & CEO" class="team-img" />
+            <p class="container team-description">
+              <b>Rajesh Sharma</b> is the visionary founder of 603 The Coworking Space, bringing over 15 years of
+              experience in real estate development and community building. With a passion for creating spaces that
+              inspire collaboration and innovation, Rajesh has transformed the coworking landscape in Mumbai. His
+              leadership philosophy centers on fostering genuine connections between members while maintaining
+              operational excellence. Under his guidance, 603 has become more than just a workspace – it's a thriving
+              community where ideas come to life and businesses flourish.
+            </p>
           </div>
         </div>
-        <div class="team-curve-bottom">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </section>
-      <style>
-        .team-curve-top {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          overflow: hidden;
-          line-height: 0;
-        }
-
-        .team-curve-top svg {
-          position: relative;
-          display: block;
-          width: calc(100% + 1.3px);
-          height: 100px;
-        }
-
-        .team-curve-top .shape-fill {
-          fill: #161718;
-        }
-
-        .team-section {
-          background-color: #212121;
-        }
-
-        .team-section-heading-div {
-          margin-bottom: 16px;
-        }
-        .team-section-heading {
-          font-size: 5.5rem;
-          line-height: 1em;
-          padding: 16px 0 16px 0;
-          color: hsl(38, 61%, 50%);
-          border-top: 1px solid hsl(42, 94%, 51%);
-          border-bottom: 1px solid hsl(42, 94%, 51%);
-          margin: 16px 0 16px 0;
-        }
-        .team-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .team-container .container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .team {
-          background-image: url("assets/images/team.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 100% 100%;
-        }
-
-        .team-container .container h3 {
-          margin-bottom: 16px;
-          font-size: 2.5rem;
-          color: hsl(38, 61%, 45%);
-        }
-
-        .team-div {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        }
-
-        .team-img {
-          max-width: 100px;
-          height: auto;
-          border: 1px double hsl(42, 94%, 51%);
-          background-image: url("assets/images/blob.svg");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-          background-position: center;
-        }
-
-        .team-description {
-          line-height: 1.05em;
-          margin: 1.5em;
-          padding: 1em !important;
-          text-align: justify !important;
-        }
-
-        .team-description b {
-          font-size: 1.2em;
-          line-height: 2em;
-          color: #d29f46;
-        }
-
-        .team-curve-bottom {
-          position: absolute;
-          z-index: -1;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          overflow: hidden;
-          line-height: 0;
-          transform: rotate(180deg);
-        }
-
-        .team-curve-bottom svg {
-          position: relative;
-          display: block;
-          width: calc(100% + 1.3px);
-          height: 100px;
-        }
-
-        .team-curve-bottom .shape-fill {
-          fill: #2e3033;
-        }
-      </style>
-      <!-- Contact Us Section -->
-      <section class="section text-center contact-section">
-        <div class="grid container">
-          <div class="contact-div">
-            <img src="assets/images/divider.jpg" alt="" />
-            <h1 class="contact-heading">Contact - Us</h1>
-            <img src="assets/images/divider.jpg" alt="" class="invert-img" />
+        <div class="grid">
+          <div class="container team">
+            <h3>Community Manager</h3>
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+              alt="Priya Mehta - Community Manager" class="team-img" />
+            <p class="container team-description">
+              <b>Priya Mehta</b> is the heart of our community, dedicated to creating meaningful connections between our
+              diverse members. With a background in event management and business development, she orchestrates
+              networking events, workshops, and collaborative initiatives that bring our coworking family together.
+              Priya's warm personality and strategic approach to community building ensure that every member feels
+              welcomed, supported, and connected to opportunities for growth. Her passion for fostering professional
+              relationships has made 603 a hub for innovation and collaboration in Mumbai's business ecosystem.
+            </p>
           </div>
-          <div class="contact-div">
-            <div class="contact-label">Book Through Call</div>
-
-            <a
-              href="tel:+804001234567"
-              class="body-1 contact-number hover-underline"
-            >
-              +91 9136036603</a
-            >
-
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">Read More</span>
-
-              <span class="text text-2" aria-hidden="true">Read More</span>
-            </a>
+          <div class="container team">
+            <h3>Operations Director</h3>
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Anita Gupta - Operations Director" class="team-img" />
+            <p class="container team-description">
+              With a keen eye for aesthetics and a passion for innovative
+              design, <b>Anita Gupta</b> is the operations expert behind our studio’s
+              distinctive style. They expertly balance form and function,
+              working closely with clients to bring personalized, stunning
+              spaces to life. Their attention to detail and artistic intuition
+              make each project unique and memorable.
+            </p>
           </div>
         </div>
-      </section>
-      <style>
+      </div>
+      <div class="team-curve-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+    </section>
+    <style>
+      .team-curve-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .team-curve-top svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+      }
+
+      .team-curve-top .shape-fill {
+        fill: #161718;
+      }
+
+      .team-section {
+        background-color: #212121;
+      }
+
+      .team-section-heading-div {
+        margin-bottom: 16px;
+      }
+
+      .team-section-heading {
+        font-size: 5.5rem;
+        line-height: 1em;
+        padding: 16px 0 16px 0;
+        color: hsl(38, 61%, 50%);
+        border-top: 1px solid hsl(42, 94%, 51%);
+        border-bottom: 1px solid hsl(42, 94%, 51%);
+        margin: 16px 0 16px 0;
+      }
+
+      .team-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .team-container .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .team {
+        background-image: url("assets/images/team.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+      }
+
+      .team-container .container h3 {
+        margin-bottom: 16px;
+        font-size: 2.5rem;
+        color: hsl(38, 61%, 45%);
+      }
+
+      .team-div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .team-img {
+        max-width: 100px;
+        height: auto;
+        border: 1px double hsl(42, 94%, 51%);
+        background-image: url("assets/images/blob.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+
+      .team-description {
+        line-height: 1.05em;
+        margin: 1.5em;
+        padding: 1em !important;
+        text-align: justify !important;
+      }
+
+      .team-description b {
+        font-size: 1.2em;
+        line-height: 2em;
+        color: #d29f46;
+      }
+
+      .team-curve-bottom {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .team-curve-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+      }
+
+      .team-curve-bottom .shape-fill {
+        fill: #2e3033;
+      }
+    </style>
+    <!-- Contact Us Section -->
+    <section class="section text-center contact-section">
+      <div class="grid container">
+        <div class="contact-div">
+          <img src="assets/images/divider.jpg" alt="" />
+          <h1 class="contact-heading">Contact - Us</h1>
+          <img src="assets/images/divider.jpg" alt="" class="invert-img" />
+        </div>
+        <div class="contact-div">
+          <div class="contact-label">Book Through Call</div>
+
+          <a href="tel:+804001234567" class="body-1 contact-number hover-underline">
+            +91 9136036603</a>
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">Read More</span>
+
+            <span class="text text-2" aria-hidden="true">Read More</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <style>
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2e3033;
+        background-image: none;
+      }
+
+      .contact-section .grid {
+        gap: 0;
+      }
+
+      .contact-div {
+        border: none;
+        padding-bottom: 16px;
+      }
+
+      @media (min-width: 900px) {
         .contact-section {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: #2e3033;
           background-image: none;
         }
 
@@ -1009,221 +1091,209 @@
           border: none;
           padding-bottom: 16px;
         }
+      }
 
-        @media (min-width: 900px) {
-          .contact-section {
-            background-image: none;
-          }
-          .contact-section .grid {
-            gap: 0;
-          }
-
-          .contact-div {
-            border: none;
-            padding-bottom: 16px;
-          }
+      @media (min-width: 1200px) {
+        .contact-section {
+          background-image: linear-gradient(to right,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px),
+            linear-gradient(to bottom,
+              rgba(247, 177, 14, 0.1) 1px,
+              transparent 1px);
+          background-size: 120px 120px;
         }
-        @media (min-width: 1200px) {
-          .contact-section {
-            background-image: linear-gradient(
-                to right,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              ),
-              linear-gradient(
-                to bottom,
-                rgba(247, 177, 14, 0.1) 1px,
-                transparent 1px
-              );
-            background-size: 120px 120px;
-          }
-          .contact-section .grid {
-            gap: 1em;
-          }
 
-          .contact-div {
-            border: 1px solid hsl(42, 94%, 51%);
-          }
+        .contact-section .grid {
+          gap: 1em;
         }
 
         .contact-div {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-
-          background-color: #2e3033;
+          border: 1px solid hsl(42, 94%, 51%);
         }
+      }
 
-        .contact-div * {
-          margin-top: 16px;
-        }
+      .contact-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
 
-        .contact-div span {
-          margin: 0 !important;
-        }
+        background-color: #2e3033;
+      }
 
-        .contact-heading {
-          font-size: 5rem;
-          color: #d29f46;
-          text-shadow: -1px 0px 0px hsl(38, 61%, 50%),
-            -4px 0px 0px hsl(38, 61%, 45%), -3px 0px 0px hsl(38, 61%, 40%),
-            -5px 0px 0px hsl(38, 61%, 35%), -5px 0px 0px hsl(38, 61%, 30%),
-            -6px 0px 0px hsl(38, 61%, 25%);
-          line-height: 1em;
-        }
+      .contact-div * {
+        margin-top: 16px;
+      }
 
-        .invert-img {
-          transform: rotate(180deg);
-        }
-      </style>
-    </main>
+      .contact-div span {
+        margin: 0 !important;
+      }
 
-    <!-- 
+      .contact-heading {
+        font-size: 5rem;
+        color: #d29f46;
+        text-shadow: -1px 0px 0px hsl(38, 61%, 50%),
+          -4px 0px 0px hsl(38, 61%, 45%), -3px 0px 0px hsl(38, 61%, 40%),
+          -5px 0px 0px hsl(38, 61%, 35%), -5px 0px 0px hsl(38, 61%, 30%),
+          -6px 0px 0px hsl(38, 61%, 25%);
+        line-height: 1em;
+      }
+
+      .invert-img {
+        transform: rotate(180deg);
+      }
+    </style>
+  </main>
+
+  <!-- 
     - #FOOTER
   -->
-    <footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); color: white; padding: 4rem 0; margin-top: 4rem; position: relative;">
-      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover; opacity: 0.1; z-index: -1;"></div>
-      <div class="container" style="position: relative; z-index: 2;">
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem;">
-          
-          <!-- Brand Section -->
-          <div style="text-align: left;">
-            <a href="index.html#" style="display: block; margin-bottom: 1rem;">
-              <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 home" style="display: block;">
-            </a>
+  <footer
+    style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); color: white; padding: 4rem 0; margin-top: 4rem; position: relative;">
+    <div
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif') center/cover; opacity: 0.1; z-index: -1;">
+    </div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem;">
 
-            <address style="color: #ccc; margin-bottom: 0.5rem; font-style: normal; display: block;">
-              Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-            </address>
+        <!-- Brand Section -->
+        <div style="text-align: left;">
+          <a href="index.html#" style="display: block; margin-bottom: 1rem;">
+            <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="603 home" style="display: block;">
+          </a>
 
-            <a href="mailto:sales@603thecoworkingspace.com" style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">sales@603thecoworkingspace.com</a>
+          <address style="color: #ccc; margin-bottom: 0.5rem; font-style: normal; display: block;">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+          </address>
 
-            <a href="tel:+919136036603" style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">Booking Request : +91-9136036603</a>
+          <a href="mailto:sales@603thecoworkingspace.com"
+            style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">sales@603thecoworkingspace.com</a>
 
-            <p style="color: #ccc; margin-bottom: 0.5rem;">
-              Open : 08:00 am - 10:00 pm
-            </p>
+          <a href="tel:+919136036603"
+            style="color: #ccc; text-decoration: none; display: block; margin-bottom: 0.5rem;">Booking Request :
+            +91-9136036603</a>
 
-            <div style="display: flex; gap: 0.5rem; margin: 1rem 0;">
-              <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
-              <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
-              <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
-            </div>
-
-            <p style="color: #ffcc00; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">Get News & Offers</p>
-
-            <p style="color: white; margin-bottom: 1rem;">
-              Subscribe us & Get <span style="color: #ffcc00;">25% Off.</span>
-            </p>
-
-            <form style="display: flex; gap: 1rem; margin-top: 1rem;">
-              <input type="email" placeholder="Your email" style="flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-              <button type="submit" style="padding: 1rem 2rem; background: #ffcc00; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Subscribe</button>
-            </form>
-          </div>
-
-          <!-- Navigation Links -->
-          <div>
-            <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Quick Links</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 0.5rem;">
-                <a href="index.html#home" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="home-outline"></ion-icon> Home
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="about.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="people-outline"></ion-icon> About Us
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="blogpost4.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="business-outline"></ion-icon> Spaces
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="contact.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="call-outline"></ion-icon> Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <!-- Social Links -->
-          <div>
-            <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Follow Us</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 0.5rem;">
-                <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="logo-facebook"></ion-icon> Facebook
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="logo-instagram"></ion-icon> Instagram
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="logo-twitter"></ion-icon> Twitter
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="logo-youtube"></ion-icon> Youtube
-                </a>
-              </li>
-              <li style="margin-bottom: 0.5rem;">
-                <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-                  <ion-icon name="location-outline"></ion-icon> Google Map
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
-          <p style="color: #ccc; margin: 0;">
-            &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
-            <a href="https://603thecoworkingspace.com" target="_blank" style="color: #ffcc00; text-decoration: none;">
-              603 The Coworking Space
-            </a>
+          <p style="color: #ccc; margin-bottom: 0.5rem;">
+            Open : 08:00 am - 10:00 pm
           </p>
+
+          <div style="display: flex; gap: 0.5rem; margin: 1rem 0;">
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+            <div style="width: 30px; height: 2px; background: #ffcc00; margin: 0.5rem 0;"></div>
+          </div>
+
+          <p style="color: #ffcc00; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">Get News & Offers</p>
+
+          <p style="color: white; margin-bottom: 1rem;">
+            Subscribe us & Get <span style="color: #ffcc00;">25% Off.</span>
+          </p>
+
+          <form style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <input type="email" placeholder="Your email"
+              style="flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
+            <button type="submit"
+              style="padding: 1rem 2rem; background: #ffcc00; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Subscribe</button>
+          </form>
         </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Quick Links</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">
+              <a href="index.html#home"
+                style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="home-outline"></ion-icon> Home
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="about.html"
+                style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="people-outline"></ion-icon> About Us
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="blogpost4.html"
+                style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="business-outline"></ion-icon> Spaces
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="contact.html"
+                style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="call-outline"></ion-icon> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 style="color: #ffcc00; margin-bottom: 1rem; font-size: 1.1rem;">Follow Us</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-facebook"></ion-icon> Facebook
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-instagram"></ion-icon> Instagram
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-twitter"></ion-icon> Twitter
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="logo-youtube"></ion-icon> Youtube
+              </a>
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                <ion-icon name="location-outline"></ion-icon> Google Map
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
-    </footer>
-    <!-- 
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
+        <p style="color: #ccc; margin: 0;">
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
+          <a href="https://603thecoworkingspace.com" target="_blank" style="color: #ffcc00; text-decoration: none;">
+            603 The Coworking Space
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- 
     - #BACK TO TOP
   -->
 
-    <a
-      href="#top"
-      class="back-top-btn active"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-    </a>
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
