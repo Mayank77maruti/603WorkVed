@@ -1200,6 +1200,71 @@
           .layout-image {
             height: 200px;
           }
+        }
+      </style>
+
+      <script>
+        // Workspace layout functionality
+        let isDraggingComponent = false;
+        let isResizingComponent = false;
+        let activeComponent = null;
+        let dragStartX, dragStartY, resizeStartWidth, resizeStartHeight, dragStartLeft, dragStartTop;
+
+        document.addEventListener('DOMContentLoaded', function () {
+          const components = document.querySelectorAll('.office-component');
+
+          components.forEach(component => {
+            // Dragging functionality
+            component.addEventListener('mousedown', startComponentDrag);
+
+            // Resizing functionality
+            const resizeCorner = component.querySelector('.resize-corner');
+            resizeCorner.addEventListener('mousedown', startComponentResize);
+          });
+
+          document.addEventListener('mousemove', handleComponentMouseMove);
+          document.addEventListener('mouseup', stopComponentDragResize);
+        });
+
+        function startComponentDrag(e) {
+          if (e.target.classList.contains('resize-corner')) return;
+
+          isDraggingComponent = true;
+          activeComponent = e.currentTarget;
+          activeComponent.classList.add('dragging');
+
+          const rect = activeComponent.getBoundingClientRect();
+          const containerRect = activeComponent.parentElement.getBoundingClientRect();
+
+          dragStartX = e.clientX;
+          dragStartY = e.clientY;
+          dragStartLeft = rect.left - containerRect.left;
+          dragStartTop = rect.top - containerRect.top;
+
+          e.preventDefault();
+        }
+
+        function startComponentResize(e) {
+          isResizingComponent = true;
+          activeComponent = e.target.parentElement;
+
+          const rect = activeComponent.getBoundingClientRect();
+
+          dragStartX = e.clientX;
+          dragStartY = e.clientY;
+          resizeStartWidth = rect.width;
+          resizeStartHeight = rect.height;
+
+          e.preventDefault();
+          e.stopPropagation();
+        }
+
+        function handleComponentMouseMove(e) {
+          if (!isDraggingComponent && !isResizingComponent) return;
+
+          if (isDraggingComponent) {
+            const deltaX = e.clientX - dragStartX;
+            const deltaY = e.clientY - dragStartY;
 
           .layout-details {
             padding: 20px;
@@ -1208,6 +1273,7 @@
           .layout-cta h3 {
             font-size: 1.8rem;
           }
+        }
 
           .layout-cta p {
             font-size: 1.1rem;
