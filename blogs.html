@@ -1,976 +1,888 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
     - primary meta tags
   -->
-    <title>603 The Coworking Space</title>
-    <meta name="title" content="603 The Coworking Space" />
+  <title>603 The Coworking Space</title>
+  <meta name="title" content="603 The Coworking Space" />
 
-    <!-- 
+  <!-- 
     - favicon
   -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
+  <!-- 
     - preload images
   -->
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif"
-    />
-    
+  <link rel="preload" as="image" href="./assets/images/sunmill-loc_batcheditor_fotor (1).avif" />
+
   <!--
         - Font Awesome
       -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--
       - Ionic Icons CDN
     -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
 
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-    rel="stylesheet"
-  />
-  <body id="top" class="blogs-page">
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-watcher"></div>
-    
-    <!-- 
+</head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet" />
+
+<body id="top" class="blogs-page">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-watcher"></div>
+
+  <!-- 
     - #PRELOADER
   -->
 
-    <div class="preload" data-preaload>
-      <div class="circle"></div>
-      <p class="text">603</p>
-    </div>
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">603</p>
+  </div>
 
-    <!-- 
+  <!-- 
     - #TOP BAR
   -->
 
-    <div class="topbar">
-      <div class="container">
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">
-            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
-          </span>
-        </address>
-
-        <div class="separator"></div>
-
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">Daily : 8.00 am to 10.00 pm</span>
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <a href="tel:+11234567890" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
+        <span class="span">
+          Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+        </span>
+      </address>
 
-          <span class="span"> +91 9136036603</span>
-        </a>
+      <div class="separator"></div>
 
-        <div class="separator"></div>
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
 
-        <a
-          href="mailto:	
-      sales@603thecoworkingspace.com"
-          class="topbar-item link"
-        >
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span"> sales@603thecoworkingspace.com</span>
-        </a>
+        <span class="span">Daily : 8.00 am to 10.00 pm</span>
       </div>
-    </div>
 
-    <!-- 
+      <a href="tel:+11234567890" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> +91 9136036603</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:	
+      sales@603thecoworkingspace.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> sales@603thecoworkingspace.com</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header" data-header>
-      <div class="container">
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html#" class="logo">
+        <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="close-btn scale-up" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
         <a href="index.html#" class="logo">
-          <img
-            src="./assets/images/603logo (1).avif"
-            width="160"
-            height="50"
-            alt="Grilli - Home"
-          />
+          <img src="./assets/images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
         </a>
 
-        <nav class="navbar" data-navbar>
-          <button
-            class="close-btn scale-up"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link hover-underline">
+              <div class="separator"></div>
 
-          <a href="index.html#" class="logo">
-            <img
-              src="./assets/images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-            />
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogpost4.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Spaces</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#images" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Images</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blogs.html" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+              <span class="span">Blogs</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Restaurant St, Delicious City, <br />
+            London 9578, UK
+          </address>
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+
+          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+            +88-123-123456
           </a>
+        </div>
+      </nav>
 
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a
-                href="index.html#home"
-                class="navbar-link hover-underline"
-              >
-                <div class="separator"></div>
+      <a href="indexLayout.html" class="btn btn-secondary scale-up">
+        <span class="text text-1">Make Your Space</span>
 
-                <span class="span">Home</span>
-              </a>
+        <span class="text text-2" aria-hidden="true">Make Your Space</span>
+      </a>
+
+      <button class="nav-open-btn scale-up" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Floating Elements -->
+  <div class="floating-element">
+    <img src="./assets/images/separator.svg" alt="" width="50" height="50">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
+  </div>
+  <div class="floating-element">
+    <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
+  </div>
+
+  <main>
+    <article>
+      <section class="section service bg-black-10 text-center m-3" aria-label="service">
+        <div class="container">
+          <p class="section-subtitle label-2">Latest Insights</p>
+
+          <h2 class="headline-1 section-title fade-in">Blogs</h2>
+
+          <p class="section-text">
+            Stay updated with our latest blog posts where we share insights,
+            tips, and trends on office interiors, productivity, and workspace
+            design. Our expert writers bring you valuable content to help you
+            create a workspace that inspires and motivates.
+          </p>
+
+          <ul class="grid-list">
+            <li class="fade-in">
+              <div class="service-card">
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="10 Years of 603" class="img-cover" />
+                  </figure>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost1.html">10 Years of 603: How We Are</a>
+                  </h3>
+
+                  <a href="HowWeAre.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
 
-            <li class="navbar-item">
-              <a href="blogpost4.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Spaces</span>
-              </a>
+            <li class="fade-in">
+              <div class="service-card">
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="Meet Our Team" class="img-cover" />
+                  </figure>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost2.html">Meet Our Team</a>
+                  </h3>
+
+                  <a href="MeetOurTeam.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
 
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">About Us</span>
-              </a>
+            <li class="fade-in">
+              <div class="service-card">
+                <a href="assets/blogpages/blogpost3.html" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/the-9th-coworking--MezGpfNBTo-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="Our Achievements" class="img-cover" />
+                  </figure>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost3.html">Our Achievements</a>
+                  </h3>
+
+                  <a href="Achievements.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
 
-            <li class="navbar-item">
-              <a href="index.html#images" class="navbar-link hover-underline">
-                <div class="separator"></div>
-                <span class="span">Images</span>
-              </a>
-            </li>
+            <li class="fade-in">
+              <div class="service-card">
+                <a href="blogpost6.html" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+                    <img src="./assets/images/jose-losada-DyFjxmHt3Es-unsplash.avif" width="285" height="336"
+                      loading="lazy" alt="How to Use Our Calculator" class="img-cover" />
+                  </figure>
+                </a>
 
-            <li class="navbar-item">
-              <a href="blogs.html" class="navbar-link hover-underline active">
-                <div class="separator"></div>
-                <span class="span">Blogs</span>
-              </a>
-            </li>
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="blogpost6.html">How to Use Our Space Calculator</a>
+                  </h3>
 
-            <li class="navbar-item">
-              <a href="contact.html" class="navbar-link hover-underline">
-                <div class="separator"></div>
-
-                <span class="span">Contact</span>
-              </a>
+                  <a href="blogpost6.html" class="btn-text hover-underline label-2">Read More</a>
+                </div>
+              </div>
             </li>
           </ul>
+        </div>
+      </section>
 
-          <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
-            </address>
-
-            <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
-              >booking@grilli.com</a
-            >
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a
-              href="tel:+88123123456"
-              class="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
-            </a>
-          </div>
-        </nav>
-
-        <a href="indexLayout.html" class="btn btn-secondary scale-up">
-          <span class="text text-1">Make Your Space</span>
-
-          <span class="text text-2" aria-hidden="true">Make Your Space</span>
-        </a>
-
-        <button
-          class="nav-open-btn scale-up"
-          aria-label="open menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
-        </button>
-      </div>
-    </header>
-
-    <!-- Floating Elements -->
-    <div class="floating-element">
-      <img src="./assets/images/separator.svg" alt="" width="50" height="50">
-    </div>
-    <div class="floating-element">
-      <img src="./assets/images/img-pattern.svg" alt="" width="60" height="60">
-    </div>
-    <div class="floating-element">
-      <img src="./assets/images/badge-2.png" alt="" width="40" height="40">
-    </div>
-
-    <main>
-      <article>
-        <section
-          class="section service bg-black-10 text-center m-3"
-          aria-label="service"
-        >
-          <div class="container">
-            <p class="section-subtitle label-2">Latest Insights</p>
-
-            <h2 class="headline-1 section-title fade-in">Blogs</h2>
-
-            <p class="section-text">
-              Stay updated with our latest blog posts where we share insights,
-              tips, and trends on office interiors, productivity, and workspace
-              design. Our expert writers bring you valuable content to help you
-              create a workspace that inspires and motivates.
-            </p>
-
-            <ul class="grid-list">
-              <li class="fade-in">
-                <div class="service-card">
-                  <a href="#" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/benjamin-child-0sT9YhNgSEs-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="10 Years of 603"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost1.html">10 Years of 603: How We Are</a>
-                    </h3>
-
-                    <a href="HowWeAre.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-
-              <li class="fade-in">
-                <div class="service-card">
-                  <a href="#" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Meet Our Team"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost2.html">Meet Our Team</a>
-                    </h3>
-
-                    <a href="MeetOurTeam.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-
-              <li class="fade-in">
-                <div class="service-card">
-                  <a
-                    href="assets/blogpages/blogpost3.html"
-                    class="has-before hover:shine"
-                  >
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/images/the-9th-coworking--MezGpfNBTo-unsplash.avif"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Our Achievements"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="blogpost3.html">Our Achievements</a>
-                    </h3>
-
-                    <a href="Achievements.html" class="btn-text hover-underline label-2"
-                      >Read More</a
-                    >
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 
+      <!-- 
         - #ABOUT
       -->
 
-        <style>
-          /* Enhanced Blogs Page Styling */
-          .blogs-page {
-            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0f0f0f 100%);
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
+      <style>
+        /* Enhanced Blogs Page Styling */
+        .blogs-page {
+          background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0f0f0f 100%);
+          min-height: 100vh;
+          position: relative;
+          overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-watcher {
+          height: 10px;
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+          width: 100%;
+          border-radius: 1rem;
+          scale: 0 1;
+          animation: scroll-watcher ease-in;
+          background-color: var(--gold-crayola-dark);
+          animation-timeline: scroll();
+        }
+
+        @keyframes scroll-watcher {
+          to {
+            scale: 1 1;
+          }
+        }
+
+        /* Floating Elements */
+        .floating-element {
+          position: absolute;
+          z-index: 1;
+          opacity: 0.1;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+          top: 10%;
+          left: 10%;
+          animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+          top: 20%;
+          right: 15%;
+          animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+          bottom: 30%;
+          left: 5%;
+          animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
           }
 
-          /* Scroll Progress Bar */
-          .scroll-watcher {
-            height: 10px;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            border-radius: 1rem;
-            scale: 0 1;
-            animation: scroll-watcher ease-in;
-            background-color: var(--gold-crayola-dark);
-            animation-timeline: scroll();
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+          }
+        }
+
+        /* Enhanced Blog Section */
+        .section.service {
+          background: transparent !important;
+          padding: 16rem 0 6rem;
+          position: relative;
+          z-index: 2;
+          opacity: 1;
+          visibility: visible;
+          min-height: 80vh;
+        }
+
+        .section.service .container {
+          position: relative;
+          z-index: 3;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        /* Enhanced Section Title */
+        .section-title {
+          background: linear-gradient(135deg, var(--gold-crayola), #ffd700, var(--gold-crayola));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+          from {
+            filter: drop-shadow(0 0 10px rgba(255, 204, 0, 0.3));
           }
 
-          @keyframes scroll-watcher {
-            to {
-              scale: 1 1;
-            }
+          to {
+            filter: drop-shadow(0 0 20px rgba(255, 204, 0, 0.6));
           }
+        }
 
-          /* Floating Elements */
-          .floating-element {
-            position: absolute;
-            z-index: 1;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-          }
+        /* Enhanced Section Subtitle */
+        .section-subtitle {
+          color: var(--gold-crayola);
+          font-size: 1.8rem;
+          font-weight: var(--weight-bold);
+          text-transform: uppercase;
+          letter-spacing: var(--letterSpacing-2);
+          margin-bottom: 20px;
+          position: relative;
+        }
 
-          .floating-element:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-          }
+        .section-subtitle::after {
+          content: url('./assets/images/separator.svg');
+          display: block;
+          width: 100px;
+          margin: 15px auto 0;
+          filter: brightness(0) saturate(100%) invert(77%) sepia(85%) saturate(1256%) hue-rotate(1deg) brightness(102%) contrast(101%);
+        }
 
-          .floating-element:nth-child(2) {
-            top: 20%;
-            right: 15%;
-            animation-delay: 2s;
-          }
+        /* Enhanced Section Text */
+        .section-text {
+          color: var(--quick-silver);
+          font-size: var(--fontSize-body-2);
+          max-width: 800px;
+          margin: 0 auto 4rem;
+          line-height: var(--lineHeight-5);
+          text-align: center;
+          opacity: 1;
+          visibility: visible;
+        }
 
-          .floating-element:nth-child(3) {
-            bottom: 30%;
-            left: 5%;
-            animation-delay: 4s;
-          }
+        /* Debug: Ensure all elements are visible */
+        .section-subtitle,
+        .section-title,
+        .section-text,
+        .grid-list li {
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
 
-          @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-          }
+        /* Enhanced Blog Cards */
+        .service-card {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          opacity: 1;
+          visibility: visible;
+          min-height: 400px;
+        }
 
-          /* Enhanced Blog Section */
+        .service-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(255, 204, 0, 0.2);
+          border-color: var(--gold-crayola);
+        }
+
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+          transition: left 0.6s;
+          z-index: 1;
+        }
+
+        .service-card:hover::before {
+          left: 100%;
+        }
+
+        /* Enhanced Card Banner */
+        .card-banner {
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px 20px 0 0;
+        }
+
+        .card-banner::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, rgba(255, 204, 0, 0.1), transparent);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .card-banner::after {
+          opacity: 1;
+        }
+
+        .img-cover {
+          transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .img-cover {
+          transform: scale(1.1);
+        }
+
+        /* Enhanced Card Content */
+        .card-content {
+          padding: 2rem;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          z-index: 2;
+        }
+
+        .card-title {
+          margin-bottom: 1.5rem;
+          flex-grow: 1;
+        }
+
+        .card-title a {
+          color: var(--white);
+          text-decoration: none;
+          transition: color 0.3s ease;
+          font-size: 1.4rem;
+          font-weight: var(--weight-bold);
+          line-height: 1.3;
+        }
+
+        .card-title a:hover {
+          color: var(--gold-crayola);
+        }
+
+        /* Enhanced Read More Button */
+        .btn-text {
+          color: var(--gold-crayola);
+          font-weight: var(--weight-bold);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: all 0.3s ease;
+        }
+
+        .btn-text:hover {
+          color: var(--white);
+          transform: translateX(5px);
+        }
+
+        .btn-text::after {
+          content: '→';
+          transition: transform 0.3s ease;
+        }
+
+        .btn-text:hover::after {
+          transform: translateX(3px);
+        }
+
+        /* Enhanced Grid List */
+        .grid-list {
+          gap: 3rem;
+        }
+
+        /* Glass Box Styling */
+        .glass-box {
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 10px;
+          padding: 20px;
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(10px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          display: inline-block;
+          margin: 0 auto;
+        }
+
+        .glass-box p {
+          margin: 10px 0;
+        }
+
+        .profile {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        .profile .img {
+          border-radius: 50%;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          padding: 5px;
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Ensure grid-list is visible */
+        .grid-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 3rem;
+          margin-top: 4rem;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
           .section.service {
-            background: transparent !important;
-            padding: 16rem 0 6rem;
-            position: relative;
-            z-index: 2;
-            opacity: 1;
-            visibility: visible;
-            min-height: 80vh;
+            padding: 6rem 0 4rem;
           }
 
-          .section.service .container {
-            position: relative;
-            z-index: 3;
-            opacity: 1;
-            visibility: visible;
-          }
-
-          /* Enhanced Section Title */
           .section-title {
-            background: linear-gradient(135deg, var(--gold-crayola), #ffd700, var(--gold-crayola));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: titleGlow 3s ease-in-out infinite alternate;
+            font-size: 2.5rem;
           }
 
-          @keyframes titleGlow {
-            from { filter: drop-shadow(0 0 10px rgba(255, 204, 0, 0.3)); }
-            to { filter: drop-shadow(0 0 20px rgba(255, 204, 0, 0.6)); }
-          }
-
-          /* Enhanced Section Subtitle */
-          .section-subtitle {
-            color: var(--gold-crayola);
-            font-size: 1.8rem;
-            font-weight: var(--weight-bold);
-            text-transform: uppercase;
-            letter-spacing: var(--letterSpacing-2);
-            margin-bottom: 20px;
-            position: relative;
-          }
-
-          .section-subtitle::after {
-            content: url('./assets/images/separator.svg');
-            display: block;
-            width: 100px;
-            margin: 15px auto 0;
-            filter: brightness(0) saturate(100%) invert(77%) sepia(85%) saturate(1256%) hue-rotate(1deg) brightness(102%) contrast(101%);
-          }
-
-          /* Enhanced Section Text */
-          .section-text {
-            color: var(--quick-silver);
-            font-size: var(--fontSize-body-2);
-            max-width: 800px;
-            margin: 0 auto 4rem;
-            line-height: var(--lineHeight-5);
-            text-align: center;
-            opacity: 1;
-            visibility: visible;
-          }
-
-          /* Debug: Ensure all elements are visible */
-          .section-subtitle,
-          .section-title,
-          .section-text,
-          .grid-list li {
-            opacity: 1 !important;
-            visibility: visible !important;
-          }
-
-          /* Enhanced Blog Cards */
           .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            opacity: 1;
-            visibility: visible;
-            min-height: 400px;
+            margin-bottom: 2rem;
           }
 
-          .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 204, 0, 0.2);
-            border-color: var(--gold-crayola);
-          }
-
-          .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.6s;
-            z-index: 1;
-          }
-
-          .service-card:hover::before {
-            left: 100%;
-          }
-
-          /* Enhanced Card Banner */
-          .card-banner {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px 20px 0 0;
-          }
-
-          .card-banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 204, 0, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-          }
-
-          .service-card:hover .card-banner::after {
-            opacity: 1;
-          }
-
-          .img-cover {
-            transition: transform 0.4s ease;
-          }
-
-          .service-card:hover .img-cover {
-            transform: scale(1.1);
-          }
-
-          /* Enhanced Card Content */
-          .card-content {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            z-index: 2;
-          }
-
-          .card-title {
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-          }
-
-          .card-title a {
-            color: var(--white);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 1.4rem;
-            font-weight: var(--weight-bold);
-            line-height: 1.3;
-          }
-
-          .card-title a:hover {
-            color: var(--gold-crayola);
-          }
-
-          /* Enhanced Read More Button */
-          .btn-text {
-            color: var(--gold-crayola);
-            font-weight: var(--weight-bold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-          }
-
-          .btn-text:hover {
-            color: var(--white);
-            transform: translateX(5px);
-          }
-
-          .btn-text::after {
-            content: '→';
-            transition: transform 0.3s ease;
-          }
-
-          .btn-text:hover::after {
-            transform: translateX(3px);
-          }
-
-          /* Enhanced Grid List */
           .grid-list {
-            gap: 3rem;
+            gap: 2rem;
           }
+        }
+      </style>
 
-          /* Glass Box Styling */
-          .glass-box {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            padding: 20px;
-            backdrop-filter: blur(9px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            display: inline-block;
-            margin: 0 auto;
-          }
-
-          .glass-box p {
-            margin: 10px 0;
-          }
-
-          .profile {
-            margin-top: 20px;
-            text-align: center;
-          }
-
-          .profile .img {
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 5px;
-          }
-
-          /* Scroll Animations */
-          .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-            transition: all 0.6s ease-out;
-          }
-
-          .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-          }
-
-          /* Ensure grid-list is visible */
-          .grid-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-            opacity: 1;
-            visibility: visible;
-          }
-
-          /* Mobile Responsiveness */
-          @media (max-width: 768px) {
-            .section.service {
-              padding: 6rem 0 4rem;
-            }
-
-            .section-title {
-              font-size: 2.5rem;
-            }
-
-            .service-card {
-              margin-bottom: 2rem;
-            }
-
-            .grid-list {
-              gap: 2rem;
-            }
-          }
-        </style>
-
-        <!-- 
+      <!-- 
         - #EVENT
-      --></article>
-    </main>
+      -->
+    </article>
+  </main>
 
-    <!--                        no change-->
-    <!-- 
+  <!--                        no change-->
+  <!-- 
     - #FOOTER
   -->
 
-    <footer
-      class="footer section has-bg-image text-center"
-      style="
+  <footer class="footer section has-bg-image text-center" style="
         background-image: url('./assets/images/fae955e3-de29-4d6b-a41a-85563f86a931.avif');
-      "
-    >
-      <div class="container">
-        <div class="footer-top grid-list">
-          <div class="footer-brand has-before has-after">
-            <a href="#" class="logo">
-              <img
-                src="./assets/images/603logo (1).avif"
-                width="160"
-                height="50"
-                loading="lazy"
-                alt="grilli home"
-              />
-            </a>
+      ">
+    <div class="container">
+      <div class="footer-top grid-list">
+        <div class="footer-brand has-before has-after">
+          <a href="#" class="logo">
+            <img src="./assets/images/603logo (1).avif" width="160" height="50" loading="lazy" alt="grilli home" />
+          </a>
 
-            <address class="body-4">
-              Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
-              400052
-            </address>
+          <address class="body-4">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
+            400052
+          </address>
 
-            <a href="mailto:booking@grilli.com" class="body-4 contact-link"
-              >booking@grilli.com</a
-            >
+          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
 
-            <a href="tel:+88123123456" class="body-4 contact-link"
-              >Booking Request : +88-123-123456</a
-            >
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
 
-            <p class="body-4">Open : 09:00 am - 01:00 pm</p>
+          <p class="body-4">Open : 09:00 am - 01:00 pm</p>
 
-            <div class="wrapper">
-              <div class="separator"></div>
-              <div class="separator"></div>
-              <div class="separator"></div>
-            </div>
-
-            <p class="title-1">Get News & Offers</p>
-
-            <p class="label-1">
-              Subscribe us & Get <span class="span">25% Off.</span>
-            </p>
-
-            <form action="" class="input-wrapper">
-              <div class="icon-wrapper">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-                <input
-                  type="email"
-                  name="email_address"
-                  placeholder="Your email"
-                  autocomplete="off"
-                  class="input-field"
-                />
-              </div>
-
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Subscribe</span>
-
-                <span class="text text-2" aria-hidden="true">Subscribe</span>
-              </button>
-            </form>
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
           </div>
 
-          <ul class="footer-list">
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Home</a>
-            </li>
+          <p class="title-1">Get News & Offers</p>
 
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">Menus</a>
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >About Us</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Our Chefs</a
-              >
-            </li>
-
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <!-- Facebook Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-facebook"></ion-icon> Facebook
-              </a>
-            </li>
-          
-            <!-- Instagram Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-instagram"></ion-icon> Instagram
-              </a>
-            </li>
-          
-            <!-- Twitter Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <i class="fa-brands fa-x-twitter"></i>
-                Twitter
-              </a>
-            </li>
-          
-            <!-- Youtube Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="logo-youtube"></ion-icon>Youtube
-              </a>
-            </li>
-          
-            <!-- Google Map Link with Icon -->
-            <li>
-              <a href="#" class="label-2 footer-link hover-underline">
-                <ion-icon name="location-outline"></ion-icon> Google Map
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-bottom">
-          <p class="copyright">
-            &copy; <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
-            <a href="603thecoworkingspace.com" target="_blank" class="link"
-              >603 The Coworking Space</a
-            >
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
           </p>
-        </div>
-      </div>
-    </footer>
 
-    <!-- 
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off"
+                class="input-field" />
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <!-- Facebook Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-facebook"></ion-icon> Facebook
+            </a>
+          </li>
+
+          <!-- Instagram Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-instagram"></ion-icon> Instagram
+            </a>
+          </li>
+
+          <!-- Twitter Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <i class="fa-brands fa-x-twitter"></i>
+              Twitter
+            </a>
+          </li>
+
+          <!-- Youtube Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="logo-youtube"></ion-icon>Youtube
+            </a>
+          </li>
+
+          <!-- Google Map Link with Icon -->
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">
+              <ion-icon name="location-outline"></ion-icon> Google Map
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> . All Rights Reserved | Crafted by
+          <a href="603thecoworkingspace.com" target="_blank" class="link">603 The Coworking Space</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
     - #BACK TO TOP
   -->
 
-    <a
-      href="#top"
-      class="back-top-btn active"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-    </a>
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-    <!-- Enhanced JavaScript for Blogs Page -->
-    <script>
-      // Scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
+  <!-- Enhanced JavaScript for Blogs Page -->
+  <script>
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
 
-      // Observe fade-in elements
-      document.querySelectorAll('.fade-in').forEach(element => {
-        observer.observe(element);
+    // Observe fade-in elements
+    document.querySelectorAll('.fade-in').forEach(element => {
+      observer.observe(element);
+    });
+
+    // Navbar functionality
+    const navbar = document.querySelector('[data-navbar]');
+    const navTogglers = document.querySelectorAll('[data-nav-toggler]');
+
+    const addEventOnElements = function (elements, eventType, callback) {
+      for (let i = 0, len = elements.length; i < len; i++) {
+        elements[i].addEventListener(eventType, callback);
+      }
+    }
+
+    const toggleNavbar = function () {
+      navbar.classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    }
+
+    addEventOnElements(navTogglers, 'click', toggleNavbar);
+
+    // Header scroll behavior
+    const header = document.querySelector('[data-header]');
+    let lastScrollPos = 0;
+
+    const hideHeader = function () {
+      const isScrollBottom = lastScrollPos < window.scrollY;
+      if (isScrollBottom) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+      lastScrollPos = window.scrollY;
+    }
+
+    window.addEventListener('scrollend', hideHeader);
+
+    // Enhanced card hover effects
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
       });
 
-      // Navbar functionality
-      const navbar = document.querySelector('[data-navbar]');
-      const navTogglers = document.querySelectorAll('[data-nav-toggler]');
-
-      const addEventOnElements = function (elements, eventType, callback) {
-        for (let i = 0, len = elements.length; i < len; i++) {
-          elements[i].addEventListener(eventType, callback);
-        }
-      }
-
-      const toggleNavbar = function () {
-        navbar.classList.toggle('active');
-        document.body.classList.toggle('nav-active');
-      }
-
-      addEventOnElements(navTogglers, 'click', toggleNavbar);
-
-      // Header scroll behavior
-      const header = document.querySelector('[data-header]');
-      let lastScrollPos = 0;
-
-      const hideHeader = function () {
-        const isScrollBottom = lastScrollPos < window.scrollY;
-        if (isScrollBottom) {
-          header.classList.add('hide');
-        } else {
-          header.classList.remove('hide');
-        }
-        lastScrollPos = window.scrollY;
-      }
-
-      window.addEventListener('scrollend', hideHeader);
-
-      // Enhanced card hover effects
-      document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-          this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-          this.style.transform = 'translateY(0) scale(1)';
-        });
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0) scale(1)';
       });
-    </script>
+    });
+  </script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
